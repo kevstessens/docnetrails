@@ -1,0 +1,24 @@
+<div class="simplebox">
+  <h1 class="titleh">Login</h1>
+    <div class="content">
+      
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+          
+        <div class="form-line">
+          <label class="st-label">Email</label>
+          <%= f.email_field :email, :style => " width:80%;" %>
+        </div>
+          
+        <div class="form-line">
+          <label class="st-label">Password</label>
+          <%= f.password_field :password, :style => " width:80%;" %>
+        </div>
+          
+        <div class="form-line">
+          <%= f.submit "Login", :class => "submit-button" %>
+        </div>
+
+      <% end %>
+      
+    </div>
+</div>

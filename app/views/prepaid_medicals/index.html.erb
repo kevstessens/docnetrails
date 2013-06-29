@@ -1,0 +1,23 @@
+<h1>Listing prepaid_medicals</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @prepaid_medicals.each do |prepaid_medical| %>
+  <tr>
+    <td><%= prepaid_medical.name %></td>
+    <td><%= link_to 'Show', prepaid_medical %></td>
+    <td><%= link_to 'Edit', edit_prepaid_medical_path(prepaid_medical) %></td>
+    <td><%= link_to 'Destroy', prepaid_medical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Prepaid medical', new_prepaid_medical_path %>

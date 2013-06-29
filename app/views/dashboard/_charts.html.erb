@@ -1,0 +1,182 @@
+<% unless current_user.external? %>
+    <!-- Chart one -->
+    <div class="simplebox grid360-left" style="z-index: 560;">
+
+      <div class="titleh" style="z-index: 600;"><h3><%= t("dashboard.developers_working")%><%= current_user.full_name%></h3>
+
+      </div>
+
+      <div class="body" style="z-index: 580;">
+
+
+        <!-- start pie chart javascript codes -->
+        <script type="text/javascript">
+
+            // Load the Visualization API and the piechart package.
+            google.load('visualization', '1.0', {'packages':['corechart']});
+
+            // Set a callback to run when the Google Visualization API is loaded.
+            google.setOnLoadCallback(drawChart);
+
+            // Callback that creates and populates a data table,
+            // instantiates the pie chart, passes in the data and
+            // draws it.
+            function drawChart() {
+
+                // Create the data table.
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Topping');
+                data.addColumn('number', 'Slices');
+                data.addRows([
+                    <% @values.each do |j|%>
+                    ['<%= j[0] %>', <%= j[1] %>],
+                    <% end %>
+                ]);
+
+                // Set chart options
+                var options = {'title':'<%= t("dashboard.percentant_completed") %> <%= current_user.full_name%>',
+                    'width':350,
+                    'height':300};
+
+                // Instantiate and draw our chart, passing in some options.
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_div'));
+                chart.draw(data, options);
+            }
+        </script>
+        <!-- end pie chart javascript codes -->
+
+
+
+        <!-- start chart div -->
+        <div id="piechart_div" style="z-index: 570; position: relative;"><div style="position: relative; width: 350px; height: 300px;" dir="ltr"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="350" height="300" style="overflow: hidden;"><defs id="defs"></defs><rect x="0" y="0" width="350" height="300" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="67" y="38.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">How Much Pizza I Ate Last Night</text></g><g><rect x="218" y="58" width="65" height="83" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="218" y="58" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="67.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Mushro...</text><rect x="233" y="58" width="50" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><rect x="218" y="58" width="11" height="11" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="218" y="76" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="85.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Onions</text></g><rect x="218" y="76" width="11" height="11" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="218" y="94" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="103.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Olives</text></g><rect x="218" y="94" width="11" height="11" stroke="none" stroke-width="0" fill="#ff9900"></rect></g><g><rect x="218" y="112" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="121.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Zucchini</text></g><rect x="218" y="112" width="11" height="11" stroke="none" stroke-width="0" fill="#109618"></rect></g><g><rect x="218" y="130" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="139.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Pepperoni</text></g><rect x="218" y="130" width="11" height="11" stroke="none" stroke-width="0" fill="#990099"></rect></g></g><g><path d="M134,151L134,85A66,66,0,0,1,180.66904755831214,197.66904755831212L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#3366cc"></path><text text-anchor="start" x="154.13268086158794" y="140.09046032341806" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">37.5%</text></g><g><path d="M134,151L68,151A66,66,0,0,1,134,85L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#990099"></path><text text-anchor="start" x="92.45647605591881" y="124.30647605591882" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">25%</text></g><g><path d="M134,151L87.33,197.67A66,66,0,0,1,68,151L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#109618"></path></g><g><path d="M134,151L134,217A66,66,0,0,1,87.33095244168787,197.66904755831214L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#ff9900"></path></g><g><path d="M134,151L180.67,197.67A66,66,0,0,1,134,217L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#dc3912"></path></g><g></g></svg></div></div><div style="display: none; position: absolute; top: 310px; left: 360px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">3 (37.5%)</div><div></div></div>
+        <!-- end chart div -->
+
+
+
+      </div>
+
+    </div>
+    <!-- END Chart one -->
+
+    <% if !current_user.developer? %>
+    <!-- chart two -->
+    <div class="simplebox grid360-right" style="z-index: 610;">
+
+      <div class="titleh" style="z-index: 600;"><h3><%= t("dashboard.developers_total_hours") %></h3>
+
+      </div>
+
+      <div class="body"  style="z-index: 580;">
+
+
+        <!-- start pie chart javascript codes -->
+        <script type="text/javascript">
+
+            // Load the Visualization API and the piechart package.
+            google.load('visualization', '1.0', {'packages':['corechart']});
+
+            // Set a callback to run when the Google Visualization API is loaded.
+            google.setOnLoadCallback(drawChart);
+
+            // Callback that creates and populates a data table,
+            // instantiates the pie chart, passes in the data and
+            // draws it.
+            function drawChart() {
+
+                // Create the data table.
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Topping');
+                data.addColumn('number', 'Slices');
+                data.addRows([
+                    <% @values2.each do |j|%>
+                    ['<%= j[0] %>', <%= j[1] %>],
+                    <% end %>
+                ]);
+
+                // Set chart options
+                var options = {'title':'<%= t("dashboard.percentant_worked") %>',
+                    'width':350,
+                    'height':300};
+
+                // Instantiate and draw our chart, passing in some options.
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_div2'));
+                chart.draw(data, options);
+            }
+        </script>
+        <!-- end pie chart javascript codes -->
+
+
+
+        <!-- start chart div -->
+        <div id="piechart_div2" style="z-index: 570; position: relative;"><div style="position: relative; width: 350px; height: 300px;" dir="ltr"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="350" height="300" style="overflow: hidden;"><defs id="defs"></defs><rect x="0" y="0" width="350" height="300" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="67" y="38.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">How Much Pizza I Ate Last Night</text></g><g><rect x="218" y="58" width="65" height="83" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="218" y="58" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="67.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Mushro...</text><rect x="233" y="58" width="50" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><rect x="218" y="58" width="11" height="11" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="218" y="76" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="85.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Onions</text></g><rect x="218" y="76" width="11" height="11" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="218" y="94" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="103.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Olives</text></g><rect x="218" y="94" width="11" height="11" stroke="none" stroke-width="0" fill="#ff9900"></rect></g><g><rect x="218" y="112" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="121.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Zucchini</text></g><rect x="218" y="112" width="11" height="11" stroke="none" stroke-width="0" fill="#109618"></rect></g><g><rect x="218" y="130" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="139.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Pepperoni</text></g><rect x="218" y="130" width="11" height="11" stroke="none" stroke-width="0" fill="#990099"></rect></g></g><g><path d="M134,151L134,85A66,66,0,0,1,180.66904755831214,197.66904755831212L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#3366cc"></path><text text-anchor="start" x="154.13268086158794" y="140.09046032341806" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">37.5%</text></g><g><path d="M134,151L68,151A66,66,0,0,1,134,85L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#990099"></path><text text-anchor="start" x="92.45647605591881" y="124.30647605591882" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">25%</text></g><g><path d="M134,151L87.33,197.67A66,66,0,0,1,68,151L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#109618"></path></g><g><path d="M134,151L134,217A66,66,0,0,1,87.33095244168787,197.66904755831214L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#ff9900"></path></g><g><path d="M134,151L180.67,197.67A66,66,0,0,1,134,217L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#dc3912"></path></g><g></g></svg></div></div><div style="display: none; position: absolute; top: 310px; left: 360px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">3 (37.5%)</div><div></div></div>
+        <!-- end chart div -->
+
+
+
+      </div>
+
+    </div>
+    <!-- END Chart two -->
+
+        <% else %>
+    <!-- chart two -->
+    <div class="simplebox grid360-right" style="z-index: 610;">
+
+      <div class="titleh" style="z-index: 600;"><h3><%= t("dashboard.project_ticket_state") %></h3>
+
+      </div>
+
+      <div class="body"  style="z-index: 580;">
+
+
+        <!-- start pie chart javascript codes -->
+        <script type="text/javascript">
+
+            // Load the Visualization API and the piechart package.
+            google.load('visualization', '1.0', {'packages':['corechart']});
+
+            // Set a callback to run when the Google Visualization API is loaded.
+            google.setOnLoadCallback(drawChart);
+
+            // Callback that creates and populates a data table,
+            // instantiates the pie chart, passes in the data and
+            // draws it.
+            function drawChart() {
+
+                // Create the data table.
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Topping');
+                data.addColumn('number', 'Slices');
+                data.addRows([
+                    <% @values3.each do |j|%>
+                    ['<%= j[0] %>', <%= j[1] %>],
+                    <% end %>
+                ]);
+
+                // Set chart options
+                var options = {'title':'<%= t("dashboard.percentant_closed") %>',
+                    'width':350,
+                    'height':300};
+
+                // Instantiate and draw our chart, passing in some options.
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_div3'));
+                chart.draw(data, options);
+            }
+        </script>
+        <!-- end pie chart javascript codes -->
+
+
+
+        <!-- start chart div -->
+        <div id="piechart_div3" style="z-index: 570; position: relative;"><div style="position: relative; width: 350px; height: 300px;" dir="ltr"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="350" height="300" style="overflow: hidden;"><defs id="defs"></defs><rect x="0" y="0" width="350" height="300" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="67" y="38.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">How Much Pizza I Ate Last Night</text></g><g><rect x="218" y="58" width="65" height="83" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="218" y="58" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="67.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Mushro...</text><rect x="233" y="58" width="50" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><rect x="218" y="58" width="11" height="11" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="218" y="76" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="85.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Onions</text></g><rect x="218" y="76" width="11" height="11" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="218" y="94" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="103.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Olives</text></g><rect x="218" y="94" width="11" height="11" stroke="none" stroke-width="0" fill="#ff9900"></rect></g><g><rect x="218" y="112" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="121.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Zucchini</text></g><rect x="218" y="112" width="11" height="11" stroke="none" stroke-width="0" fill="#109618"></rect></g><g><rect x="218" y="130" width="65" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="233" y="139.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Pepperoni</text></g><rect x="218" y="130" width="11" height="11" stroke="none" stroke-width="0" fill="#990099"></rect></g></g><g><path d="M134,151L134,85A66,66,0,0,1,180.66904755831214,197.66904755831212L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#3366cc"></path><text text-anchor="start" x="154.13268086158794" y="140.09046032341806" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">37.5%</text></g><g><path d="M134,151L68,151A66,66,0,0,1,134,85L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#990099"></path><text text-anchor="start" x="92.45647605591881" y="124.30647605591882" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">25%</text></g><g><path d="M134,151L87.33,197.67A66,66,0,0,1,68,151L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#109618"></path></g><g><path d="M134,151L134,217A66,66,0,0,1,87.33095244168787,197.66904755831214L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#ff9900"></path></g><g><path d="M134,151L180.67,197.67A66,66,0,0,1,134,217L134,151A0,0,0,0,0,134,151" stroke="#ffffff" stroke-width="1" fill="#dc3912"></path></g><g></g></svg></div></div><div style="display: none; position: absolute; top: 310px; left: 360px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">3 (37.5%)</div><div></div></div>
+        <!-- end chart div -->
+
+
+
+      </div>
+
+    </div>
+    <!-- END Chart two -->
+        <%end%>
+
+<% end %>

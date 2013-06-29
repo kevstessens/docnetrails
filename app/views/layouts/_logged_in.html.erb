@@ -1,0 +1,296 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Trackmint</title>
+
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <%= javascript_include_tag "jquery.min" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "jquery-ui-1.8.11.custom.min" %>
+    <%= javascript_include_tag "jquery-settings" %>
+    <%= javascript_include_tag "toogle" %>
+    <%= javascript_include_tag "jquery.tipsy" %>
+    <%= javascript_include_tag "jquery.uniform.min" %>
+    <%= javascript_include_tag "jquery.wysiwyg" %>
+    <%= javascript_include_tag "jquery.tablesorter.min" %>
+    <%= javascript_include_tag "raphael" %>
+    <%= javascript_include_tag "analytics" %>
+    <%= javascript_include_tag "popup" %>
+    <%= javascript_include_tag "fullcalendar.min" %>
+    <%= javascript_include_tag "jquery.prettyPhoto.js" %>
+    <%= javascript_include_tag "jquery.ui.core" %>
+    <%= javascript_include_tag "jquery.ui.mouse" %>
+    <%= javascript_include_tag "fullcalendar.min.js" %>
+    <%= javascript_include_tag "jquery.ui.widget" %>
+    <%= javascript_include_tag "jquery.ui.slider" %>
+    <%= javascript_include_tag "jquery.ui.datepicker" %>
+    <%= javascript_include_tag "jquery.ui.tabs" %>
+    <%= javascript_include_tag "jquery.ui.accordion" %>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <%= javascript_include_tag "jquery.dataTables" %>
+    <%= javascript_include_tag "bootstrap.min" %>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(function(){
+                $("[id$='_picture']").uniform({
+                    fileDefaultText:"<%= t("no_file")%>",
+                fileBtnText:"<%= t("choose")%>"
+                });
+            });
+        });
+
+
+    </script>
+
+    <%= csrf_meta_tags %>
+
+  </head>
+  <body id="body">
+
+  <% unless current_project.nil? %>
+
+  <!-- Modal -->
+    <div id="myModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-body">
+        <%= render "requests/quick_form" %>
+      </div>
+    </div>
+
+    <!-- Modal2 -->
+    <div id="myModal2" class="modal hide-small" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-body">
+        <%= render "milestones/add_hours" %>
+      </div>
+    </div>
+
+    <!-- Modal3 -->
+    <div id="myModal3" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-body">
+        <%= render "tickets/quick_form" %>
+      </div>
+    </div>
+
+  <% end %>
+
+    <div class="wrapper">
+
+      <!-- START HEADER -->
+      <div id="header">
+
+        <!-- logo -->
+        <div class="logo">  <a href="<%= root_path %>"><img src="/assets/logo-small.png" width="112" height="40" alt="logo"/></a> </div>
+
+        <!-- notifications -->
+
+        <div id="notifications">
+            <a href="#" class="qbutton-left tips" id="notification_icon" title="<%= t("notifications")%>"><img src="/assets/icons/header/dashboard.png" width="16" height="15" alt="dashboard"> <% if current_user.notifications.unread.count > 0 %><span class="qballon"><%= current_user.notifications.unread.count%></span> <%end%></a>
+            <a href="<%= messages_path %>" class="qbutton-right"><img src="/assets/icons/header/support.png" width="19" height="13" alt="support">  <% if current_user.unread_messages.count > 0 %><span class="qballon"><%= current_user.unread_messages.count%></span> <%end%></a>
+          <div class="sResults" id="sResults" style="display: none;">
+            <span class="arrow"></span>
+            <ul class="updates">
+              <% if current_user.notifications.unread.count == 0 %>
+                    <span>
+                        <li align="center"><%= t("no_notifications")%></li>
+                    </span>
+              <% end %>
+
+              <% current_user.notifications.unread.limit(4).each do |f|  %>
+                  <li>
+										<span class="uDone">
+                                        <%= link_to f.notice, f.link %>
+										</span>
+                    <span class="uDate"><span><%= f.created_at.strftime("%d") %></span><%= f.created_at.strftime("/%m") %></span>
+                    <span class="clear"></span>
+                  </li>
+              <% end %>
+              <% if current_user.notifications.unread.count > 5 %>
+                  <div align="center" ><%= link_to t("see_all") + current_user.notifications.unread.count.to_s + ")", notifications_path %></div>
+              <% else %>
+                  <div align="center" ><%= link_to t("go_to_notifications"), notifications_path %></div>
+            <% end %>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- quick menu -->
+        <div id="quickmenu">
+          <% if can? :new, Request %>
+              <a href="#myModal" role="button" data-toggle="modal" class="qbutton-left tips" title="<%= t("requests.add_new")%>"><img src="/assets/icons/header/newpost.png" width="18" height="14" alt="new post" /></a>
+          <% end %>
+          <% if can? :add_invested_hours, Milestone %>
+            <a href="#myModal2" role="button" data-toggle="modal" class="qbutton-left tips" title="<%= t("invested_hours.add_worked_hours")%>"><img src="/assets/icons/button/clock2.png" width="14" height="14" alt="new post" /></a>
+          <% end %>
+
+          <% if can? :new, Ticket %>
+            <a href="#myModal3" role="button" data-toggle="modal" class="qbutton-left tips" title="<%= t("tickets.add_new")%>"><img src="/assets/icons/header/newpost.png" width="18" height="14" alt="new post" /></a>
+          <% end %>
+
+          <a id="open-stats" href="#" class="qbutton-right tips" title="<%= t("statistics")%>"><img src="/assets/icons/header/graph.png" width="17" height="15" alt="graph" /></a>
+          <div class="clear"></div>
+        </div>
+
+        <!-- profile box -->
+        <div id="profilebox">
+          <a href="#" class="display">
+            <img src="/assets/simple-profile-img.jpg" width="33" height="33" alt="profile"/>  <b><%= t("logged_as")%></b> <span><%= current_user.first_name %></span>
+          </a>
+
+          <div class="profilemenu">
+            <ul>
+              <% if can? :edit, current_user %>
+                  <li><%= link_to t("edit_profile"), edit_user_path(current_user) %></li>
+                  <li><%= link_to t("mailers.change_password_input"), users_update_password_path %></li>
+
+            <% end %>
+              <li><%= link_to t("logout"), destroy_user_session_path, :method => :delete %></li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <!-- project box -->
+        <div id="profilebox">
+          <a href="#" class="display">
+            <b><%= t("current_project")%></b> <span><%= current_project.name %></span>
+          </a>
+
+          <div class="profilemenu">
+            <ul>
+              <% current_user.projects.each do |project| %>
+                  <li id="changer_<%= project.id%>"><a href="#"> <%= project.name %></a></li>
+              <% end %>
+
+              <%= form_for(current_project, :url => { :action => "select_project", :controller => :projects }, :html => { :method => :get }) do |f| %>
+
+                  <%= f.text_field :id,:hidden => true, :id => "project_id"%>
+                  <%= f.submit "Save",:hidden =>true, :id=> "change_project_button", :class => "st-button"%>
+              <% end %>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="clear"></div>
+      </div>
+      <!-- END HEADER -->
+
+      <!-- START MAIN -->
+      <div id="main">
+
+        <% unless flash[:notice].nil? %>
+            <div class="albox succesbox" style="z-index: 690;">
+              <%= flash[:notice]%>
+              <a href="#" class="close tips" original-title="close"><%= t("close")%></a>
+            </div>
+        <% end %>
+
+        <% unless flash[:error].nil? %>
+            <div class="albox errorbox" style="z-index: 690;">
+              <%= flash[:error]%>
+              <a href="#" class="close tips" original-title="close"><%= t("close")%></a>
+            </div>
+        <% end %>        
+
+        <!-- START SIDEBAR -->
+        <div id="sidebar">
+
+          <!-- start searchbox -->
+          <div id="searchbox">
+
+          </div>
+          <!-- end searchbox -->
+
+          <!-- start sidemenu -->
+          <div id="sidemenu">
+            <ul>
+              <li <%= "class=active" if @active_tab=="dashboard" %>><a href="<%= root_path %>"><img src="/assets/icons/sidemenu/laptop.png" width="16" height="16" alt="icon"/><%= t("dashboard.dashboard")%></a></li>
+              <li <%= "class=active" if @active_tab=="projects" %>><a href="<%= projects_path %>"><img src="/assets/icons/sidemenu/copy.png" width="16" height="16" alt="icon"/><%= t("projects.projects")%></a></li>
+
+              <% unless current_project.nil? %>
+
+              <% if can? :index, User %>
+              <li <%= "class=active" if @active_tab=="users" %>><a href="<%= users_path %>"><img src="/assets/icons/sidemenu/user.png" width="16" height="16" alt="icon"/><%= t("users.users")%></a></li>
+              <% end %>
+
+              <% if can? :index, InvestedHour %>
+              <li <%= "class=active" if @active_tab=="invested_hours" %>><a href="<%= invested_hours_path %>"><img src="/assets/icons/sidemenu/user_add.png" width="16" height="16" alt="icon"/><%= t("invested_hours.worked_hours")%></a></li>
+              <% end %>
+
+              <li <%= "class=active" if @active_tab=="features" %>><a href="<%= features_path %>"><img src="/assets/icons/sidemenu/star.png" width="16" height="16" alt="icon"/><%= t("features.features")%></a></li>
+              <li <%= "class=active" if @active_tab=="bugs" %>><a href="<%= bugs_path %>"><img src="/assets/icons/sidemenu/error.png" width="16" height="16" alt="icon"/><%= t("bugs.bugs")%></a></li>
+              <li <%= "class=active" if @active_tab=="requests" %>><a href="<%= requests_path %>"><img src="/assets/icons/sidemenu/file.png" width="16" height="16" alt="icon"/><%= t("requests.requests")%></a><span class="ballon"><%= current_project.requests.unassigned.count %></span></li>
+              <%  if !current_user.external? %>
+              <li class="subtitle">
+                <a class="action tips-right" href="#" original-title="<%= t("events.calendar")%>"><img src="/assets/icons/sidemenu/calendar.png" width="16" height="16" alt="icon"><%= t("events.calendar")%><img src="/assets/arrow-down.png" width="7" height="4" alt="arrow" class="arrow"></a>
+                <ul class="submenu" style="<%= 'display: block;' if @active_tab == 'calendar'%>">
+                  <li <%= "class=active" if @active_sub_tab=="calendar_timeline" %>><a href="<%= calendar_path %>"><%= t("events.timeline")%></a></li>
+                  <li <%= "class=active" if @active_sub_tab=="calendar_events" %>><a href="<%= calendar_events_path %>"><%= t("events.events")%></a></li>
+                </ul>
+              </li>
+              <% else %>
+              <li <%= "class=active" if @active_tab=="calendar" %>><a href="<%= calendar_events_path %>"><img src="/assets/icons/sidemenu/calendar.png" width="16" height="16" alt="icon"/><%= t("events.events")%></a></li>
+              <% end %>
+
+            <% end %>
+              <!-- end submenu with icon -->
+            </ul>
+          </div>
+          <!-- end sidemenu -->
+
+        </div>
+        <!-- END SIDEBAR -->
+
+        <!-- START MAIN -->
+
+        <!-- START PAGE -->
+        <div id="page">
+
+          <!-- start stats -->
+          <div id="stats">
+            <!-- use it up/down on <b> tag for different colors -->
+            <div class="column">  <b class="up"><%= current_project.percentant_completed unless current_project.nil?%>%</b>  <%= t("dashboard.project_completed")%></div>
+            <div class="column">  <b><%= (current_project.current_milestone.ending_date.to_date - DateTime.current().to_date).to_i unless current_project.nil?%></b> <%= t("dashboard.days_to_deliver")%> </div>
+            <% if current_user.developer? %>
+            <div class="column">  <b class="up"><%= current_user.get_hours(current_project.current_milestone.id) unless current_project.nil?  %></b><%= t("dashboard.hours_worked")%></div>
+            <% else %>
+            <div class="column">  <b class="up"><%= current_project.current_milestone.milestone_hours unless current_project.nil?  %></b><%= t("dashboard.hours_worked")%></div>
+            <% end %>
+            <div class="column">  <b class="down"><%= current_project.bugs.opened.count unless current_project.nil? %></b><%= t("dashboard.bugs_reported")%></div>
+            <!-- this is last column -->
+            <div class="column last"> <b><%= current_project.requests.unassigned.count unless current_project.nil? %></b>  <%= t("dashboard.pending_requests")%></div>
+            <a href="#" title="Close Stats" class="close tips"><%= t("close")%></a>
+            <% if can? :add_invested_hours, Milestone %>
+                <img src="/assets/icons/mini/stats-arrow-top.png" width="17" height="9" alt="arrow" class="arrow" />
+            <% else %>
+                <img src="/assets/icons/mini/stats-arrow-top.png" width="17" height="9" alt="arrow" class="arrow-external" />
+            <% end %>
+
+
+          </div>
+          <!-- end stats -->
+
+          <%= yield %>
+
+        </div>
+
+        <div class="clear"></div>
+      </div>
+      <!-- END MAIN -->
+
+      <!-- START FOOTER -->
+      <div id="footer">
+        <div class="left-column">Copyright 2012 - All rights reserved.</div>
+        <div class="right-column">Trackmint <a href="http://www.redmintlabs.com" target="_blank">Redmint</a></div>
+      </div>
+      <!-- END FOOTER -->
+
+    </div>  
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<div class="loginform">
+  <div class="title"> <img src="/assets/mobile/logo-small.png" width="134" height="47" /></div>
+  <div class="body">
+    <h2 align="center"><%= t("forgot")  %></h2>
+    <div class="clear"></div>
+    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |f| %>
+        <label class="log-lab"><%= t("users.email")%></label>
+        <%= f.email_field :email, :class => "login-input-user" %>
+
+        <%= f.submit t("send_me_reset"), :class => "button" %>
+
+        <%= render "devise/shared/links" %>
+        </div>
+    <% end %>
+    </div>

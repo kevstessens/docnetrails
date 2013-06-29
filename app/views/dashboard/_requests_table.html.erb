@@ -1,0 +1,89 @@
+<div class="simplebox grid740">
+
+  <% if can? :create, Request %>
+
+  <div class="titleh">
+    <h3><%= t("dashboard.unnasigned_requests") %></h3>
+
+    <div class="shortcuts-icons">
+      <a class="shortcut tips" href="<%= requests_path %>" title="<%= t("view_all") %>"><img src="/assets/icons/shortcut/copy.png" width="25" height="25" alt="icon" /></a>
+      <a class="shortcut tips" href="<%= new_request_path %>" title="<%= t("dashboard.add_new_request") %>"><img src="/assets/icons/shortcut/plus.png" width="25" height="25" alt="icon" /></a>
+    </div>
+  </div>
+
+  <% else %>
+      <div class="titleh" style="margin-top: 400px;">
+        <h3><%= t("dashboard.unnasigned_requests") %></h3>
+        <div class="shortcuts-icons">
+          <a class="shortcut tips" href="<%= requests_path %>" title="<%= t("view_all") %>"><img src="/assets/icons/shortcut/copy.png" width="25" height="25" alt="icon" /></a>
+        </div>
+      </div>
+
+  <% end %>
+
+
+  <table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="example">
+    <% if !@requests.empty? %>
+
+        <thead>
+        <tr>
+          <th><%= t("id") %></th>
+          <th><%= t("bugs.brief") %></th>
+          <th><%= t("dashboard.assigned") %></th>
+          <th><%= t("dashboard.priority") %></th>
+          <th><%= t("bugs.reported_at") %></th>
+          <th><%= t("actions") %></th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <% @requests.each do |request| %>
+
+            <tr class="gradeA">
+              <td><%= request.id%></td>
+              <td style="width: 260px;"><%= link_to request.brief, request if can? :show, request %></td>
+              <% if !request.assigned%>
+                  <td><%= translate_assigned(request.assigned)%></td>
+              <% else %>
+                  <% if request.assigned_to.type == "Feature"  %>
+                      <td><%= link_to feature_path(request.assigned_to), feature_path(request.assigned_to), :target => "_blank"%></td>
+                  <% else %>
+                      <td><%= link_to bug_path(request.assigned_to), bug_path(request.assigned_to), :target => "_blank"%></td>
+                  <% end %>
+              <% end %>
+
+              <% if request.normal? %>
+                <td><strong class="hg-yellow"><%= request.request_state.name unless request.request_state.nil?%></strong></td>
+              <% elsif request.urgent? %>
+                  <td><strong class="hg-red"><%= request.request_state.name unless request.request_state.nil?%></strong></td>
+              <%elsif request.nice_to_have? %>
+                <td><strong class="hg-green"><%= request.request_state.name unless request.request_state.nil?%></strong></td>
+              <%end%>
+
+              <td><%= request.created_at.strftime("%d/%m/%y") %></td>
+              <td>
+                <%= link_to t("show"), request if can? :show, request %>
+                <%= link_to t("edit"), edit_request_path(request) if can? :update, request %>
+                <%= link_to  t("destroy"), request, method: :delete, data: { confirm: t("sure") } if can? :destroy, request %>
+              </td>
+            </tr>
+
+        <% end %>
+    <% else %>
+        <thead>
+        <tr></tr>
+        </thead>
+
+        <tr class="gradeA">
+          <td align="center"> <%= t("nothing_to_show") %></td>
+        </tr>
+
+        <tbody>
+
+    <% end %>
+
+    </tbody>
+  </table>
+
+</div>

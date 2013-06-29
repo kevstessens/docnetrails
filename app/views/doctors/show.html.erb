@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @doctor.user %>
+</p>
+
+<p>
+  <b>Hour from:</b>
+  <%= @doctor.hour_from %>
+</p>
+
+<p>
+  <b>Hour to:</b>
+  <%= @doctor.hour_to %>
+</p>
+
+<p>
+  <b>Shift duration:</b>
+  <%= @doctor.shift_duration %>
+</p>
+
+<p>
+  <b>Medical specification:</b>
+  <%= @doctor.medical_specification %>
+</p>
+
+
+<%= link_to 'Edit', edit_doctor_path(@doctor) %> |
+<%= link_to 'Back', doctors_path %>

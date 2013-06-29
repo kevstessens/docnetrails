@@ -1,0 +1,21 @@
+<div class="simplebox">
+  <h1 class="titleh"><%= current_project.name %> Statistics</h1>
+  <div class="content">
+
+
+    <!-- start statistics -->
+    <ul class="statistics">
+      <li><%= t("dashboard.project_completed")%> <p><span class="green"><%= current_project.percentant_completed unless current_project.nil?%>%</span></p>  </li>
+      <li><%= t("dashboard.days_to_deliver")%> <p> <%= (current_project.current_milestone.ending_date.to_date - DateTime.current().to_date).to_i unless current_project.nil?%> </p> </li>
+      <% if current_user.developer? %>
+        <li><%= t("dashboard.hours_worked")%> <p><span class="green"> <%= current_user.get_hours(current_project.current_milestone.id) unless current_project.nil?  %> </span></p>  </li>
+      <% else %>
+        <li><%= t("dashboard.hours_worked")%> <p><span class="green"> <%= current_project.current_milestone.milestone_hours unless current_project.nil?  %> </span></p>  </li>
+      <% end %>
+      <li><%= t("dashboard.bugs_reported")%> <p><span class="red"><%= current_project.bugs.pending.count unless current_project.nil? %></span></p>  </li>
+      <li><%= t("dashboard.pending_requests")%> <p> <%= current_project.requests.unassigned.count unless current_project.nil? %> </p>  </li>
+    </ul>
+    <!-- end statistics -->
+
+  </div>
+</div>

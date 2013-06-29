@@ -9,5 +9,21 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require_directory
  */
+
+.hide {
+    display:none;
+    top: 15% !important;
+}
+
+.hide-small {
+    display:none;
+    top: 40% !important;
+}
+
+
+body.modal-body {
+    overflow: hidden;
+    top: 50% !important;
+}

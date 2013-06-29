@@ -1,0 +1,23 @@
+<h1>Listing medical_specifications</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @medical_specifications.each do |medical_specification| %>
+  <tr>
+    <td><%= medical_specification.name %></td>
+    <td><%= link_to 'Show', medical_specification %></td>
+    <td><%= link_to 'Edit', edit_medical_specification_path(medical_specification) %></td>
+    <td><%= link_to 'Destroy', medical_specification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Medical specification', new_medical_specification_path %>

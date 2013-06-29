@@ -1,0 +1,21 @@
+<%= form_for(@prepaid_medical) do |f| %>
+  <% if @prepaid_medical.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prepaid_medical.errors.count, "error") %> prohibited this prepaid_medical from being saved:</h2>
+
+      <ul>
+      <% @prepaid_medical.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

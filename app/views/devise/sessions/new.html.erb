@@ -1,0 +1,20 @@
+
+    <div class="loginform">
+      <div class="title"> <img src="/assets/mobile/logo-small.png" width="134" height="47" /></div>
+      <div class="body">
+        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+          <label class="log-lab"><%= t("users.email")%></label>
+          <%= f.email_field :email, :class => "login-input-user" %>
+          <label class="log-lab"><%= t("password")%></label>
+          <%= f.password_field :password, :class => "login-input-pass" %>
+
+          <%= f.submit t("sign_in"), :class => "button" %>
+
+        <%= render "devise/shared/links" %>
+        </div>
+      <% end %>
+    </div>
+
+
+
+

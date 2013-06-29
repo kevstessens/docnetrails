@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  hour_from: 2013-06-29 19:27:56
+  hour_to: 2013-06-29 19:27:56
+  shift_duration: 2013-06-29 19:27:56
+  medical_specification: 
+
+two:
+  user: 
+  hour_from: 2013-06-29 19:27:56
+  hour_to: 2013-06-29 19:27:56
+  shift_duration: 2013-06-29 19:27:56
+  medical_specification: 

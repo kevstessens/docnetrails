@@ -1,4 +1,43 @@
 Docnet::Application.routes.draw do
+
+  resources :patients
+
+
+  resources :doctors
+
+
+  resources :medical_specifications
+
+
+  resources :appointments
+
+
+  resources :hospitals
+
+
+  resources :addresses
+
+
+  resources :cities
+
+
+  resources :states
+
+
+  resources :countries
+
+
+  resources :prepaid_medicals
+
+
+  devise_for :users
+
+  resources :users
+
+
+  resources :user_roles
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -45,6 +84,9 @@ Docnet::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+
+  root :to => 'dashboard#index'
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

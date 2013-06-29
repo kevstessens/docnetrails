@@ -1,0 +1,20 @@
+<body>
+
+<div class="loginform">
+  <div class="title"> <img src="/assets/logo-small.png" width="134" height="47" /></div>
+  <div class="body">
+    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+        <%= devise_error_messages! %>
+        <%= f.hidden_field :reset_password_token %>
+
+        <label class="log-lab"><%= t("mailers.new_password")%></label>
+        <%= f.password_field :password, :class => "login-input-pass" %>
+        <label class="log-lab"><%= t("mailers.confirm_password")%></label>
+        <%= f.password_field :password_confirmation, :class => "login-input-pass" %>
+
+        <%= f.submit t("mailers.change_password_input"), :class => "button" %>
+        </div>
+
+        </div>
+    <% end %>
+

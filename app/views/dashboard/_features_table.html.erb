@@ -1,0 +1,79 @@
+<div class="simplebox grid740">
+
+  <div class="titleh">
+    <h3><%= t("features.features") %></h3>
+
+    <div class="shortcuts-icons">
+      <a class="shortcut tips" href="<%= features_path %>" title="<%= t("view_all") %>"><img src="/assets/icons/shortcut/copy.png" width="25" height="25" alt="icon" /></a>
+      <% if can? :create, Feature %>
+          <a class="shortcut tips" href="<%= new_feature_path %>" title="<%= t("dashboard.new_feature") %>"><img src="/assets/icons/shortcut/plus.png" width="25" height="25" alt="icon" /></a>
+      <% end %>
+    </div>
+
+  </div>
+
+
+
+
+
+  <table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="example3">
+
+    <% if !@features.empty? %>
+
+        <thead>
+        <tr>
+          <th><%= t("id") %></th>
+          <th><%= t("bugs.brief") %></th>
+          <th><%= t("bugs.priority") %></th>
+          <th><%= t("bugs.state") %></th>
+          <th><%= t("bugs.responsible") %></th>
+          <th><%= t("actions") %></th>
+        </tr>
+        </thead>
+
+
+        <tbody>
+
+        <% @features.each do |feature| %>
+
+            <tr class="gradeA">
+              <td><%= feature.id%></td>
+              <td style="width: 220px;"><%= link_to feature.brief, feature if can? :show, feature %></td>
+              <% if feature.normal? %>
+                  <td><strong class="hg-yellow"><%= feature.ticket_priority.name unless feature.ticket_priority.nil?%></strong></td>
+              <% elsif feature.urgent? %>
+                  <td><strong class="hg-red"><%= feature.ticket_priority.name unless feature.ticket_priority.nil?%></strong></td>
+              <%elsif feature.nice_to_have? %>
+                  <td><strong class="hg-green"><%= feature.ticket_priority.name unless feature.ticket_priority.nil?%></strong></td>
+              <%end%>
+              <td><%= t(feature.feature_state.name.to_s) unless feature.feature_state.nil?%></td>
+              <td><%= feature.responsible.first_name unless feature.responsible.nil?%></td>
+              <td><%= link_to t("show"), feature if can? :show, feature %>
+                <%= link_to t("edit"), edit_feature_path(feature) if can? :update, feature %>
+                <%= link_to t("destroy"), feature, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, feature %></td>
+
+            </tr>
+        <% end %>
+
+    <% else %>
+        <thead>
+        <tr></tr>
+        </thead>
+
+        <tr class="gradeA">
+          <td align="center"><%= t("nothing_to_show") %></td>
+        </tr>
+
+        <tbody>
+
+
+    <% end %>
+    </tbody>
+
+  </table>
+
+
+
+
+
+</div>
