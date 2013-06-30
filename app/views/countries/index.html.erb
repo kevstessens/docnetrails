@@ -1,23 +1,93 @@
-<h1>Listing countries</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("countries") %></h2>	<p>Doc.net</p></div>
 
-<% @countries.each do |country| %>
-  <tr>
-    <td><%= country.name %></td>
-    <td><%= link_to 'Show', country %></td>
-    <td><%= link_to 'Edit', edit_country_path(country) %></td>
-    <td><%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
-<br />
 
-<%= link_to 'New Country', new_country_path %>
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><b><%= link_to t("countries"), countries_path %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+  <!-- START TABLE -->
+  <div class="simplebox grid740">
+
+    <div class="titleh">
+      <h3><%= t("countries") %></h3>
+
+      <div class="shortcuts-icons">
+            <a class="shortcut tips" href="<%= new_country_path %>" title="<%= t("country.add") %>"><img src="/assets/icons/shortcut/plus.png" width="25" height="25" alt="icon" /></a>
+      </div>
+
+    </div>
+
+
+
+
+
+    <table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="example">
+
+      <% if !@countries.empty? %>
+
+          <thead>
+          <tr>
+            <th><%= t("id") %></th>
+            <th><%= t("name") %></th>
+            <th><%= t("actions") %></th>
+
+          </tr>
+          </thead>
+
+
+          <tbody>
+
+          <% @countries.each do |country| %>
+
+              <tr class="gradeA">
+                <td><%= country.id %></td>
+                <td><%= country.name %></td>
+                <td><%= link_to t("show"), country %>
+                  <%= link_to t("edit"), edit_country_path(country) %>
+                  <%= link_to t("destroy"), country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+          <% end %>
+
+      <% else %>
+          <thead>
+          <tr></tr>
+          </thead>
+
+          <tr class="gradeA">
+            <td align="center"><%= t("nothing_to_show") %></td>
+          </tr>
+
+          <tbody>
+
+
+      <% end %>
+      </tbody>
+
+    </table>
+
+
+
+
+
+  </div>
+  <!-- END TABLE -->
+
+
+</div>

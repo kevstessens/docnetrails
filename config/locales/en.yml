@@ -2,6 +2,13 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  country:
+    country: "Country"
+    new: "New Country"
+    create: "Create Country"
+    add: "Add Country"
+    edit: "Edit Country"
+    details: "Country Details"
   countries: "Countries"
   states: "States"
   cities: "Cities"

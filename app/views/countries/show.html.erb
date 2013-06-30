@@ -1,10 +1,62 @@
-<p id="notice"><%= notice %></p>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("country.country") %> <%= @country.name %></h2>	<p>Doc.net</p></div>
 
-<p>
-  <b>Name:</b>
-  <%= @country.name %>
-</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
 
-<%= link_to 'Edit', edit_country_path(@country) %> |
-<%= link_to 'Back', countries_path %>
+
+
+
+
+
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= link_to t("countries"), countries_path %></li>
+      <li><b><%= @country.id %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+
+
+  <!-- START SIMPLE FORM -->
+  <div class="simplebox grid740">
+
+    <!-- start show codes -->
+    <div class="simplebox grid740">
+      <div class="titleh"><h3><%= t("country.details") %></h3>
+
+        <div class="shortcuts-icons">
+              <a class="shortcut tips" href="<%= edit_country_path(@country) %>" original-title="<%= t("country.edit") %>"><img src="/assets/icons/shortcut/file.png" width="25" height="25" alt="icon"></a>
+        </div>
+      </div>
+      <div class="body">
+
+        <ul class="statistics">
+          <li><%= t("id") %>	<p>	<span class="blue"><b><%= @country.id unless @country.nil?%></b></span>	</p>	</li>
+          <li><%= t("name") %>	<p>	<span class="blue"><b><%= @country.name unless @country.nil?%></b></span>	</p>	</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- end show codes -->
+
+  </div>
+  <!-- END SIMPLE FORM -->
+
+
+
+</div>
+
