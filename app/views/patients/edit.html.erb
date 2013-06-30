@@ -1,6 +1,89 @@
-<h1>Editing patient</h1>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("patient.edit") %></h2>	<p>Doc.net</p></div>
 
-<%= render 'form' %>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
-<%= link_to 'Show', @patient %> |
-<%= link_to 'Back', patients_path %>
+
+
+
+
+
+
+<!-- START CONTENT -->
+<div class="content">
+
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= link_to t("patients"), countries_path %></li>
+      <li><b><%= t("edit") %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+
+  <!-- START SIMPLE FORM -->
+  <div class="simplebox grid740">
+    <div class="titleh">
+      <h3><%= t("patient.edit") %></h3>
+    </div>
+    <div class="body">
+
+      <%= semantic_nested_form_for @user, :url => url_for(:controller => 'patients', :action => 'update') do |f| %>
+
+          <% if @user.errors.any? %>
+              <div class="albox errorbox" style="z-index: 670;">
+                <b><%= t("errors") %> :</b>
+                <% @user.errors.messages.each do |msg| %>
+                    <li><%= msg[1][0] %></li>
+                <% end %>
+                <a href="#" class="close tips" original-title="close"><%= t("close") %></a>
+              </div>
+          <% end %>
+
+          <div class="st-form-line">
+            <span class="st-labeltext"><%= t("name") %></span>
+            <%= f.text_field :full_name, :class => "st-forminput"%>
+          </div>
+
+          <div class="st-form-line">
+            <span class="st-labeltext"><%= t("users.email") %></span>
+            <%= f.text_field :email, :class => "st-forminput"%>
+          </div>
+
+          <div class="st-form-line">
+            <span class="st-labeltext"><%= t("birthdate") %></span>
+            <%= f.text_field :birthdate,{ :class => "datepicker-input" }%>
+          </div>
+
+          <%=f.inputs :for => [:patient, f.object.patient] do |h|%>
+
+              <div class="st-form-line">
+                <span class="st-labeltext"><%= t("prepaid_medicals") %></span>
+                <%= h.select :prepaid_medicals_id, PrepaidMedical.all.map { |f| [t(f.name.downcase),f.id] }, { :prompt => t("select_one") }, { :class => 'uniform', :style => "opacity: 0;" } %>
+              </div>
+
+          <% end %>
+
+
+
+          <div class="button-box">
+
+            <%= link_to t("cancel"), patients_path, :class => "st-clear" %>
+            <%= f.submit t("save"), :class => "st-button"%>
+          </div>
+      <% end %>
+
+    </div>
+  </div>
+  <!-- END SIMPLE FORM -->
+
+</div>
+

@@ -1,20 +1,65 @@
-<p id="notice"><%= notice %></p>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("patients") %> <%= @patient.user.full_name %></h2>	<p>Doc.net</p></div>
 
-<p>
-  <b>User:</b>
-  <%= @patient.user %>
-</p>
-
-<p>
-  <b>Prepaid medicals:</b>
-  <%= @patient.prepaid_medicals %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @patient.address %>
-</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
 
-<%= link_to 'Edit', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patients_path %>
+
+
+
+
+
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= link_to t("patients"), patients_path %></li>
+      <li><b><%= @patient.id %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+
+
+  <!-- START SIMPLE FORM -->
+  <div class="simplebox grid740">
+
+    <!-- start show codes -->
+    <div class="simplebox grid740">
+      <div class="titleh"><h3><%= t("patient.details") %></h3>
+
+        <div class="shortcuts-icons">
+          <a class="shortcut tips" href="<%= edit_patient_path(@patient) %>" original-title="<%= t("patient.edit") %>"><img src="/assets/icons/shortcut/file.png" width="25" height="25" alt="icon"></a>
+        </div>
+      </div>
+      <div class="body">
+
+        <ul class="statistics">
+          <li><%= t("id") %>	<p>	<span class="blue"><b><%= @patient.id unless @patient.nil?%></b></span>	</p>	</li>
+          <li><%= t("name") %>	<p>	<span class="blue"><b><%= @patient.user.full_name unless @patient.user.nil?%></b></span>	</p>	</li>
+          <li><%= t("email") %>	<p>	<span class="blue"><b><%= @patient.user.email unless @patient.user.nil?%></b></span>	</p>	</li>
+          <li><%= t("birthdate") %>	<p>	<span class="blue"><b><%= @patient.user.birthdate unless @patient.user.nil?%></b></span>	</p>	</li>
+          <li><%= t("prepaid_medicals") %>	<p>	<span class="blue"><b><%= PrepaidMedical.where("id = ?", @patient.prepaid_medicals_id).first.name unless @patient.prepaid_medicals_id.nil?%></b></span>	</p>	</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- end show codes -->
+
+  </div>
+  <!-- END SIMPLE FORM -->
+
+
+
+</div>
+

@@ -13,7 +13,6 @@
 //= require jquery_ujs
 //= require jquery_nested_form
 //= require users.js
-//= require best_in_place
 
 
 $(function() {
@@ -31,12 +30,6 @@ $(function() {
 });
 
 $(document).ready(function() {
-
-    jQuery(".best_in_place").best_in_place();
-    $('.best_in_place').bind('ajax:success', function(){
-        if ($(this).attr('data-type') == 'textarea')
-            $(this).JQtextile('textile', this.innerHTML)
-    });
 
     $('.highlight_on_success').bind("ajax:success", function(){
         $(this).closest('tr').effect('highlight')

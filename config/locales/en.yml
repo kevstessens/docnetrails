@@ -2,6 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  patient:
+    add: "Add Patient"
+    new: "New Patient"
+    edit: "Edit Patient"
+    create: "Create Patient"
+    details: "Patient Details"
   country:
     country: "Country"
     new: "New Country"
@@ -9,6 +15,8 @@ en:
     add: "Add Country"
     edit: "Edit Country"
     details: "Country Details"
+  select_one: "Please select one"
+  email: "Email"
   countries: "Countries"
   states: "States"
   cities: "Cities"
@@ -59,6 +67,7 @@ en:
   friday: "Friday"
   saturday: "Saturday"
   password: "Password"
+  birthdate: "Birth date"
   sign_in: "Sign in"
   send_me_reset: "Send me reset password instructions"
   forgot: "Forgot your Password?"

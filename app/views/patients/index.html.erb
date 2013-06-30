@@ -1,27 +1,97 @@
-<h1>Listing patients</h1>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Prepaid medicals</th>
-    <th>Address</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("patients") %></h2>	<p>Doc.net</p></div>
 
-<% @patients.each do |patient| %>
-  <tr>
-    <td><%= patient.user %></td>
-    <td><%= patient.prepaid_medicals %></td>
-    <td><%= patient.address %></td>
-    <td><%= link_to 'Show', patient %></td>
-    <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
-    <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
-<br />
 
-<%= link_to 'New Patient', new_patient_path %>
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><b><%= link_to t("patients"), patients_path %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+  <!-- START TABLE -->
+  <div class="simplebox grid740">
+
+    <div class="titleh">
+      <h3><%= t("patients") %></h3>
+
+      <div class="shortcuts-icons">
+        <a class="shortcut tips" href="<%= new_patient_path %>" title="<%= t("patient.add") %>"><img src="/assets/icons/shortcut/plus.png" width="25" height="25" alt="icon" /></a>
+      </div>
+
+    </div>
+
+
+
+
+
+    <table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="example">
+
+      <% if !@patients.empty? %>
+
+          <thead>
+          <tr>
+            <th><%= t("id") %></th>
+            <th><%= t("name") %></th>
+            <th><%= t("email") %></th>
+            <th><%= t("prepaid_medicals") %></th>
+            <th><%= t("actions") %></th>
+
+          </tr>
+          </thead>
+
+
+          <tbody>
+
+          <% @patients.each do |patient| %>
+
+              <tr class="gradeA">
+                <td><%= patient.id %></td>
+                <td><%= patient.user.full_name %></td>
+                <td><%= patient.user.email %></td>
+                <td><%= PrepaidMedical.where("id = ?", patient.prepaid_medicals_id).first.name %></td>
+                <td><%= link_to t("show"), patient %>
+                  <%= link_to t("edit"), edit_patient_path(patient) %>
+                  <%= link_to t("destroy"), patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+          <% end %>
+
+      <% else %>
+          <thead>
+          <tr></tr>
+          </thead>
+
+          <tr class="gradeA">
+            <td align="center"><%= t("nothing_to_show") %></td>
+          </tr>
+
+          <tbody>
+
+
+      <% end %>
+      </tbody>
+
+    </table>
+
+
+
+
+
+  </div>
+  <!-- END TABLE -->
+
+
+</div>
