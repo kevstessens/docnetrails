@@ -2,6 +2,15 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  countries: "Countries"
+  states: "States"
+  cities: "Cities"
+  medical_specifications: "Medical Specifications"
+  prepaid_medicals: "Prepaid Medicals"
+  hospitals: "Hospitals"
+  patients: "Patients"
+  doctors: "Doctors"
+  basic_details: "Basic Configs"
   sign_in: "Sign in"
   find_bugs_by: "Find bugs by"
   readd: "Read?"

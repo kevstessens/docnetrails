@@ -125,17 +125,17 @@
           <div id="sidemenu">
             <ul>
               <li <%= "class=active" if @active_tab=="dashboard" %>><a href="<%= root_path %>"><img src="/assets/icons/sidemenu/laptop.png" width="16" height="16" alt="icon"/><%= t("dashboard.dashboard")%></a></li>
-              <li <%= "class=active" if @active_tab=="projects" %>><a href="#"><img src="/assets/icons/sidemenu/copy.png" width="16" height="16" alt="icon"/><%= t("projects.projects")%></a></li>
-              <li <%= "class=active" if @active_tab=="users" %>><a href="#"><img src="/assets/icons/sidemenu/user.png" width="16" height="16" alt="icon"/><%= t("users.users")%></a></li>
-              <li <%= "class=active" if @active_tab=="invested_hours" %>><a href="#"><img src="/assets/icons/sidemenu/user_add.png" width="16" height="16" alt="icon"/><%= t("invested_hours.worked_hours")%></a></li>
-              <li <%= "class=active" if @active_tab=="features" %>><a href="#"><img src="/assets/icons/sidemenu/star.png" width="16" height="16" alt="icon"/><%= t("features.features")%></a></li>
-              <li <%= "class=active" if @active_tab=="bugs" %>><a href="#"><img src="/assets/icons/sidemenu/error.png" width="16" height="16" alt="icon"/><%= t("bugs.bugs")%></a></li>
-              <li <%= "class=active" if @active_tab=="requests" %>><a href="#"><img src="/assets/icons/sidemenu/file.png" width="16" height="16" alt="icon"/><%= t("requests.requests")%></a><span class="ballon">0</span></li>
+              <li <%= "class=active" if @active_tab=="patients" %>><a href="<%= patients_path %>"><img src="/assets/icons/sidemenu/user.png" width="16" height="16" alt="icon"/><%= t("patients")%></a></li>
+              <li <%= "class=active" if @active_tab=="doctors" %>><a href="<%= doctors_path %>"><img src="/assets/icons/sidemenu/user_add.png" width="16" height="16" alt="icon"/><%= t("doctors")%></a></li>
+              <li <%= "class=active" if @active_tab=="hospitals" %>><a href="<%= hospitals_path %>"><img src="/assets/icons/sidemenu/image.png" width="16" height="16" alt="icon"/><%= t("hospitals")%></a></li>
+              <li <%= "class=active" if @active_tab=="prepaid_medicals" %>><a href="<%= prepaid_medicals_path %>"><img src="/assets/icons/sidemenu/heart.png" width="16" height="16" alt="icon"/><%= t("prepaid_medicals")%></a><span class="ballon">0</span></li>
               <li class="subtitle">
-                <a class="action tips-right" href="#" original-title="<%= t("events.calendar")%>"><img src="/assets/icons/sidemenu/calendar.png" width="16" height="16" alt="icon"><%= t("events.calendar")%><img src="/assets/arrow-down.png" width="7" height="4" alt="arrow" class="arrow"></a>
+                <a class="action tips-right" href="#" original-title="<%= t("basic_details")%>"><img src="/assets/icons/sidemenu/info.png" width="16" height="16" alt="icon"><%= t("basic_details")%><img src="/assets/arrow-down.png" width="7" height="4" alt="arrow" class="arrow"></a>
                 <ul class="submenu" style="<%= 'display: block;' if @active_tab == 'calendar'%>">
-                  <li <%= "class=active" if @active_sub_tab=="calendar_timeline" %>><a href="#"><%= t("events.timeline")%></a></li>
-                  <li <%= "class=active" if @active_sub_tab=="calendar_events" %>><a href="#"><%= t("events.events")%></a></li>
+                  <li <%= "class=active" if @active_sub_tab=="country" %>><a href="<%= countries_path  %>"><%= t("countries")%></a></li>
+                  <li <%= "class=active" if @active_sub_tab=="state" %>><a href="<%= states_path  %>"><%= t("states")%></a></li>
+                  <li <%= "class=active" if @active_sub_tab=="city" %>><a href="<%= cities_path  %>"><%= t("cities")%></a></li>
+                  <li <%= "class=active" if @active_sub_tab=="medical_specification" %>><a href="<%= medical_specifications_path  %>"><%= t("medical_specifications")%></a></li>
                 </ul>
               </li>
 
