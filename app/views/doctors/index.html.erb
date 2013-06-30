@@ -1,31 +1,95 @@
-<h1>Listing doctors</h1>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Hour from</th>
-    <th>Hour to</th>
-    <th>Shift duration</th>
-    <th>Medical specification</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("doctors") %></h2>	<p>Doc.net</p></div>
 
-<% @doctors.each do |doctor| %>
-  <tr>
-    <td><%= doctor.user %></td>
-    <td><%= doctor.hour_from %></td>
-    <td><%= doctor.hour_to %></td>
-    <td><%= doctor.shift_duration %></td>
-    <td><%= doctor.medical_specification %></td>
-    <td><%= link_to 'Show', doctor %></td>
-    <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
-    <td><%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
-<br />
 
-<%= link_to 'New Doctor', new_doctor_path %>
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><b><%= link_to t("doctors"), doctors_path %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+  <!-- START TABLE -->
+  <div class="simplebox grid740">
+
+    <div class="titleh">
+      <h3><%= t("doctors") %></h3>
+
+      <div class="shortcuts-icons">
+        <a class="shortcut tips" href="<%= new_doctor_path %>" title="<%= t("doctor.add") %>"><img src="/assets/icons/shortcut/plus.png" width="25" height="25" alt="icon" /></a>
+      </div>
+
+    </div>
+
+
+
+
+
+    <table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="example">
+
+      <% if !@doctors.empty? %>
+
+          <thead>
+          <tr>
+            <th><%= t("id") %></th>
+            <th><%= t("name") %></th>
+            <th><%= t("email") %></th>
+            <th><%= t("actions") %></th>
+
+          </tr>
+          </thead>
+
+
+          <tbody>
+
+          <% @doctors.each do |doctor| %>
+
+              <tr class="gradeA">
+                <td><%= doctor.id %></td>
+                <td><%= doctor.user.full_name %></td>
+                <td><%= doctor.user.email %></td>
+                <td><%= link_to t("show"), doctor %>
+                  <%= link_to t("edit"), edit_doctor_path(doctor) %>
+                  <%= link_to t("destroy"), doctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+          <% end %>
+
+      <% else %>
+          <thead>
+          <tr></tr>
+          </thead>
+
+          <tr class="gradeA">
+            <td align="center"><%= t("nothing_to_show") %></td>
+          </tr>
+
+          <tbody>
+
+
+      <% end %>
+      </tbody>
+
+    </table>
+
+
+
+
+
+  </div>
+  <!-- END TABLE -->
+
+
+</div>

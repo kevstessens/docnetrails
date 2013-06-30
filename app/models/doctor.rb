@@ -5,5 +5,6 @@ class Doctor < ActiveRecord::Base
   has_and_belongs_to_many :prepaid_medicals
   has_and_belongs_to_many :medical_specification
 
-  attr_accessible :hour_from, :hour_to, :shift_duration
+  attr_accessible :hour_from, :hour_to, :shift_duration, :user_id
+
 end

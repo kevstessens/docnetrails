@@ -1,37 +1,58 @@
-<%= form_for(@doctor) do |f| %>
-  <% if @doctor.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@doctor.errors.count, "error") %> prohibited this doctor from being saved:</h2>
+<%= semantic_nested_form_for @user, :url => url_for(:controller => 'doctors', :action => 'create') do |f| %>
 
-      <ul>
-      <% @doctor.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <% if @user.errors.any? %>
+        <div class="albox errorbox" style="z-index: 670;">
+          <b><%= t("errors") %> :</b>
+          <% @user.errors.messages.each do |msg| %>
+              <li><%= msg[1][0] %></li>
+          <% end %>
+          <a href="#" class="close tips" original-title="close"><%= t("close") %></a>
+        </div>
+    <% end %>
+
+    <div class="st-form-line">
+      <span class="st-labeltext"><%= t("name") %></span>
+      <%= f.text_field :full_name, :class => "st-forminput"%>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </div>
-  <div class="field">
-    <%= f.label :hour_from %><br />
-    <%= f.time_select :hour_from %>
-  </div>
-  <div class="field">
-    <%= f.label :hour_to %><br />
-    <%= f.time_select :hour_to %>
-  </div>
-  <div class="field">
-    <%= f.label :shift_duration %><br />
-    <%= f.time_select :shift_duration %>
-  </div>
-  <div class="field">
-    <%= f.label :medical_specification %><br />
-    <%= f.text_field :medical_specification %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="st-form-line">
+      <span class="st-labeltext"><%= t("users.email") %></span>
+      <%= f.text_field :email, :class => "st-forminput"%>
+    </div>
+
+    <div class="st-form-line">
+      <span class="st-labeltext"><%= t("password") %></span>
+      <%= f.password_field :password, :class => "st-forminput"%>
+    </div>
+
+    <div class="st-form-line">
+      <span class="st-labeltext"><%= t("birthdate") %></span>
+      <%= f.text_field :birthdate,{ :class => "datepicker-input" }%>
+    </div>
+
+    <%=f.inputs :for => [:doctor, f.object.doctor] do |h|%>
+
+        <div class="st-form-line">
+          <span class="st-labeltext"><%= t("doctor.hour_from") %></span>
+          <%= h.text_field :hour_from, :class => "st-forminput"%>
+        </div>
+
+        <div class="st-form-line">
+          <span class="st-labeltext"><%= t("doctor.hour_to") %></span>
+          <%= h.text_field :hour_to, :class => "st-forminput"%>
+        </div>
+
+        <div class="st-form-line">
+          <span class="st-labeltext"><%= t("doctor.shift_duration") %></span>
+          <%= h.text_field :shift_duration, :class => "st-forminput"%>
+        </div>
+
+
+    <% end %>
+
+    <div class="button-box">
+
+      <%= link_to t("cancel"), doctors_path, :class => "st-clear" %>
+      <%= f.submit t("save"), :class => "st-button"%>
+    </div>
 <% end %>

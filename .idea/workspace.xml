@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3fed882-095c-4e00-b4cc-7f832b10220a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/patients/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/patients/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/docnet.iml" afterPath="$PROJECT_DIR$/.idea/docnet.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/doctors/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/doctors/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/doctor.rb" afterPath="$PROJECT_DIR$/app/models/doctor.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/doctors_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/doctors_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/doctors/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/doctors/edit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/patients/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/patients/edit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/patients/index.html.erb" afterPath="$PROJECT_DIR$/app/views/patients/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/patients/new.html.erb" afterPath="$PROJECT_DIR$/app/views/patients/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/patient.rb" afterPath="$PROJECT_DIR$/app/models/patient.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/patients_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/patients_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/doctors/index.html.erb" afterPath="$PROJECT_DIR$/app/views/doctors/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/doctors/new.html.erb" afterPath="$PROJECT_DIR$/app/views/doctors/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/doctors/show.html.erb" afterPath="$PROJECT_DIR$/app/views/doctors/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/patients/show.html.erb" afterPath="$PROJECT_DIR$/app/views/patients/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user_role.rb" afterPath="$PROJECT_DIR$/app/models/user_role.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="docnet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,14 +21,14 @@
     <file path="/Volumes/ARCHIVOS/Java y Rails/Rails projects/trackmint/Gemfile" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372541420428" ignored="false" />
     <file path="/seeds.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372541954489" ignored="false" />
     <file path="/Gemfile" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372623945509" ignored="false" />
-    <file path="/user.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372628899948" ignored="false" />
-    <file path="/en.yml" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372629543302" ignored="false" />
+    <file path="/user.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372632496671" ignored="false" />
+    <file path="/en.yml" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372632823959" ignored="false" />
     <file path="/20130629222509_create_appointments.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372544967552" ignored="false" />
     <file path="/appointment.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372545898651" ignored="false" />
-    <file path="/index.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372629112974" ignored="false" />
+    <file path="/index.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372634216992" ignored="false" />
     <file path="/_charts.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372545437234" ignored="false" />
     <file path="/20130629223850_create_intermediate_tables.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372545796281" ignored="false" />
-    <file path="/doctor.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372546288083" ignored="false" />
+    <file path="/doctor.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372632507563" ignored="false" />
     <file path="/patient.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372628918538" ignored="false" />
     <file path="/medical_specification.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372546281740" ignored="false" />
     <file path="/address.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372546145002" ignored="false" />
@@ -43,13 +38,15 @@
     <file path="/_sign_in.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372611893397" ignored="false" />
     <file path="/_stats.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372612339347" ignored="false" />
     <file path="/_features_table.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372612840741" ignored="false" />
-    <file path="/_form.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372628784984" ignored="false" />
-    <file path="/new.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372625872227" ignored="false" />
-    <file path="/edit.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372630038362" ignored="false" />
-    <file path="/show.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372629765266" ignored="false" />
+    <file path="/_form.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372633785079" ignored="false" />
+    <file path="/new.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372633835333" ignored="false" />
+    <file path="/edit.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372634006307" ignored="false" />
+    <file path="/show.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372634780139" ignored="false" />
     <file path="/patients_controller.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372630885629" ignored="false" />
     <file path="/fragment.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372629707868" ignored="false" />
     <file path="/user_role.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372629208340" ignored="false" />
+    <file path="/doctors_controller.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372634043055" ignored="false" />
+    <file path="/a.dummy" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372634684790" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,24 +72,43 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/patients/_form.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/doctors/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="35" column="56" selection-start="1288" selection-end="1288" vertical-scroll-proportion="-20.0">
               <folding>
-                <element signature="e#100#1699#0" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#1031#1045#0" expanded="true" />
-                <element signature="e#1276#1297#0" expanded="true" />
-                <element signature="e#1424#1439#0" expanded="true" />
+                <element signature="e#1030#1044#0" expanded="true" />
+                <element signature="e#1463#1482#0" expanded="true" />
+                <element signature="e#1649#1675#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="patients_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/patients_controller.rb">
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/doctors/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="0" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.33333334">
+            <state line="49" column="109" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.71506107">
+              <folding>
+                <element signature="n#t(&quot;doctors&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="e#489#501#0" expanded="true" />
+                <element signature="n#t(&quot;doctor.details&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#t(&quot;doctor.edit&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#t(&quot;email&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#t(&quot;birthdate&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#t(&quot;doctor.hour_from&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#t(&quot;doctor.hour_to&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#t(&quot;doctor.shift_duration&quot;)#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="4" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,80 +117,75 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/patients/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="0" selection-start="1659" selection-end="1659" vertical-scroll-proportion="-5.625">
+            <state line="55" column="105" selection-start="1928" selection-end="1928" vertical-scroll-proportion="-28.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/doctors/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="40" selection-start="647" selection-end="647" vertical-scroll-proportion="-18.75">
               <folding>
-                <element signature="n#t(&quot;patients&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#t(&quot;doctor.new&quot;)#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="e#491#504#0" expanded="true" />
-                <element signature="n#t(&quot;patient.details&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;patient.edit&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;email&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;birthdate&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;prepaid_medicals&quot;)#0;n#!!top" expanded="true" />
+                <element signature="e#465#477#0" expanded="true" />
+                <element signature="n#t(&quot;doctor.create&quot;)#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/patients/edit.html.erb">
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/patients/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="16" selection-start="1652" selection-end="1652" vertical-scroll-proportion="-8.208333">
+            <state line="0" column="0" selection-start="0" selection-end="837" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doctors_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/doctors_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="72" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/doctors/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="16" selection-start="1644" selection-end="1644" vertical-scroll-proportion="-14.916667">
               <folding>
-                <element signature="n#t(&quot;patient.edit&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#t(&quot;doctor.edit&quot;)#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="e#465#478#0" expanded="true" />
-                <element signature="n#t(&quot;patient.edit&quot;)#1;n#!!top" expanded="true" />
+                <element signature="e#464#476#0" expanded="true" />
+                <element signature="n#t(&quot;doctor.edit&quot;)#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="e#1734#1748#0" expanded="true" />
-                <element signature="e#2009#2030#0" expanded="true" />
-                <element signature="e#2163#2178#0" expanded="true" />
+                <element signature="e#1726#1740#0" expanded="true" />
+                <element signature="e#1999#2020#0" expanded="true" />
+                <element signature="e#2213#2232#0" expanded="true" />
+                <element signature="e#2423#2449#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/countries/edit.html.erb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/doctors/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="16" selection-start="0" selection-end="837" vertical-scroll-proportion="-16.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="16" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/countries/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="1492" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_role.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user_role.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="19" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patient.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/patient.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="73" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="94" column="6" selection-start="2064" selection-end="2064" vertical-scroll-proportion="-26.958334">
+              <folding>
+                <element signature="n#t(&quot;doctors&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="e#458#470#0" expanded="true" />
+                <element signature="n#t(&quot;doctors&quot;)#1;n#!!top" expanded="true" />
+                <element signature="n#t(&quot;doctor.add&quot;)#0;n#!!top" expanded="true" />
+                <element signature="e#1155#1165#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -182,10 +193,8 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/patients/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="58" selection-start="1407" selection-end="1407" vertical-scroll-proportion="-10.625">
-              <folding>
-                <element signature="e#1201#1222#0" expanded="true" />
-              </folding>
+            <state line="97" column="4" selection-start="0" selection-end="2234" vertical-scroll-proportion="-29.458334">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -211,22 +220,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/countries/show.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="dbtable:/45189353/d136f013-de64-429e-9015-5e8dcc44e32e/..patients" />
-        <option value="dbtable:/45189353/d136f013-de64-429e-9015-5e8dcc44e32e/..users" />
-        <option value="$PROJECT_DIR$/app/views/patients/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/models/patient.rb" />
         <option value="$PROJECT_DIR$/app/views/patients/index.html.erb" />
         <option value="dbtable:/45189353/d136f013-de64-429e-9015-5e8dcc44e32e/..user_roles" />
         <option value="$PROJECT_DIR$/app/models/user_role.rb" />
-        <option value="$PROJECT_DIR$/config/locales/en.yml" />
-        <option value="$PROJECT_DIR$/app/views/patients/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/patients/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/patients_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/models/doctor.rb" />
+        <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/app/views/patients/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/doctors/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/doctors/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/doctors_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/doctors/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/doctors/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/patients/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/doctors/show.html.erb" />
       </list>
     </option>
   </component>
@@ -370,6 +379,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="patients" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doctors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -887,7 +918,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2804878" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44848484" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -981,154 +1012,155 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/patients/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="31" selection-start="701" selection-end="707" vertical-scroll-proportion="-20.0">
-          <folding>
-            <element signature="n#t(&quot;patient.new&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#466#479#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="32" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="143" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/patient.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="73" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/patients/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="58" selection-start="1407" selection-end="1407" vertical-scroll-proportion="-10.625">
-          <folding>
-            <element signature="e#1201#1222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/45189353/d136f013-de64-429e-9015-5e8dcc44e32e/..user_roles">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/45189353/d136f013-de64-429e-9015-5e8dcc44e32e/..users">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/45189353/d136f013-de64-429e-9015-5e8dcc44e32e/..patients">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user_role.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="19" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/countries/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1492" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="16" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/patients/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1659" selection-end="1659" vertical-scroll-proportion="-5.625">
-          <folding>
-            <element signature="n#t(&quot;patients&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#491#504#0" expanded="true" />
-            <element signature="n#t(&quot;patient.details&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;patient.edit&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;email&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;birthdate&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;prepaid_medicals&quot;)#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/countries/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="16" selection-start="0" selection-end="837" vertical-scroll-proportion="-16.25">
+        <state line="17" column="172" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/patients/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+        <state line="26" column="66" selection-start="962" selection-end="962" vertical-scroll-proportion="-16.25">
           <folding>
-            <element signature="e#100#1699#0" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#1031#1045#0" expanded="true" />
-            <element signature="e#1276#1297#0" expanded="true" />
-            <element signature="e#1424#1439#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/countries/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="16" selection-start="0" selection-end="837" vertical-scroll-proportion="-28.75">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/patients/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="16" selection-start="1652" selection-end="1652" vertical-scroll-proportion="-8.208333">
-          <folding>
-            <element signature="n#t(&quot;patient.edit&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#465#478#0" expanded="true" />
-            <element signature="n#t(&quot;patient.edit&quot;)#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#1734#1748#0" expanded="true" />
-            <element signature="e#2009#2030#0" expanded="true" />
-            <element signature="e#2163#2178#0" expanded="true" />
-          </folding>
+        <state line="24" column="50" selection-start="493" selection-end="493" vertical-scroll-proportion="-15.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/doctor.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/patients_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.33333334">
+        <state line="29" column="27" selection-start="533" selection-end="605" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/patients/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="837" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/doctors_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="72" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/doctors/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="16" selection-start="1644" selection-end="1644" vertical-scroll-proportion="-14.916667">
+          <folding>
+            <element signature="n#t(&quot;doctor.edit&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#464#476#0" expanded="true" />
+            <element signature="n#t(&quot;doctor.edit&quot;)#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#1726#1740#0" expanded="true" />
+            <element signature="e#1999#2020#0" expanded="true" />
+            <element signature="e#2213#2232#0" expanded="true" />
+            <element signature="e#2423#2449#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/patients/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="4" selection-start="0" selection-end="2234" vertical-scroll-proportion="-29.458334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/doctors/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="6" selection-start="2064" selection-end="2064" vertical-scroll-proportion="-26.958334">
+          <folding>
+            <element signature="n#t(&quot;doctors&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#458#470#0" expanded="true" />
+            <element signature="n#t(&quot;doctors&quot;)#1;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;doctor.add&quot;)#0;n#!!top" expanded="true" />
+            <element signature="e#1155#1165#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/doctors/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="40" selection-start="647" selection-end="647" vertical-scroll-proportion="-18.75">
+          <folding>
+            <element signature="n#t(&quot;doctor.new&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#465#477#0" expanded="true" />
+            <element signature="n#t(&quot;doctor.create&quot;)#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/doctors/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="56" selection-start="1288" selection-end="1288" vertical-scroll-proportion="-20.0">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1030#1044#0" expanded="true" />
+            <element signature="e#1463#1482#0" expanded="true" />
+            <element signature="e#1649#1675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="4" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/patients/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="105" selection-start="1928" selection-end="1928" vertical-scroll-proportion="-28.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/doctors/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="109" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.71506107">
+          <folding>
+            <element signature="n#t(&quot;doctors&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#489#501#0" expanded="true" />
+            <element signature="n#t(&quot;doctor.details&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;doctor.edit&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;email&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;birthdate&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;doctor.hour_from&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;doctor.hour_to&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;doctor.shift_duration&quot;)#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

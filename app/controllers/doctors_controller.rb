@@ -25,6 +25,9 @@ class DoctorsController < ApplicationController
   # GET /doctors/new.json
   def new
     @doctor = Doctor.new
+    @user = User.new
+    @user.doctor=@doctor
+
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,15 +38,17 @@ class DoctorsController < ApplicationController
   # GET /doctors/1/edit
   def edit
     @doctor = Doctor.find(params[:id])
-  end
+    @user = User.find(@doctor.user_id)  end
 
   # POST /doctors
   # POST /doctors.json
   def create
-    @doctor = Doctor.new(params[:doctor])
+    @user = User.new(params[:user])
+    @user.user_role_id = UserRole.doctor.id
 
     respond_to do |format|
-      if @doctor.save
+      if @user.save
+        @doctor = @user.doctor
         format.html { redirect_to @doctor, notice: 'Doctor was successfully created.' }
         format.json { render json: @doctor, status: :created, location: @doctor }
       else
@@ -57,9 +62,11 @@ class DoctorsController < ApplicationController
   # PUT /doctors/1.json
   def update
     @doctor = Doctor.find(params[:id])
+    @user = @doctor.user
+
 
     respond_to do |format|
-      if @doctor.update_attributes(params[:doctor])
+      if @user.update_without_password(params[:user])
         format.html { redirect_to @doctor, notice: 'Doctor was successfully updated.' }
         format.json { head :no_content }
       else
