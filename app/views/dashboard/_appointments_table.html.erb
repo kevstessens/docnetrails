@@ -1,0 +1,75 @@
+<div class="simplebox grid740">
+
+  <div class="titleh">
+    <h3><%= t("appointments") %></h3>
+
+    <div class="shortcuts-icons">
+      <a class="shortcut tips" href="<%= new_appointment_path%>" title="<%= t("new_appointment_index") %>"><img src="/assets/icons/shortcut/plus.png" width="25" height="25" alt="icon" /></a>
+    </div>
+
+  </div>
+
+
+
+
+
+  <table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="example3">
+
+    <% if !@appointments.nil? %>
+
+        <thead>
+        <tr>
+          <th><%= t("date") %></th>
+              <% if current_user.user_role == UserRole.paciente%>
+          <th><%= t("doctor.doctor") %></th>
+              <% else %>
+          <th><%= t("patient.patient") %></th>
+              <% end %>
+
+              <th><%= t("actions") %></th>
+        </tr>
+        </thead>
+
+
+        <tbody>
+
+        <% @appointments.each do |appointment| %>
+
+            <tr class="gradeA">
+              <td><%= appointment.datetime.strftime("%d/%m/%y %H:%M") unless appointment.datetime.nil?%></td>
+              <% if current_user.user_role == UserRole.paciente%>
+            <td><%= appointment.doctor.user.full_name %></td>
+              <% else %>
+                  <td><%= appointment.patient.user.full_name %></td>
+              <% end %>
+              <td><%= link_to t("show"), appointment %>
+                <% if current_user.user_role == UserRole.doctor%>
+                    <%= link_to t("close"), edit_appointment_path(appointment) %>
+                    <% end %>
+              <%= link_to t("cancel"), appointment, method: :delete, data: { confirm: 'Are you sure?' } unless appointment.datetime <= Date.current %></td>
+
+            </tr>
+        <% end %>
+
+    <% else %>
+        <thead>
+        <tr></tr>
+        </thead>
+
+        <tr class="gradeA">
+          <td align="center"><%= t("nothing_to_show") %></td>
+        </tr>
+
+        <tbody>
+
+
+    <% end %>
+    </tbody>
+
+  </table>
+
+
+
+
+
+</div>

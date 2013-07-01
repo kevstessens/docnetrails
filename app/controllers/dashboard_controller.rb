@@ -7,6 +7,13 @@ class DashboardController < ApplicationController
 
     @dashboard_page = true
 
+    if current_user.user_role == UserRole.paciente
+    @appointments = Appointment.where("patient_id = ?", current_user.patient.id)
+    elsif current_user.user_role == UserRole.doctor
+    @appointments = Appointment.where("doctor_id = ?", current_user.doctor.id)
+    end
+
+
   end
 
   def statistics

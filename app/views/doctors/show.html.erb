@@ -46,10 +46,10 @@
           <li><%= t("id") %>	<p>	<span class="blue"><b><%= @doctor.id unless @doctor.nil?%></b></span>	</p>	</li>
           <li><%= t("name") %>	<p>	<span class="blue"><b><%= @doctor.user.full_name unless @doctor.user.nil?%></b></span>	</p>	</li>
           <li><%= t("email") %>	<p>	<span class="blue"><b><%= @doctor.user.email unless @doctor.user.nil?%></b></span>	</p>	</li>
-          <li><%= t("birthdate") %>	<p>	<span class="blue"><b><%= @doctor.user.birthdate.strftime("%d/%m/%y") unless @doctor.user.nil?%></b></span>	</p>	</li>
-          <li><%= t("doctor.hour_from") %>	<p>	<span class="blue"><b><%= @doctor.hour_from.strftime("%H:%M") unless @doctor.user.nil?%></b></span>	</p>	</li>
-          <li><%= t("doctor.hour_to") %>	<p>	<span class="blue"><b><%= @doctor.hour_to.strftime("%H:%M") unless @doctor.user.nil?%></b></span>	</p>	</li>
-          <li><%= t("doctor.shift_duration") %>	<p>	<span class="blue"><b><%= @doctor.shift_duration.strftime("%H:%M") unless @doctor.user.nil?%></b></span>	</p>	</li>
+          <li><%= t("birthdate") %>	<p>	<span class="blue"><b><%= @doctor.user.birthdate.strftime("%d/%m/%y") unless @doctor.user.birthdate.nil?%></b></span>	</p>	</li>
+          <li><%= t("doctor.hour_from") %>	<p>	<span class="blue"><b><%= @doctor.hour_from.strftime("%H:%M") unless @doctor.hour_from.nil?%></b></span>	</p>	</li>
+          <li><%= t("doctor.hour_to") %>	<p>	<span class="blue"><b><%= @doctor.hour_to.strftime("%H:%M") unless @doctor.hour_to.nil?%></b></span>	</p>	</li>
+          <li><%= t("doctor.shift_duration") %>	<p>	<span class="blue"><b><%= @doctor.shift_duration.strftime("%H:%M") unless @doctor.shift_duration.nil?%></b></span>	</p>	</li>
           <li><%= t("doctor.medical_specifications") %>	<p>	<span class="blue"><b><%= @doctor.list_specifications unless @doctor.medical_specifications.nil?%></b></span>	</p>	</li>
           <li><%= t("doctor.hospitals") %>	<p>	<span class="blue"><b><%= @doctor.list_hospitals unless @doctor.hospitals.nil?%></b></span>	</p>	</li>
           <li><%= t("doctor.prepaid_medicals") %>	<p>	<span class="blue"><b><%= @doctor.list_prepaids unless @doctor.prepaid_medicals.nil?%></b></span>	</p>	</li>

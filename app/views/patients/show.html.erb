@@ -46,7 +46,7 @@
           <li><%= t("id") %>	<p>	<span class="blue"><b><%= @patient.id unless @patient.nil?%></b></span>	</p>	</li>
           <li><%= t("name") %>	<p>	<span class="blue"><b><%= @patient.user.full_name unless @patient.user.nil?%></b></span>	</p>	</li>
           <li><%= t("email") %>	<p>	<span class="blue"><b><%= @patient.user.email unless @patient.user.nil?%></b></span>	</p>	</li>
-          <li><%= t("birthdate") %>	<p>	<span class="blue"><b><%= @patient.user.birthdate.strftime("%d/%m/%y") unless @patient.user.nil?%></b></span>	</p>	</li>
+          <li><%= t("birthdate") %>	<p>	<span class="blue"><b><%= @patient.user.birthdate.strftime("%d/%m/%y") unless @patient.user.birthdate.nil?%></b></span>	</p>	</li>
           <li><%= t("prepaid_medicals") %>	<p>	<span class="blue"><b><%= PrepaidMedical.where("id = ?", @patient.prepaid_medical_id).first.name unless @patient.prepaid_medical_id.nil?%></b></span>	</p>	</li>
         </ul>
 
