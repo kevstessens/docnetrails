@@ -47,8 +47,45 @@
           <%= h.text_field :shift_duration, :class => "st-forminput"%>
         </div>
 
+        <div class="st-form-line">
+          <span class="st-labeltext"><%= t("hospitals")%></span>
+          <div>
+            <% for hospital in Hospital.all %>
+                <div class="checker">
+                  <%= check_box_tag "user[doctor_attributes][hospital_ids][]", hospital.id, h.object.hospitals.include?(hospital), :class => "uniform", :id => "the_magick" %>
+                </div>
+                <%= hospital.name %>
+            <% end %>
+          </div>
+        </div>
 
+
+        <div class="st-form-line">
+          <span class="st-labeltext"><%= t("medical_specifications")%></span>
+          <div>
+            <% for medical_specification in MedicalSpecification.all %>
+                <div class="checker">
+                  <%= check_box_tag "user[doctor_attributes][medical_specification_ids][]", medical_specification.id, h.object.medical_specifications.include?(medical_specification), :class => "uniform", :id => "the_magick" %>
+                </div>
+                <%= medical_specification.name %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="st-form-line">
+          <span class="st-labeltext"><%= t("prepaid_medicals")%></span>
+          <div>
+            <% for prepaid_medical in PrepaidMedical.all %>
+                <div class="checker">
+                  <%= check_box_tag "user[doctor_attributes][prepaid_medical_ids][]", prepaid_medical.id, h.object.prepaid_medicals.include?(prepaid_medical), :class => "uniform", :id => "the_magick" %>
+                </div>
+                <%= prepaid_medical.name %>
+            <% end %>
+          </div>
+        </div>
     <% end %>
+
+
 
     <div class="button-box">
 

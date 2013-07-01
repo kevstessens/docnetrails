@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails docnet: development" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="d136f013-de64-429e-9015-5e8dcc44e32e">
+  <data-source source="LOCAL" name="Rails docnet: test" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="aedf35c4-9519-4dbd-8d0b-c2ee2879221f">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/xerial-sqlite-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
+      </library>
+    </libraries>
+    <schema name="" catalog=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails docnet: development" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="5ab8525a-ccd8-404a-848f-0cbacb7cc688">
     <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
     <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
     <libraries>
@@ -66,6 +79,36 @@
       <primary-key columns="id"/>
       <index name="index_doctors_on_medical_specification_id" unique="true" columns="medical_specification_id"/>
       <index name="index_doctors_on_user_id" unique="true" columns="user_id"/>
+    </table>
+    <table name="doctors_hospitals" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="doctor_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="hospital_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_doctors_hospitals_on_hospital_id" unique="true" columns="hospital_id"/>
+      <index name="index_doctors_hospitals_on_doctor_id" unique="true" columns="doctor_id"/>
+    </table>
+    <table name="doctors_medical_specifications" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="doctor_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="medical_specification_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_doctors_medical_specifications_on_medical_specification_id" unique="true" columns="medical_specification_id"/>
+      <index name="index_doctors_medical_specifications_on_doctor_id" unique="true" columns="doctor_id"/>
+    </table>
+    <table name="doctors_prepaid_medicals" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="doctor_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="prepaid_medical_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_doctors_prepaid_medicals_on_prepaid_medical_id" unique="true" columns="prepaid_medical_id"/>
+      <index name="index_doctors_prepaid_medicals_on_doctor_id" unique="true" columns="doctor_id"/>
     </table>
     <table name="hospitals" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
@@ -148,43 +191,5 @@
       <index name="index_users_on_email" unique="true" columns="email"/>
       <index name="index_users_on_user_role_id" unique="true" columns="user_role_id"/>
     </table>
-  </data-source>
-  <data-source source="LOCAL" name="Rails docnet: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="723fa69a-61ec-42a1-b7e0-a0998ea38b50">
-    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-    <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
-    <libraries>
-      <library>
-        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/xerial-sqlite-license.txt</url>
-      </library>
-      <library>
-        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
-      </library>
-    </libraries>
-  </data-source>
-  <data-source source="LOCAL" name="Rails trackmint: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="0d4a0b9f-6b72-4809-95f9-d9bd558d1f8e">
-    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-    <jdbc-url>jdbc:mysql://127.0.0.1/trackmint_production</jdbc-url>
-    <user-name>root</user-name>
-    <user-password>dfc8df9bdfc6dfc6dfc9df9edfd9dfc2</user-password>
-    <libraries>
-      <library>
-        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-license.txt</url>
-      </library>
-      <library>
-        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar</url>
-      </library>
-    </libraries>
-  </data-source>
-  <data-source source="LOCAL" name="Rails docnet: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="3bba3039-1589-45c2-ab2d-8a71d177382b">
-    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-    <jdbc-url>jdbc:sqlite:C:\Users\Usuario\Proyectos\docnetrails\db\production.sqlite3</jdbc-url>
-    <libraries>
-      <library>
-        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/xerial-sqlite-license.txt</url>
-      </library>
-      <library>
-        <url>jar://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar!/</url>
-      </library>
-    </libraries>
   </data-source>
 </component>
