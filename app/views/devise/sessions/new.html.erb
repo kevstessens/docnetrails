@@ -10,8 +10,13 @@
 
           <%= f.submit t("sign_in"), :class => "button" %>
 
-        <%= render "devise/shared/links" %>
-        </div>
+            <%= render "devise/shared/links" %>
+
+            <label class="log-lab"> </label>
+            <label class="log-lab"> </label>
+
+            <%= link_to t("not_member"), new_user_registration_path, :class => "st-clear-right" %>
+            </div>
       <% end %>
     </div>
 

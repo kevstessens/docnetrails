@@ -30,7 +30,7 @@ Docnet::Application.routes.draw do
   resources :prepaid_medicals
 
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations"}
 
   resources :users
 

@@ -34,7 +34,7 @@
 
         <div class="st-form-line">
           <span class="st-labeltext"><%= t("prepaid_medicals") %></span>
-          <%= h.select :prepaid_medicals_id, PrepaidMedical.all.map { |f| [t(f.name.downcase),f.id] }, { :prompt => t("select_one") }, { :class => 'uniform', :style => "opacity: 0;" } %>
+          <%= h.select :prepaid_medical_id, PrepaidMedical.all.map { |f| [t(f.name.downcase),f.id] }, { :prompt => t("select_one") }, { :class => 'uniform', :style => "opacity: 0;" } %>
         </div>
 
     <% end %>

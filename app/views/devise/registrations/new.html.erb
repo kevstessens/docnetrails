@@ -1,0 +1,29 @@
+
+
+<div class="loginform">
+  <div class="title"> <img src="/assets/mobile/logo-small.png" width="134" height="47" /></div>
+  <div class="body">
+    <%= form_for(@user) do |f| %>
+        <label class="log-lab"><%= t("prepaid_medical")%></label>
+        <%= f.select :prepaid_medical_id, PrepaidMedical.all.map { |f| [t(f.name.downcase),f.id] }, { :prompt => t("select_one") }, { :class => 'login-input-user-select' } %>
+        <label class="log-lab"><%= t("name")%></label>
+        <%= f.text_field :full_name, :class => "login-input-user" %>
+        <label class="log-lab"><%= t("users.email")%></label>
+        <%= f.email_field :email, :class => "login-input-user" %>
+        <label class="log-lab"><%= t("password")%></label>
+        <%= f.password_field :password, :class => "login-input-pass" %>
+        <label class="log-lab"><%= t("mailers.confirm_password")%></label>
+        <%= f.password_field :password_confirmation, :class => "login-input-pass"%>
+
+        <%= f.hidden_field :user_role_id, :value => UserRole.paciente.id %>
+
+        <%= f.submit t("sign_up"), :class => "button" %>
+
+        <%= render "devise/shared/links" %>
+        <label class="log-lab"> </label>
+        <label class="log-lab"> </label>
+
+        <%= link_to t("already_member"), root_path, :class => "st-clear-right" %>
+        </div>
+  <% end %>
+    </div>
