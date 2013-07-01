@@ -1,15 +1,63 @@
-<p id="notice"><%= notice %></p>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("city.city") %> <%= @city.name %></h2>	<p>Doc.net</p></div>
 
-<p>
-  <b>State:</b>
-  <%= @city.state %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @city.name %>
-</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
 
-<%= link_to 'Edit', edit_city_path(@city) %> |
-<%= link_to 'Back', cities_path %>
+
+
+
+
+
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= link_to t("cities"), cities_path %></li>
+      <li><b><%= @city.id %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+
+
+  <!-- START SIMPLE FORM -->
+  <div class="simplebox grid740">
+
+    <!-- start show codes -->
+    <div class="simplebox grid740">
+      <div class="titleh"><h3><%= t("city.details") %></h3>
+
+        <div class="shortcuts-icons">
+          <a class="shortcut tips" href="<%= edit_city_path(@city) %>" original-title="<%= t("city.edit") %>"><img src="/assets/icons/shortcut/file.png" width="25" height="25" alt="icon"></a>
+        </div>
+      </div>
+      <div class="body">
+
+        <ul class="statistics">
+          <li><%= t("id") %>	<p>	<span class="blue"><b><%= @city.id unless @city.nil?%></b></span>	</p>	</li>
+          <li><%= t("state.state") %>	<p>	<span class="blue"><b><%= @city.state.name unless @city.nil?%></b></span>	</p>	</li>
+          <li><%= t("name") %>	<p>	<span class="blue"><b><%= @city.name unless @city.nil?%></b></span>	</p>	</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- end show codes -->
+
+  </div>
+  <!-- END SIMPLE FORM -->
+
+
+
+</div>
+

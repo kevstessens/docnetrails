@@ -1,25 +1,95 @@
-<h1>Listing cities</h1>
 
-<table>
-  <tr>
-    <th>State</th>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("cities") %></h2>	<p>Doc.net</p></div>
 
-<% @cities.each do |city| %>
-  <tr>
-    <td><%= city.state %></td>
-    <td><%= city.name %></td>
-    <td><%= link_to 'Show', city %></td>
-    <td><%= link_to 'Edit', edit_city_path(city) %></td>
-    <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
-<br />
 
-<%= link_to 'New City', new_city_path %>
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><b><%= link_to t("cities"), cities_path %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+  <!-- START TABLE -->
+  <div class="simplebox grid740">
+
+    <div class="titleh">
+      <h3><%= t("cities") %></h3>
+
+      <div class="shortcuts-icons">
+        <a class="shortcut tips" href="<%= new_city_path %>" title="<%= t("city.add") %>"><img src="/assets/icons/shortcut/plus.png" width="25" height="25" alt="icon" /></a>
+      </div>
+
+    </div>
+
+
+
+
+
+    <table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="example">
+
+      <% if !@cities.empty? %>
+
+          <thead>
+          <tr>
+            <th><%= t("id") %></th>
+            <th><%= t("state.state") %></th>
+            <th><%= t("name") %></th>
+            <th><%= t("actions") %></th>
+
+          </tr>
+          </thead>
+
+
+          <tbody>
+
+          <% @cities.each do |city| %>
+
+              <tr class="gradeA">
+                <td><%= city.id %></td>
+                <td><%= city.state.name %></td>
+                <td><%= city.name %></td>
+                <td><%= link_to t("show"), city %>
+                  <%= link_to t("edit"), edit_city_path(city) %>
+                  <%= link_to t("destroy"), city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+          <% end %>
+
+      <% else %>
+          <thead>
+          <tr></tr>
+          </thead>
+
+          <tr class="gradeA">
+            <td align="center"><%= t("nothing_to_show") %></td>
+          </tr>
+
+          <tbody>
+
+
+      <% end %>
+      </tbody>
+
+    </table>
+
+
+
+
+
+  </div>
+  <!-- END TABLE -->
+
+
+</div>

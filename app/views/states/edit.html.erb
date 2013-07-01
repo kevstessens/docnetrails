@@ -1,6 +1,46 @@
-<h1>Editing state</h1>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("state.edit") %></h2>	<p>Doc.net</p></div>
 
-<%= render 'form' %>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
-<%= link_to 'Show', @state %> |
-<%= link_to 'Back', states_path %>
+
+
+
+
+
+
+<!-- START CONTENT -->
+<div class="content">
+
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= link_to t("states"), states_path %></li>
+      <li><b><%= t("edit") %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+
+  <!-- START SIMPLE FORM -->
+  <div class="simplebox grid740">
+    <div class="titleh">
+      <h3><%= t("state.edit") %></h3>
+    </div>
+    <div class="body">
+
+      <%= render 'form' %>
+
+    </div>
+  </div>
+  <!-- END SIMPLE FORM -->
+
+</div>
+

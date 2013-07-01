@@ -2,41 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3fed882-095c-4e00-b4cc-7f832b10220a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_logged_in.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_logged_in.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cities/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/cities/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/states/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/states/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/city.rb" afterPath="$PROJECT_DIR$/app/models/city.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/docnet.iml" afterPath="$PROJECT_DIR$/.idea/docnet.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cities/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/cities/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/states/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/states/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cities/index.html.erb" afterPath="$PROJECT_DIR$/app/views/cities/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/states/index.html.erb" afterPath="$PROJECT_DIR$/app/views/states/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cities/new.html.erb" afterPath="$PROJECT_DIR$/app/views/cities/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/states/new.html.erb" afterPath="$PROJECT_DIR$/app/views/states/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cities/show.html.erb" afterPath="$PROJECT_DIR$/app/views/cities/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/states/show.html.erb" afterPath="$PROJECT_DIR$/app/views/states/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/state.rb" afterPath="$PROJECT_DIR$/app/models/state.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="docnet.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372623526192" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372633765058" ignored="false" />
     <file path="/user_roles_controller.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372541131061" ignored="false" />
     <file path="/Volumes/ARCHIVOS/Java y Rails/Rails projects/trackmint/Gemfile" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372541420428" ignored="false" />
     <file path="/seeds.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372541954489" ignored="false" />
     <file path="/Gemfile" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372623945509" ignored="false" />
-    <file path="/user.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372632496671" ignored="false" />
-    <file path="/en.yml" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372632823959" ignored="false" />
+    <file path="/user.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372628899948" ignored="false" />
+    <file path="/en.yml" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372635069357" ignored="false" />
     <file path="/20130629222509_create_appointments.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372544967552" ignored="false" />
     <file path="/appointment.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372545898651" ignored="false" />
-    <file path="/index.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372634216992" ignored="false" />
+    <file path="/index.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372636358131" ignored="false" />
     <file path="/_charts.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372545437234" ignored="false" />
     <file path="/20130629223850_create_intermediate_tables.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372545796281" ignored="false" />
-    <file path="/doctor.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372632507563" ignored="false" />
+    <file path="/doctor.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372546288083" ignored="false" />
     <file path="/patient.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372628918538" ignored="false" />
     <file path="/medical_specification.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372546281740" ignored="false" />
     <file path="/address.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372546145002" ignored="false" />
     <file path="/prepaid_medical.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372546219035" ignored="false" />
     <file path="/hospital.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372546191638" ignored="false" />
-    <file path="/_logged_in.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372638160403" ignored="false" />
+    <file path="/_logged_in.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372613896625" ignored="false" />
     <file path="/_sign_in.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372611893397" ignored="false" />
     <file path="/_stats.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372612339347" ignored="false" />
     <file path="/_features_table.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372612840741" ignored="false" />
-    <file path="/_form.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372633785079" ignored="false" />
-    <file path="/new.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372633835333" ignored="false" />
-    <file path="/edit.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372634006307" ignored="false" />
-    <file path="/show.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372634780139" ignored="false" />
+    <file path="/_form.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372638935140" ignored="false" />
+    <file path="/new.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372625872227" ignored="false" />
+    <file path="/edit.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372634047610" ignored="false" />
+    <file path="/show.html.erb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372636150603" ignored="false" />
     <file path="/patients_controller.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372630885629" ignored="false" />
     <file path="/fragment.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372629707868" ignored="false" />
     <file path="/user_role.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372629208340" ignored="false" />
-    <file path="/doctors_controller.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372634043055" ignored="false" />
-    <file path="/a.dummy" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372634684790" ignored="false" />
+    <file path="/state.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372636012275" ignored="false" />
+    <file path="/city.rb" changelist="c3fed882-095c-4e00-b4cc-7f832b10220a" time="1372636163732" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,142 +81,66 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/doctors/_form.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/cities/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="56" selection-start="1288" selection-end="1288" vertical-scroll-proportion="-20.0">
+            <state line="7" column="10" selection-start="280" selection-end="280" vertical-scroll-proportion="-2.3333333">
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#1030#1044#0" expanded="true" />
-                <element signature="e#1463#1482#0" expanded="true" />
-                <element signature="e#1649#1675#0" expanded="true" />
+                <element signature="e#454#470#0" expanded="true" />
+                <element signature="e#573#588#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/doctors/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="109" selection-start="1771" selection-end="1771" vertical-scroll-proportion="-21.958334">
-              <folding>
-                <element signature="n#t(&quot;doctors&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="e#489#501#0" expanded="true" />
-                <element signature="n#t(&quot;doctor.details&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;doctor.edit&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;email&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;birthdate&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;doctor.hour_from&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;doctor.hour_to&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;doctor.shift_duration&quot;)#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_logged_in.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_logged_in.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="108" selection-start="4034" selection-end="4034" vertical-scroll-proportion="1.8521031">
-              <folding>
-                <element signature="n#t(&quot;no_file&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;choose&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;patients&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;doctors&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;hospitals&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;prepaid_medicals&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;basic_details&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;basic_details&quot;)#1;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;countries&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;states&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;cities&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;medical_specifications&quot;)#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="4" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/patients/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="105" selection-start="1928" selection-end="1928" vertical-scroll-proportion="-28.125">
-              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/doctors/new.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/states/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="40" selection-start="647" selection-end="647" vertical-scroll-proportion="-18.75">
-              <folding>
-                <element signature="n#t(&quot;doctor.new&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="e#465#477#0" expanded="true" />
-                <element signature="n#t(&quot;doctor.create&quot;)#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="doctors_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/doctors_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="72" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
+            <state line="40" column="20" selection-start="766" selection-end="766" vertical-scroll-proportion="-3.3921568">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/doctors/edit.html.erb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/cities/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="16" selection-start="1644" selection-end="1644" vertical-scroll-proportion="-14.916667">
+            <state line="55" column="50" selection-start="1267" selection-end="1267" vertical-scroll-proportion="-3.0">
               <folding>
-                <element signature="n#t(&quot;doctor.edit&quot;)#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="e#464#476#0" expanded="true" />
-                <element signature="n#t(&quot;doctor.edit&quot;)#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="e#1726#1740#0" expanded="true" />
-                <element signature="e#1999#2020#0" expanded="true" />
-                <element signature="e#2213#2232#0" expanded="true" />
-                <element signature="e#2423#2449#0" expanded="true" />
+                <element signature="e#388#412#0" expanded="true" />
+                <element signature="e#1072#1079#0" expanded="true" />
+                <element signature="e#1153#1162#0" expanded="true" />
+                <element signature="e#1191#1203#0" expanded="true" />
+                <element signature="e#1505#1514#0" expanded="true" />
+                <element signature="e#1554#1563#0" expanded="true" />
+                <element signature="e#1619#1631#0" expanded="true" />
+                <element signature="e#1880#1900#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/doctors/index.html.erb">
+      <file leaf-file-name="workspace.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="6" selection-start="2064" selection-end="2064" vertical-scroll-proportion="-26.958334">
-              <folding>
-                <element signature="n#t(&quot;doctors&quot;)#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="e#458#470#0" expanded="true" />
-                <element signature="n#t(&quot;doctors&quot;)#1;n#!!top" expanded="true" />
-                <element signature="n#t(&quot;doctor.add&quot;)#0;n#!!top" expanded="true" />
-                <element signature="e#1155#1165#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/patients/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="4" selection-start="0" selection-end="2234" vertical-scroll-proportion="-29.458334">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-38.717148">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/cities/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="78" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-2.490196">
+              <folding>
+                <element signature="n#t(&quot;city.city&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="e#479#490#0" expanded="true" />
+                <element signature="n#t(&quot;city.details&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#t(&quot;city.edit&quot;)#0;n#!!top" expanded="true" />
+                <element signature="n#t(&quot;state.state&quot;)#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -223,22 +166,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="dbtable:/45189353/d136f013-de64-429e-9015-5e8dcc44e32e/..user_roles" />
-        <option value="$PROJECT_DIR$/app/models/user_role.rb" />
         <option value="$PROJECT_DIR$/app/views/patients/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/patients_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/models/doctor.rb" />
-        <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/app/views/patients/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/doctors/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/doctors/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/doctors_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/doctors/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/doctors/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/patients/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/doctors/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_logged_in.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/cities/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/states/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/cities/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/states/new.html.erb" />
+        <option value="$PROJECT_DIR$/config/locales/en.yml" />
+        <option value="$PROJECT_DIR$/app/models/state.rb" />
+        <option value="$PROJECT_DIR$/app/views/states/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/cities/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/city.rb" />
+        <option value="$PROJECT_DIR$/app/views/states/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/states/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/cities/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/cities/index.html.erb" />
       </list>
     </option>
   </component>
@@ -250,8 +193,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -279,8 +222,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,7 +236,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
+              <option name="myItemId" value="docnetrails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -305,53 +246,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
+              <option name="myItemId" value="docnetrails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -369,7 +264,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
+              <option name="myItemId" value="docnetrails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -381,7 +276,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="patients" />
+              <option name="myItemId" value="states" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -391,51 +286,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doctors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
+              <option name="myItemId" value="docnetrails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -457,7 +308,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="docnetrails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="docnet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docnetrails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -475,63 +348,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
+              <option name="myItemId" value="docnetrails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docnet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="Database.TableEditor.Splitter" value="1.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="preferences.sourceCode" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../LAB3/dealhunter" />
-    <property name="FullScreen" value="true" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/LAB3/dealhunter" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="Database.TableEditor.Splitter" value="1.0" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -799,6 +640,64 @@
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
+    <configuration default="false" name="Production: docnet" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="docnet" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="true" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="ruby-1.9.3-p392" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Development: docnet" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="docnet" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="true" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="ruby-1.9.3-p392" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyDebugRunner" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <configuration default="false" name="test" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="docnet" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -849,67 +748,11 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Production: docnet" type="RailsRunConfigurationType" factoryName="Rails">
-      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
-      <module name="docnet" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Development: docnet" type="RailsRunConfigurationType" factoryName="Rails">
-      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
-      <module name="docnet" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
-      <RunnerSettings RunnerId="RubyDebugRunner" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
     <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: docnet" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: docnet" />
+      <item index="0" class="java.lang.String" itemvalue="Rails.Production: docnet" />
+      <item index="1" class="java.lang.String" itemvalue="Rails.Development: docnet" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
       <item index="4" class="java.lang.String" itemvalue="Rake.db:create" />
       <item index="5" class="java.lang.String" itemvalue="Rake.db:migrate" />
       <item index="6" class="java.lang.String" itemvalue="Rake.db:seed" />
@@ -925,6 +768,23 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c3fed882-095c-4e00-b4cc-7f832b10220a" name="Default" comment="" />
@@ -934,24 +794,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32848486" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2804878" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29393938" sideWeight="0.7041847" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39972144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44848484" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756132" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2958153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32848486" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1037,168 +897,153 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/patients/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/cities/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="66" selection-start="962" selection-end="962" vertical-scroll-proportion="-16.25">
+        <state line="10" column="53" selection-start="220" selection-end="220" vertical-scroll-proportion="0.38990825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/countries/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="726" vertical-scroll-proportion="-0.0">
           <folding>
-            <element signature="e#1031#1045#0" expanded="true" />
+            <element signature="e#103#124#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/countries/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/cities/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="16" selection-start="0" selection-end="837" vertical-scroll-proportion="-28.75">
+        <state line="20" column="13" selection-start="287" selection-end="287" vertical-scroll-proportion="0.5483871">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/patients/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/countries/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="50" selection-start="493" selection-end="493" vertical-scroll-proportion="-15.0">
+        <state line="19" column="87" selection-start="275" selection-end="275" vertical-scroll-proportion="0.04032258">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/doctor.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/countries/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+        <state line="36" column="45" selection-start="791" selection-end="791" vertical-scroll-proportion="-12.230769">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/patients_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/states/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="27" selection-start="533" selection-end="605" vertical-scroll-proportion="0.0">
+        <state line="40" column="20" selection-start="766" selection-end="766" vertical-scroll-proportion="-3.3921568">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/patients/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/state.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="837" vertical-scroll-proportion="-0.0">
+        <state line="2" column="36" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/doctors_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/city.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="72" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
+        <state line="2" column="34" selection-start="86" selection-end="86" vertical-scroll-proportion="0.077097505">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/doctors/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/states/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="16" selection-start="1644" selection-end="1644" vertical-scroll-proportion="-14.916667">
+        <state line="9" column="42" selection-start="387" selection-end="387" vertical-scroll-proportion="0.38059703">
           <folding>
-            <element signature="n#t(&quot;doctor.edit&quot;)#0;n#!!top" expanded="true" />
+            <element signature="e#457#477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/states/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="73" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.19628647">
+          <folding>
+            <element signature="n#t(&quot;states&quot;)#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#464#476#0" expanded="true" />
-            <element signature="n#t(&quot;doctor.edit&quot;)#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#1726#1740#0" expanded="true" />
-            <element signature="e#1999#2020#0" expanded="true" />
-            <element signature="e#2213#2232#0" expanded="true" />
-            <element signature="e#2423#2449#0" expanded="true" />
+            <element signature="e#457#468#0" expanded="true" />
+            <element signature="n#t(&quot;states&quot;)#1;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;state.add&quot;)#0;n#!!top" expanded="true" />
+            <element signature="e#1110#1130#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/patients/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/states/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="4" selection-start="0" selection-end="2234" vertical-scroll-proportion="-29.458334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/doctors/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="6" selection-start="2064" selection-end="2064" vertical-scroll-proportion="-26.958334">
+        <state line="46" column="93" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.31407034">
           <folding>
-            <element signature="n#t(&quot;doctors&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;state.state&quot;)#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#458#470#0" expanded="true" />
-            <element signature="n#t(&quot;doctors&quot;)#1;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;doctor.add&quot;)#0;n#!!top" expanded="true" />
-            <element signature="e#1155#1165#0" expanded="true" />
+            <element signature="e#482#493#0" expanded="true" />
+            <element signature="n#t(&quot;state.details&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;state.edit&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;country.country&quot;)#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/doctors/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/cities/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="40" selection-start="647" selection-end="647" vertical-scroll-proportion="-18.75">
+        <state line="40" column="78" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-2.490196">
           <folding>
-            <element signature="n#t(&quot;doctor.new&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;city.city&quot;)#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#465#477#0" expanded="true" />
-            <element signature="n#t(&quot;doctor.create&quot;)#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/doctors/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="56" selection-start="1288" selection-end="1288" vertical-scroll-proportion="-20.0">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#1030#1044#0" expanded="true" />
-            <element signature="e#1463#1482#0" expanded="true" />
-            <element signature="e#1649#1675#0" expanded="true" />
+            <element signature="e#479#490#0" expanded="true" />
+            <element signature="n#t(&quot;city.details&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;city.edit&quot;)#0;n#!!top" expanded="true" />
+            <element signature="n#t(&quot;state.state&quot;)#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
+        <state line="27" column="67" selection-start="717" selection-end="717" vertical-scroll-proportion="0.16018307">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/patients/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/cities/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="105" selection-start="1928" selection-end="1928" vertical-scroll-proportion="-28.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/doctors/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="109" selection-start="1771" selection-end="1771" vertical-scroll-proportion="-21.958334">
+        <state line="7" column="10" selection-start="280" selection-end="280" vertical-scroll-proportion="-2.3333333">
           <folding>
-            <element signature="n#t(&quot;doctors&quot;)#0;n#!!top" expanded="true" />
+            <element signature="e#454#470#0" expanded="true" />
+            <element signature="e#573#588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cities/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="50" selection-start="1267" selection-end="1267" vertical-scroll-proportion="-3.0">
+          <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#489#501#0" expanded="true" />
-            <element signature="n#t(&quot;doctor.details&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;doctor.edit&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;email&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;birthdate&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;doctor.hour_from&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;doctor.hour_to&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;doctor.shift_duration&quot;)#0;n#!!top" expanded="true" />
+            <element signature="e#388#412#0" expanded="true" />
+            <element signature="e#1072#1079#0" expanded="true" />
+            <element signature="e#1153#1162#0" expanded="true" />
+            <element signature="e#1191#1203#0" expanded="true" />
+            <element signature="e#1505#1514#0" expanded="true" />
+            <element signature="e#1554#1563#0" expanded="true" />
+            <element signature="e#1619#1631#0" expanded="true" />
+            <element signature="e#1880#1900#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_logged_in.html.erb">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="108" selection-start="4034" selection-end="4034" vertical-scroll-proportion="1.8521031">
-          <folding>
-            <element signature="n#t(&quot;no_file&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;choose&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;patients&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;doctors&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;hospitals&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;prepaid_medicals&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;basic_details&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;basic_details&quot;)#1;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;countries&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;states&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;cities&quot;)#0;n#!!top" expanded="true" />
-            <element signature="n#t(&quot;medical_specifications&quot;)#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-38.717148">
+          <folding />
         </state>
       </provider>
     </entry>

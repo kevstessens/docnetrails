@@ -15,6 +15,7 @@ en:
     add: "Add Country"
     edit: "Edit Country"
     details: "Country Details"
+<<<<<<< Updated upstream
   doctor:
     hour_to: "Hour to"
     hour_from: "Hour from"
@@ -24,6 +25,22 @@ en:
     new: "New Doctor"
     create: "Create Doctor"
     details: "Doctor Details"
+=======
+  state:
+    state: "State"
+    new: "New State"
+    create: "Create State"
+    add: "Add State"
+    edit: "Edit State"
+    details: "State Details"
+  city:
+    city: "City"
+    new: "New City"
+    create: "Create City"
+    add: "Add City"
+    edit: "Edit City"
+    details: "City Details"
+>>>>>>> Stashed changes
   select_one: "Please select one"
   email: "Email"
   countries: "Countries"

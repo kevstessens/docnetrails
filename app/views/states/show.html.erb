@@ -1,15 +1,63 @@
-<p id="notice"><%= notice %></p>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("state.state") %> <%= @state.name %></h2>	<p>Doc.net</p></div>
 
-<p>
-  <b>Country:</b>
-  <%= @state.country %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @state.name %>
-</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
 
-<%= link_to 'Edit', edit_state_path(@state) %> |
-<%= link_to 'Back', states_path %>
+
+
+
+
+
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= link_to t("states"), states_path %></li>
+      <li><b><%= @state.id %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+
+
+  <!-- START SIMPLE FORM -->
+  <div class="simplebox grid740">
+
+    <!-- start show codes -->
+    <div class="simplebox grid740">
+      <div class="titleh"><h3><%= t("state.details") %></h3>
+
+        <div class="shortcuts-icons">
+          <a class="shortcut tips" href="<%= edit_state_path(@state) %>" original-title="<%= t("state.edit") %>"><img src="/assets/icons/shortcut/file.png" width="25" height="25" alt="icon"></a>
+        </div>
+      </div>
+      <div class="body">
+
+        <ul class="statistics">
+          <li><%= t("id") %>	<p>	<span class="blue"><b><%= @state.id unless @state.nil?%></b></span>	</p>	</li>
+          <li><%= t("country.country") %>	<p>	<span class="blue"><b><%= @state.country.name unless @state.nil?%></b></span>	</p>	</li>
+          <li><%= t("name") %>	<p>	<span class="blue"><b><%= @state.name unless @state.nil?%></b></span>	</p>	</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- end show codes -->
+
+  </div>
+  <!-- END SIMPLE FORM -->
+
+
+
+</div>
+

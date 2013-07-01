@@ -69,8 +69,8 @@ ActiveRecord::Schema.define(:version => 20130629223850) do
   create_table "doctors_hospitals", :force => true do |t|
     t.integer  "doctor_id"
     t.integer  "hospital_id"
-    t.datetime "created_at",  :default => '2013-06-29 22:43:53', :null => false
-    t.datetime "updated_at",  :default => '2013-06-29 22:43:53', :null => false
+    t.datetime "created_at",  :default => '2013-06-30 22:50:49', :null => false
+    t.datetime "updated_at",  :default => '2013-06-30 22:50:49', :null => false
   end
 
   add_index "doctors_hospitals", ["doctor_id"], :name => "index_doctors_hospitals_on_doctor_id"
@@ -79,8 +79,8 @@ ActiveRecord::Schema.define(:version => 20130629223850) do
   create_table "doctors_medical_specifications", :force => true do |t|
     t.integer  "doctor_id"
     t.integer  "medical_specification_id"
-    t.datetime "created_at",               :default => '2013-06-29 22:43:53', :null => false
-    t.datetime "updated_at",               :default => '2013-06-29 22:43:53', :null => false
+    t.datetime "created_at",               :default => '2013-06-30 22:50:49', :null => false
+    t.datetime "updated_at",               :default => '2013-06-30 22:50:49', :null => false
   end
 
   add_index "doctors_medical_specifications", ["doctor_id"], :name => "index_doctors_medical_specifications_on_doctor_id"
@@ -89,8 +89,8 @@ ActiveRecord::Schema.define(:version => 20130629223850) do
   create_table "doctors_prepaid_medicals", :force => true do |t|
     t.integer  "doctor_id"
     t.integer  "prepaid_medical_id"
-    t.datetime "created_at",         :default => '2013-06-29 22:43:53', :null => false
-    t.datetime "updated_at",         :default => '2013-06-29 22:43:53', :null => false
+    t.datetime "created_at",         :default => '2013-06-30 22:50:49', :null => false
+    t.datetime "updated_at",         :default => '2013-06-30 22:50:49', :null => false
   end
 
   add_index "doctors_prepaid_medicals", ["doctor_id"], :name => "index_doctors_prepaid_medicals_on_doctor_id"
@@ -113,14 +113,14 @@ ActiveRecord::Schema.define(:version => 20130629223850) do
 
   create_table "patients", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "prepaid_medicals_id"
+    t.integer  "prepaid_medical_id"
     t.integer  "address_id"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   add_index "patients", ["address_id"], :name => "index_patients_on_address_id"
-  add_index "patients", ["prepaid_medicals_id"], :name => "index_patients_on_prepaid_medicals_id"
+  add_index "patients", ["prepaid_medical_id"], :name => "index_patients_on_prepaid_medical_id"
   add_index "patients", ["user_id"], :name => "index_patients_on_user_id"
 
   create_table "prepaid_medicals", :force => true do |t|
