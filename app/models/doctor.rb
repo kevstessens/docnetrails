@@ -22,4 +22,47 @@ class Doctor < ActiveRecord::Base
   def medical_specification_tokens=(ids)
     self.medical_specification_ids = ids.split(",")
   end
+
+  def list_specifications
+    specifications = ""
+    self.medical_specifications.each do |specification|
+      if medical_specifications.last == specification
+        specifications = specifications + specification.name
+      else
+        specifications = specifications + specification.name + ", "
+
+      end
+
+    end
+    return specifications
+  end
+
+  def list_hospitals
+    hospitals_list = ""
+    self.hospitals.each do |hospital|
+      if hospitals.last == hospital
+        hospitals_list = hospitals_list + hospital.name
+      else
+        hospitals_list = hospitals_list + hospital.name + ", "
+
+      end
+
+    end
+    return hospitals_list
+  end
+
+  def list_prepaids
+    prepaids = ""
+    self.prepaid_medicals.each do |prepaid|
+      if prepaid_medicals.last == prepaid
+        prepaids = prepaids + prepaid.name
+      else
+        prepaids = prepaids + prepaid.name + ", "
+
+      end
+
+    end
+    return prepaids
+  end
+
 end

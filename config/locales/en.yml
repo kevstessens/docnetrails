@@ -24,6 +24,9 @@ en:
     new: "New Doctor"
     create: "Create Doctor"
     details: "Doctor Details"
+    medical_specifications: "Medical Specifications"
+    hospitals: "Hospitals"
+    prepaid_medicals: "Prepaid Medicals"
   state:
     state: "State"
     new: "New State"
