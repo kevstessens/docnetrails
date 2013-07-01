@@ -69,9 +69,8 @@
 
         <!-- quick menu -->
         <div id="quickmenu">
-              <a href="#myModal" role="button" data-toggle="modal" class="qbutton-left tips" title="<%= t("requests.add_new")%>"><img src="/assets/icons/header/newpost.png" width="18" height="14" alt="new post" /></a>
-              <a href="#myModal2" role="button" data-toggle="modal" class="qbutton-left tips" title="<%= t("invested_hours.add_worked_hours")%>"><img src="/assets/icons/button/clock2.png" width="14" height="14" alt="new post" /></a>
-              <a href="#myModal3" role="button" data-toggle="modal" class="qbutton-right tips" title="<%= t("tickets.add_new")%>"><img src="/assets/icons/header/newpost.png" width="18" height="14" alt="new post" /></a>
+              <a href="#myModal2" role="button" data-toggle="modal" class="qbutton-left tips" title="<%= t("new_appointment_index")%>"><img src="/assets/icons/button/clock2.png" width="14" height="14" alt="new post" /></a>
+              <a href="#myModal3" role="button" data-toggle="modal" class="qbutton-right tips" title="<%= t("my_appointments")%>"><img src="/assets/icons/header/newpost.png" width="18" height="14" alt="new post" /></a>
           <div class="clear"></div>
         </div>
 
@@ -127,6 +126,7 @@
           <!-- start sidemenu -->
           <div id="sidemenu">
             <ul>
+              <% if current_user.user_role_id == UserRole.admin.id%>
               <li <%= "class=active" if @active_tab=="dashboard" %>><a href="<%= root_path %>"><img src="/assets/icons/sidemenu/laptop.png" width="16" height="16" alt="icon"/><%= t("dashboard.dashboard")%></a></li>
               <li <%= "class=active" if @active_tab=="patients" %>><a href="<%= patients_path %>"><img src="/assets/icons/sidemenu/user.png" width="16" height="16" alt="icon"/><%= t("patients")%></a></li>
               <li <%= "class=active" if @active_tab=="doctors" %>><a href="<%= doctors_path %>"><img src="/assets/icons/sidemenu/user_add.png" width="16" height="16" alt="icon"/><%= t("doctors")%></a></li>
@@ -141,6 +141,18 @@
                   <li <%= "class=active" if @active_sub_tab=="medical_specification" %>><a href="<%= medical_specifications_path  %>"><%= t("medical_specifications")%></a></li>
                 </ul>
               </li>
+                  <% elsif current_user.user_role_id == UserRole.paciente.id%>
+                  <li <%= "class=active" if @active_tab=="dashboard" %>><a href="<%= root_path %>"><img src="/assets/icons/sidemenu/laptop.png" width="16" height="16" alt="icon"/><%= t("dashboard.dashboard")%></a></li>
+                  <li <%= "class=active" if @active_tab=="patients" %>><a href="<%= patient_path(current_user.patient) %>"><img src="/assets/icons/sidemenu/user.png" width="16" height="16" alt="icon"/><%= t("profile")%></a></li>
+
+                  <% else %>
+
+                  <li <%= "class=active" if @active_tab=="dashboard" %>><a href="<%= root_path %>"><img src="/assets/icons/sidemenu/laptop.png" width="16" height="16" alt="icon"/><%= t("dashboard.dashboard")%></a></li>
+                  <li <%= "class=active" if @active_tab=="patients" %>><a href="<%= doctor_path(current_user.doctor) %>"><img src="/assets/icons/sidemenu/user.png" width="16" height="16" alt="icon"/><%= t("profile")%></a></li>
+
+
+            <% end %>
+
 
               <!-- end submenu with icon -->
             </ul>
