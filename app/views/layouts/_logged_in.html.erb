@@ -152,11 +152,13 @@
                   <% elsif current_user.user_role_id == UserRole.paciente.id%>
                   <li <%= "class=active" if @active_tab=="dashboard" %>><a href="<%= root_path %>"><img src="/assets/icons/sidemenu/laptop.png" width="16" height="16" alt="icon"/><%= t("dashboard.dashboard")%></a></li>
                   <li <%= "class=active" if @active_tab=="patients" %>><a href="<%= patient_path(current_user.patient) %>"><img src="/assets/icons/sidemenu/user.png" width="16" height="16" alt="icon"/><%= t("profile")%></a></li>
+                  <li <%= "class=active" if @active_tab=="appointments" %>><a href="<%= appointments_path %>"><img src="/assets/icons/sidemenu/user.png" width="16" height="16" alt="icon"/><%= t("appointments")%></a></li>
 
                   <% else %>
 
                   <li <%= "class=active" if @active_tab=="dashboard" %>><a href="<%= root_path %>"><img src="/assets/icons/sidemenu/laptop.png" width="16" height="16" alt="icon"/><%= t("dashboard.dashboard")%></a></li>
                   <li <%= "class=active" if @active_tab=="patients" %>><a href="<%= doctor_path(current_user.doctor) %>"><img src="/assets/icons/sidemenu/user.png" width="16" height="16" alt="icon"/><%= t("profile")%></a></li>
+                  <li <%= "class=active" if @active_tab=="appointments" %>><a href="<%= appointments_path %>"><img src="/assets/icons/sidemenu/user.png" width="16" height="16" alt="icon"/><%= t("appointments")%></a></li>
 
 
             <% end %>

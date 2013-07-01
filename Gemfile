@@ -10,6 +10,8 @@ gem 'devise'
 gem 'cancan'
 gem 'nested_form'
 gem 'kaminari'
+gem "meta_search"
+
 
 
 gem 'formtastic'

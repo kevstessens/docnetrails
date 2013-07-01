@@ -1,0 +1,101 @@
+
+<div id="myModalSearch" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-body">
+    <%= render "appointments/search" %>
+  </div>
+</div>
+
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("doctors") %></h2>	<p>Doc.net</p></div>
+
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
+
+
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><b><%= link_to t("doctors"), doctors_path %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+  <!-- START TABLE -->
+  <div class="simplebox grid740">
+
+    <div class="titleh">
+      <h3><%= t("doctors") %></h3>
+
+      <div class="shortcuts-icons">
+        <a class="shortcut tips" href="#myModalSearch" role="button" data-toggle="modal" title="<%= t("filter")%>"><img src="/assets/icons/shortcut/search.png" width="25" height="25" alt="icon" /></a>
+      </div>
+
+    </div>
+
+
+
+
+
+    <table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="example">
+
+      <% if !@doctors.empty? %>
+
+          <thead>
+          <tr>
+            <th><%= t("id") %></th>
+            <th><%= t("name") %></th>
+            <th><%= t("email") %></th>
+            <th><%= t("actions") %></th>
+
+          </tr>
+          </thead>
+
+
+          <tbody>
+
+          <% @doctors.each do |doctor| %>
+
+              <tr class="gradeA">
+                <td><%= doctor.id %></td>
+                <td><%= doctor.user.full_name %></td>
+                <td><%= doctor.user.email %></td>
+                <td><%= link_to t("show"), doctor %>
+                  <%= link_to t("edit"), edit_doctor_path(doctor) %>
+                  <%= link_to t("destroy"), doctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+          <% end %>
+
+      <% else %>
+          <thead>
+          <tr></tr>
+          </thead>
+
+          <tr class="gradeA">
+            <td align="center"><%= t("nothing_to_show") %></td>
+          </tr>
+
+          <tbody>
+
+
+      <% end %>
+      </tbody>
+
+    </table>
+
+
+
+
+
+  </div>
+  <!-- END TABLE -->
+
+
+</div>

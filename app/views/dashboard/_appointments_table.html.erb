@@ -4,7 +4,9 @@
     <h3><%= t("appointments") %></h3>
 
     <div class="shortcuts-icons">
-      <a class="shortcut tips" href="<%= new_appointment_path%>" title="<%= t("new_appointment_index") %>"><img src="/assets/icons/shortcut/plus.png" width="25" height="25" alt="icon" /></a>
+      <% if current_user.user_role == UserRole.paciente%>
+        <a class="shortcut tips" href="<%= appointments_new_appointment_doctor_search_path%>" title="<%= t("new_appointment_index") %>"><img src="/assets/icons/shortcut/plus.png" width="25" height="25" alt="icon" /></a>
+      <% end %>
     </div>
 
   </div>

@@ -17,6 +17,7 @@ en:
     edit: "Edit Country"
     details: "Country Details"
   doctor:
+    find_by: "Find doctor by"
     doctor: "Doctor"
     hour_to: "Hour to"
     hour_from: "Hour from"

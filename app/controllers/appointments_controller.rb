@@ -1,6 +1,15 @@
 class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
+  def new_appointment_doctor_search
+      @search = Doctor.search(params[:search])
+      @doctors = @search.page(params[:page])
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: new_appointment_doctor_search }
+    end
+  end
+
   def index
     @appointments = Appointment.all
 

@@ -1,4 +1,6 @@
 Docnet::Application.routes.draw do
+  match 'appointments/new_appointment_doctor_search' => 'appointments#new_appointment_doctor_search'
+
 
   resources :patients
 
