@@ -83,9 +83,12 @@
 
           <div class="profilemenu">
             <ul>
-                  <li><%= link_to t("edit_profile"), edit_user_path(current_user) %></li>
-
-              <li><%= link_to t("logout"), destroy_user_session_path, :method => :delete %></li>
+                <% if current_user.user_role_id == UserRole.doctor.id %>
+                <li><%= link_to t("edit_profile"), edit_doctor_path(Doctor.where("user_id = ?", current_user.id).first) %></li>
+                <% elsif current_user.user_role_id == UserRole.paciente.id %>
+                <li><%= link_to t("edit_profile"), edit_patient_path(Patient.where("user_id = ?", current_user.id).first)  %></li>
+                <% end %>
+                <li><%= link_to t("logout"), destroy_user_session_path, :method => :delete %></li>
             </ul>
           </div>
 
