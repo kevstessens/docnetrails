@@ -42,13 +42,32 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  def new_appointment_calendar()
+  def new_appointment_calendar
     @appointment = Appointment.new
     @appointment.doctor = Doctor.find(params[:doctor])
     @appointment.patient = current_user.patient
     @appointments = @appointment.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay").all
     @appointments.each do |app|
       app.title = t("busy")
+      app.allDay = false
+    end
+    @appointments = @appointments.to_json.html_safe
+  end
+
+
+  def doctor_appointments
+    @appointments = current_user.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, patient_id as patient_id").all
+    @appointments.each do |app|
+      app.title = Patient.find(app.patient_id).user.full_name
+      app.allDay = false
+    end
+    @appointments = @appointments.to_json.html_safe
+  end
+
+  def patient_appointments
+    @appointments = current_user.patient.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, doctor_id as doctor_id").all
+    @appointments.each do |app|
+      app.title = Doctor.find(app.doctor_id).user.full_name
       app.allDay = false
     end
     @appointments = @appointments.to_json.html_safe
