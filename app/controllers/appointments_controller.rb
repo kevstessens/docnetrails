@@ -46,7 +46,11 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
     @appointment.doctor = Doctor.find(params[:doctor])
     @appointment.patient = current_user.patient
-    @appointments = @appointment.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end").all
+    @appointments = @appointment.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay").all
+    @appointments.each do |app|
+      app.title = t("busy")
+      app.allDay = false
+    end
     @appointments = @appointments.to_json.html_safe
   end
 
