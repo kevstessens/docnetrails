@@ -1,35 +1,46 @@
-<p id="notice"><%= notice %></p>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("address.address") %>: <%= @address.street %> <%= @address.number %>, <%= @address.city.name %></h2>	<p>Doc.net</p></div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
-<p>
-  <b>Country:</b>
-  <%= @address.country %>
-</p>
+<!-- START CONTENT -->
+<div class="content">
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= link_to t("addresses"), addresses_path %></li>
+      <li><b><%= @address.id %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+  <!-- START SIMPLE FORM -->
+  <div class="simplebox grid740">
+    <!-- start show codes -->
+    <div class="simplebox grid740">
+      <div class="titleh"><h3><%= t("address.details") %></h3>
+        <div class="shortcuts-icons">
+          <a class="shortcut tips" href="<%= edit_address_path(@address) %>" original-title="<%= t("address.edit") %>"><img src="/assets/icons/shortcut/file.png" width="25" height="25" alt="icon"></a>
+        </div>
+      </div>
+      <div class="body">
+        <ul class="statistics">
+          <li><%= t("id") %>	<p>	<span class="blue"><b><%= @address.id unless @address.nil?%></b></span>	</p>	</li>
+          <li><%= t("country.country") %>	<p>	<span class="blue"><b><%= @address.country.name unless @address.nil?%></b></span>	</p>	</li>
+          <li><%= t("state.state") %>	<p>	<span class="blue"><b><%= @address.state.name unless @address.nil?%></b></span>	</p>	</li>
+          <li><%= t("city.city") %>	<p>	<span class="blue"><b><%= @address.city.name unless @address.nil?%></b></span>	</p>	</li>
+          <li><%= t("street") %>	<p>	<span class="blue"><b><%= @address.street unless @address.nil?%></b></span>	</p>	</li>
+          <li><%= t("number") %>	<p>	<span class="blue"><b><%= @address.number unless @address.nil?%></b></span>	</p>	</li>
+          <li><%= t("postal_code") %>	<p>	<span class="blue"><b><%= @address.postal_code unless @address.nil?%></b></span>	</p>	</li>
+        </ul>
+      </div>
+    </div>
+    <!-- end show codes -->
+  </div>
+  <!-- END SIMPLE FORM -->
 
-<p>
-  <b>State:</b>
-  <%= @address.state %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @address.city %>
-</p>
-
-<p>
-  <b>Street:</b>
-  <%= @address.street %>
-</p>
-
-<p>
-  <b>Number:</b>
-  <%= @address.number %>
-</p>
-
-<p>
-  <b>Postal code:</b>
-  <%= @address.postal_code %>
-</p>
-
-
-<%= link_to 'Edit', edit_address_path(@address) %> |
-<%= link_to 'Back', addresses_path %>
+</div>

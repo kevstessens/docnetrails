@@ -1,21 +1,21 @@
 <%= form_for(@prepaid_medical) do |f| %>
-  <% if @prepaid_medical.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@prepaid_medical.errors.count, "error") %> prohibited this prepaid_medical from being saved:</h2>
+    <% if @prepaid_medical.errors.any? %>
+        <div class="albox errorbox" style="z-index: 670;">
+          <b><%= t("errors") %> :</b>
+          <% @prepaid_medical.errors.messages.each do |msg| %>
+              <li><%= msg[1][0] %></li>
+          <% end %>
+          <a href="#" class="close tips" original-title="close"><%= t("close") %></a>
+        </div>
+    <% end %>
 
-      <ul>
-      <% @prepaid_medical.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <div class="st-form-line">
+      <span class="st-labeltext"><%= t("name") %></span>
+      <%= f.text_field :name, :class => "st-forminput"%>    </div>
+
+    <div class="button-box">
+
+      <%= link_to t("cancel"), prepaid_medicals_path, :class => "st-clear" %>
+      <%= f.submit t("save"), :class => "st-button"%>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

@@ -1,33 +1,71 @@
-<h1>Listing addresses</h1>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("addresses") %></h2>	<p>Doc.net</p></div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
-<table>
-  <tr>
-    <th>Country</th>
-    <th>State</th>
-    <th>City</th>
-    <th>Street</th>
-    <th>Number</th>
-    <th>Postal code</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<!-- START CONTENT -->
+<div class="content">
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><b><%= link_to t("addresses"), addresses_path %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+  <!-- START TABLE -->
+  <div class="simplebox grid740">
+    <div class="titleh">
+      <h3><%= t("addresses") %></h3>
+      <div class="shortcuts-icons">
+        <a class="shortcut tips" href="<%= new_address_path %>" title="<%= t("address.add") %>"><img src="/assets/icons/shortcut/plus.png" width="25" height="25" alt="icon" /></a>
+      </div>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" class="tablesorter" id="example">
+      <% if !@addresses.empty? %>
+          <thead>
+          <tr>
+            <th><%= t("id") %></th>
+            <th><%= t("country.country") %></th>
+            <th><%= t("state.state") %></th>
+            <th><%= t("city.city") %></th>
+            <th><%= t("street") %></th>
+            <th><%= t("number") %></th>
+            <th><%= t("postal_code") %></th>
+            <th><%= t("actions") %></th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @addresses.each do |address| %>
+              <tr class="gradeA">
+                <td><%= address.id %></td>
+                <td><%= address.country.name %></td>
+                <td><%= address.state.name %></td>
+                <td><%= address.city.name %></td>
+                <td><%= address.street %></td>
+                <td><%= address.number %></td>
+                <td><%= address.postal_code %></td>
+                <td><%= link_to t("show"), address %>
+                  <%= link_to t("edit"), edit_address_path(address) %>
+                  <%= link_to t("destroy"), address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+          <% end %>
+      <% else %>
+          <thead>
+          <tr></tr>
+          </thead>
+          <tr class="gradeA">
+            <td align="center"><%= t("nothing_to_show") %></td>
+          </tr>
+          <tbody>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+  <!-- END TABLE -->
 
-<% @addresses.each do |address| %>
-  <tr>
-    <td><%= address.country %></td>
-    <td><%= address.state %></td>
-    <td><%= address.city %></td>
-    <td><%= address.street %></td>
-    <td><%= address.number %></td>
-    <td><%= address.postal_code %></td>
-    <td><%= link_to 'Show', address %></td>
-    <td><%= link_to 'Edit', edit_address_path(address) %></td>
-    <td><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Address', new_address_path %>
+</div>

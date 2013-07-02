@@ -2,21 +2,13 @@
 <div class="page-title">
   <div class="in">
     <div class="titlebar">	<h2><%= t("country.country") %> <%= @country.name %></h2>	<p>Doc.net</p></div>
-
     <div class="clear"></div>
   </div>
 </div>
 <!-- end page title -->
 
-
-
-
-
-
-
 <!-- START CONTENT -->
 <div class="content">
-
   <!-- START NAVIGATION -->
   <div class="grid740" style="z-index: 720;">
     <ul class="pagewrap">
@@ -26,37 +18,24 @@
     </ul>
   </div>
   <!-- END NAVIGATION -->
-
-
-
   <!-- START SIMPLE FORM -->
   <div class="simplebox grid740">
-
     <!-- start show codes -->
     <div class="simplebox grid740">
       <div class="titleh"><h3><%= t("country.details") %></h3>
-
         <div class="shortcuts-icons">
               <a class="shortcut tips" href="<%= edit_country_path(@country) %>" original-title="<%= t("country.edit") %>"><img src="/assets/icons/shortcut/file.png" width="25" height="25" alt="icon"></a>
         </div>
       </div>
       <div class="body">
-
         <ul class="statistics">
           <li><%= t("id") %>	<p>	<span class="blue"><b><%= @country.id unless @country.nil?%></b></span>	</p>	</li>
           <li><%= t("name") %>	<p>	<span class="blue"><b><%= @country.name unless @country.nil?%></b></span>	</p>	</li>
         </ul>
-
       </div>
-
     </div>
-
     <!-- end show codes -->
-
   </div>
   <!-- END SIMPLE FORM -->
 
-
-
 </div>
-

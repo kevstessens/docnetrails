@@ -1,15 +1,54 @@
-<p id="notice"><%= notice %></p>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= @hospital.name %></h2>	<p>Doc.net</p></div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
-<p>
-  <b>Name:</b>
-  <%= @hospital.name %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @hospital.address %>
-</p>
-
-
-<%= link_to 'Edit', edit_hospital_path(@hospital) %> |
-<%= link_to 'Back', hospitals_path %>
+<!-- START CONTENT -->
+<div class="content">
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= link_to t("hospitals"), hospitals_path %></li>
+      <li><b><%= @hospital.id %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+  <!-- START SIMPLE FORM -->
+  <div class="simplebox grid740">
+    <!-- start show codes -->
+    <div class="simplebox grid740">
+      <div class="titleh"><h3><%= @hospital.name %></h3>
+      </div>
+      <div class="body">
+      <ul class="statistics">
+        <li><%= t("id") %>	<p>	<span class="blue"><b><%= @hospital.id unless @hospital.nil?%></b></span>	</p>	</li>
+        <% if(!@hospital.nil? && !@hospital.address.nil?) %>
+            <% address = @hospital.address.street + " " + @hospital.address.number + ", " + @hospital.address.city.name %>
+        <% else %>
+            <% address = "" %>
+        <% end %>
+        <li><%= t("address") %>	<p>	<span class="blue"><b><%= address %></b></span>	</p>	</li>
+      </ul>
+    </div>
+      <div class="titleh"><h3><%= t("doctors") %></h3>
+        <div class="shortcuts-icons">
+          <a class="shortcut tips" href="<%= edit_hospital_path(@hospital) %>" original-title="<%= t("hospital.edit") %>"><img src="/assets/icons/shortcut/file.png" width="25" height="25" alt="icon"></a>
+        </div>
+      </div>
+      <div class="body">
+      <ul class="statistics">
+        <% form_for @hospital.doctors do |doctor| %>
+          <li><%= User.find(doctor.user_id).full_name unless @hospital.nil? %>	<p>	<span class="blue"><b><%= link_to t("show"), doctor %></b></span>	</p>	</li>
+        <% end %>
+      </ul>
+    </div>
+    </div>
+    <!-- end show codes -->
+  </div>
+  <!-- END SIMPLE FORM -->
+</div>

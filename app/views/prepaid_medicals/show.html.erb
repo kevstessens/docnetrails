@@ -1,10 +1,41 @@
-<p id="notice"><%= notice %></p>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("prepaid_medical.prepaid_medical") %> <%= @prepaid_medical.name %></h2>	<p>Doc.net</p></div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
-<p>
-  <b>Name:</b>
-  <%= @prepaid_medical.name %>
-</p>
+<!-- START CONTENT -->
+<div class="content">
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= link_to t("prepaid_medicals"), prepaid_medicals_path %></li>
+      <li><b><%= @prepaid_medical.id %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+  <!-- START SIMPLE FORM -->
+  <div class="simplebox grid740">
+    <!-- start show codes -->
+    <div class="simplebox grid740">
+      <div class="titleh"><h3><%= t("prepaid_medical.details") %></h3>
+        <div class="shortcuts-icons">
+          <a class="shortcut tips" href="<%= edit_prepaid_medical_path(@prepaid_medical) %>" original-title="<%= t("prepaid_medical.edit") %>"><img src="/assets/icons/shortcut/file.png" width="25" height="25" alt="icon"></a>
+        </div>
+      </div>
+      <div class="body">
+        <ul class="statistics">
+          <li><%= t("id") %>	<p>	<span class="blue"><b><%= @prepaid_medical.id unless @prepaid_medical.nil?%></b></span>	</p>	</li>
+          <li><%= t("name") %>	<p>	<span class="blue"><b><%= @prepaid_medical.name unless @prepaid_medical.nil?%></b></span>	</p>	</li>
+        </ul>
+      </div>
+    </div>
+    <!-- end show codes -->
+  </div>
+  <!-- END SIMPLE FORM -->
 
-
-<%= link_to 'Edit', edit_prepaid_medical_path(@prepaid_medical) %> |
-<%= link_to 'Back', prepaid_medicals_path %>
+</div>
