@@ -72,7 +72,7 @@
 
           <% if current_user.user_role_id != UserRole.admin.id %>
               <% if current_user.user_role_id == UserRole.paciente.id %>
-              <a href="<%= new_appointment_path%>" role="button" class="qbutton-left tips" title="<%= t("new_appointment_index")%>"><img src="/assets/icons/button/clock2.png" width="14" height="14" alt="new post" /></a>
+              <a href="<%= appointments_new_appointment_doctor_search_path%>" role="button" class="qbutton-left tips" title="<%= t("new_appointment_index")%>"><img src="/assets/icons/button/clock2.png" width="14" height="14" alt="new post" /></a>
               <% elsif current_user.user_role_id == UserRole.doctor.id %>
               <a href="<%= new_appointment_path%>" role="button" class="qbutton-left tips" title="<%= t("skip_shifts")%>"><img src="/assets/icons/button/clock2.png" width="14" height="14" alt="new post" /></a>
               <% end %>

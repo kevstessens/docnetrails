@@ -42,6 +42,14 @@ class AppointmentsController < ApplicationController
     end
   end
 
+  def new_appointment_calendar()
+    @appointment = Appointment.new
+    @appointment.doctor = Doctor.find(params[:doctor])
+    @appointment.patient = current_user.patient
+    @appointments = @appointment.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end").all
+    @appointments = @appointments.to_json.html_safe
+  end
+
   def index
     @appointments = Appointment.all
 

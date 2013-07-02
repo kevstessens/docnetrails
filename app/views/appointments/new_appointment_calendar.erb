@@ -1,0 +1,85 @@
+<script type="text/javascript">
+    /* Full Calendar */
+    $(document).ready(function() {
+
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,basicWeek,basicDay'
+            },
+            editable: false,
+            events: <%= @appointments %>,
+            monthNames:[' <%= t("january") %>', '<%= t("february") %>', '<%= t("march") %>', '<%= t("april") %>', '<%= t("may") %>', '<%= t("june") %>', '<%= t("july") %>',
+                '<%= t("august") %>', '<%= t("september") %>', '<%= t("october") %>', '<%= t("november") %>', '<%= t("december") %>'],
+            dayNames:['<%= t("sunday") %>', '<%= t("monday") %>', '<%= t("tuesday") %>', '<%= t("wednesday") %>',
+                '<%= t("thursday") %>', '<%= t("friday") %>', '<%= t("saturday") %>'],
+            dayNamesShort:['<%= t("sun") %>', '<%= t("mon") %>', '<%= t("tue") %>', '<%= t("wed") %>', '<%= t("thu") %>', '<%= t("fri") %>', '<%= t("sat") %>'],
+            monthNamesShort:['<%= t("jan") %>', '<%= t("feb") %>', '<%= t("mar") %>', '<%= t("apr") %>', '<%= t("may") %>', '<%= t("jun") %>', '<%= t("jul") %>',
+                '<%= t("aug") %>', '<%= t("sep") %>', '<%= t("oct") %>', '<%= t("nov") %>', '<%= t("dec") %>'],
+            buttonText: {
+                prev:     '&nbsp;&#9668;&nbsp;',  // left triangle
+                next:     '&nbsp;&#9658;&nbsp;',  // right triangle
+                prevYear: '&nbsp;&lt;&lt;&nbsp;', // <<
+                nextYear: '&nbsp;&gt;&gt;&nbsp;', // >>
+                today:    '<%= t("today") %>',
+                month:    '<%= t("month") %>',
+                week:     '<%= t("week") %>',
+                day:      '<%= t("day") %>'
+            },
+            dayClick: function(date, allDay, jsEvent, view) {
+
+                if (allDay) {
+                    alert('Clicked on the entire day: ' + date);
+                }else{
+                    alert('Clicked on the slot: ' + date);
+                }
+
+                // change the day's background color just for fun
+                $(this).css('background-color', 'red');
+
+            }
+
+        });
+
+    });
+</script>
+
+
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">  <h2><%= t("events.timeline_calendar")%></h2> <p>Doc.net</p></div>
+
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
+
+
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= t("events.calendar")%></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+  <!-- START TABLE -->
+  <div class="simplebox grid740">
+
+    <div id="calendar"> </div>
+
+  </div>
+  <!-- END TABLE -->
+
+</div>

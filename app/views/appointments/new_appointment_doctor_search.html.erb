@@ -50,10 +50,10 @@
 
           <thead>
           <tr>
-            <th><%= t("id") %></th>
             <th><%= t("name") %></th>
-            <th><%= t("email") %></th>
-            <th><%= t("actions") %></th>
+            <th><%= t("hospitals") %></th>
+            <th><%= t("doctor.medical_specifications") %></th>
+            <th><%= t("prepaid_medicals") %></th>
 
           </tr>
           </thead>
@@ -64,10 +64,12 @@
           <% @doctors.each do |doctor| %>
 
               <tr class="gradeA">
-                <td><%= doctor.id %></td>
-                <td><%= doctor.user.full_name %></td>
-                <td><%= doctor.user.email %></td>
-                <td><%= link_to t("show"), doctor %></td>
+                <td><%= link_to doctor.user.full_name, appointments_new_appointment_calendar_path(:doctor => doctor) %></td>
+                <td><%= doctor.list_hospitals %></td>
+                <td><%= doctor.list_specifications %></td>
+                <td><%= doctor.list_prepaids %></td>
+
+
               </tr>
           <% end %>
 
