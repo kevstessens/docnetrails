@@ -73,6 +73,7 @@ en:
       edit: "Edit Prepaid Medical"
       details: "Prepaid Medical Details"
   profile: "Profile"
+  not_informed: "Not Informed"
   appointments: "Appointments"
   new_appointment_index: "New Appointment"
   my_appointments: "My appointments"
