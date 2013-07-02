@@ -37,7 +37,9 @@
       <div class="titleh"><h3><%= t("patient.details") %></h3>
 
         <div class="shortcuts-icons">
-          <a class="shortcut tips" href="<%= edit_patient_path(@patient) %>" original-title="<%= t("patient.edit") %>"><img src="/assets/icons/shortcut/file.png" width="25" height="25" alt="icon"></a>
+          <% if current_user.user_role == UserRole.admin%>
+            <a class="shortcut tips" href="<%= edit_patient_path(@patient) %>" original-title="<%= t("patient.edit") %>"><img src="/assets/icons/shortcut/file.png" width="25" height="25" alt="icon"></a>
+          <% end %>
         </div>
       </div>
       <div class="body">

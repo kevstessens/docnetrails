@@ -1,4 +1,4 @@
-<%= form_for @search, :url => appointments_new_appointment_doctor_search_path, :html => {:method => :get} do |f| %>
+<%= form_for @appointment, :url => appointments_new_appointment_doctor_search_path, :html => {:method => :get} do |f| %>
 
     <div class="modal-header">
       <h3 id="myModalLabel"><%= t("doctor.find_by") %>:</h3>
@@ -6,17 +6,17 @@
 
     <div class="st-form-line">
       <span class="st-labeltext"><%= t("medical_specifications") %></span>
-      <%= f.collection_select :medical_specification_ids_contains, MedicalSpecification.all, :id, :name, { :prompt => t("all") }, { :class => 'uniform', :style => "opacity: 0;" } %>
+      <%= f.collection_select :patient_id, MedicalSpecification.all, :id, :name, { :prompt => t("all") }, { :class => 'uniform', :style => "opacity: 0;" } %>
     </div>
 
     <div class="st-form-line">
       <span class="st-labeltext"><%= t("hospitals") %></span>
-      <%= f.collection_select :hospital_ids_contains, Hospital.all, :id, :name, { :prompt => t("all") }, { :class => 'uniform', :style => "opacity: 0;" } %>
+      <%= f.collection_select :doctor_id, Hospital.all, :id, :name, { :prompt => t("all") }, { :class => 'uniform', :style => "opacity: 0;" } %>
     </div>
 
     <div class="st-form-line">
   <span class="st-labeltext"><%= t("prepaid_medicals") %></span>
-        <%= f.collection_select :prepaid_medical_ids_contains, PrepaidMedical.all, :id, :name, { :prompt => t("all") }, { :class => 'uniform', :style => "opacity: 0;" } %>
+        <%= f.collection_select :ranking, PrepaidMedical.all, :id, :name, { :prompt => t("all") }, { :class => 'uniform', :style => "opacity: 0;" } %>
     </div>
 
     </br>

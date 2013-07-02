@@ -2,8 +2,40 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def new_appointment_doctor_search
-      @search = Doctor.search(params[:search])
-      @doctors = @search.page(params[:page])
+
+    @appointment = Appointment.new
+    @doctors = Doctor.all
+    if !params[:appointment].nil?
+      doctor = Array.new
+      if (params[:appointment][:patient_id].blank? and params[:appointment][:doctor_id].blank? and params[:appointment][:ranking].blank?)
+        doctor = @doctors
+      end
+      unless params[:appointment][:patient_id].blank?
+        medical_spec = params[:appointment][:patient_id]
+        Doctor.joins(:medical_specifications).where("medical_specifications.id = ?", medical_spec).all.each do |doctor2|
+          doctor.append(doctor2)
+        end
+      end
+      unless params[:appointment][:doctor_id].blank?
+        hospital = params[:appointment][:doctor_id]
+        Doctor.joins(:hospitals).where("hospitals.id = ?", hospital).all.each do |doctor2|
+          doctor.append(doctor2)
+        end
+      end
+      unless params[:appointment][:ranking].blank?
+        prepaid_med = params[:appointment][:ranking]
+        hospital = params[:appointment][:doctor_id]
+        Doctor.joins(:prepaid_medicals).where("prepaid_medicals.id = ?", prepaid_med).all.each do |doctor2|
+          doctor.append(doctor2)
+        end
+      end
+    else
+      doctor = Doctor.all
+    end
+
+
+
+      @doctors = doctor
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: new_appointment_doctor_search }

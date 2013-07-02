@@ -67,9 +67,7 @@
                 <td><%= doctor.id %></td>
                 <td><%= doctor.user.full_name %></td>
                 <td><%= doctor.user.email %></td>
-                <td><%= link_to t("show"), doctor %>
-                  <%= link_to t("edit"), edit_doctor_path(doctor) %>
-                  <%= link_to t("destroy"), doctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to t("show"), doctor %></td>
               </tr>
           <% end %>
 
