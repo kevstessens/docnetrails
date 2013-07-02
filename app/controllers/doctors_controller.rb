@@ -49,6 +49,7 @@ class DoctorsController < ApplicationController
     respond_to do |format|
       if @user.save
         @doctor = @user.doctor
+        NewDoctorMailer.new_doctor_created(@user).deliver
         format.html { redirect_to @doctor, notice: 'Doctor was successfully created.' }
         format.json { render json: @doctor, status: :created, location: @doctor }
       else

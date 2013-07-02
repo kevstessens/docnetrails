@@ -10,9 +10,7 @@ class RegistrationsController < Devise::RegistrationsController
 
     if @user.save
       patient.save
-      #clientinfo.save
-      #address.save
-      #NewUserMailer.new_user_email(@user).deliver
+      NewPatientMailer.new_patient_created(patient).deliver
 
       if @user.active_for_authentication?
         sign_in("user", @user)
