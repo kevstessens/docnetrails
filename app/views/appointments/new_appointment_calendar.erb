@@ -35,7 +35,8 @@
             dayClick: function(date, allDay, jsEvent, view) {
 
                 if (allDay) {
-                    alert('Clicked on the entire day: ' + date);
+                    $("#date").val(date);
+                    document.getElementById('appoinment_confirmation').style.display = "block";
                 }else{
                     alert('Clicked on the slot: ' + date);
                 }
@@ -54,6 +55,11 @@
     });
 </script>
 
+<div id="appoinment_confirmation" class="modal hide" date="<%=  %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-body">
+    <%= render :partial => "appointments/confirmation", :date => "date" %>
+  </div>
+</div>
 
 <!-- start page title -->
 <div class="page-title">

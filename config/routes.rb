@@ -4,6 +4,7 @@ Docnet::Application.routes.draw do
   match 'appointments/new_appointment_calendar' => 'appointments#new_appointment_calendar'
   match 'appointments/doctor_appointments' => 'appointments#doctor_appointments'
   match 'appointments/patient_appointments' => 'appointments#patient_appointments'
+  match 'appointments/confirmation' => 'appointments#confirmation'
 
 
   resources :patients

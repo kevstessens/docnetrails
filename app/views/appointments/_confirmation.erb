@@ -1,0 +1,18 @@
+<%= form_for @appointment, :url => appointments_new_appointment_calendar_path(:doctor => @appointment.doctor), :html => {:method => :get} do |f| %>
+
+    <div class="modal-header">
+      <h3 id="myModalLabel"><%= t("new_appointment_index") %></h3>
+    </div>
+
+    <div class="st-form-line">
+      <%= t("confirm.question") %>
+      <%= @date %>
+    </div>
+    </br>
+
+    <div class="button-box" style="float:right;">
+      <a href="#" class="st-clear" data-dismiss="modal" aria-hidden="true"><%= t("cancel") %></a>
+      <%= f.submit t("confirm"), :class => "st-button"%>
+    </div>
+
+<% end %>

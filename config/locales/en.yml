@@ -146,6 +146,9 @@ en:
   go_to_notifications: "Go to my notifications"
   view_all: "View All"
   cancel: "Cancel"
+  confirm: "Confirm"
+  confirm:
+    question: "Do you want to confirm an appointment at "
   find_features_by: "Find features by:"
   nothing_to_show: "There is nothing to show."
   statistics: "Statistics"

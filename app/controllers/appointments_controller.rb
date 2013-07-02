@@ -54,6 +54,9 @@ class AppointmentsController < ApplicationController
     @appointments = @appointments.to_json.html_safe
   end
 
+  def confirmation
+    @appointment.datetime = Date.new
+  end
 
   def doctor_appointments
     @appointments = current_user.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, patient_id as patient_id").all
