@@ -1,6 +1,7 @@
 class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
+
   def new_appointment_doctor_search
 
     @appointment = Appointment.new
@@ -59,10 +60,12 @@ class AppointmentsController < ApplicationController
   end
 
   def doctor_appointments
-    @appointments = current_user.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, patient_id as patient_id").all
+    @appointments = current_user.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, patient_id as patient_id, story_fragment as url, id as id").all
     @appointments.each do |app|
       app.title = Patient.find(app.patient_id).user.full_name
       app.allDay = false
+      app.url = appointment_path(app.id)
+
     end
     @appointments = @appointments.to_json.html_safe
   end

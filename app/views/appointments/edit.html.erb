@@ -1,6 +1,82 @@
-<h1>Editing appointment</h1>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("patient.edit") %></h2>	<p>Doc.net</p></div>
 
-<%= render 'form' %>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
-<%= link_to 'Show', @appointment %> |
-<%= link_to 'Back', appointments_path %>
+
+
+
+
+
+
+<!-- START CONTENT -->
+<div class="content">
+
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= link_to t("appointments"), appointment_path %></li>
+      <li><b><%= t("close_appointment") %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+
+  <!-- START SIMPLE FORM -->
+  <div class="simplebox grid740">
+    <div class="titleh">
+      <h3><%= t("close_appointment") + @appointment.patient.user.full_name%></h3>
+    </div>
+    <div class="body">
+
+      <%= semantic_nested_form_for @appointment do |f| %>
+
+          <% if @appointment.errors.any? %>
+              <div class="albox errorbox" style="z-index: 670;">
+                <b><%= t("errors") %> :</b>
+                <% @appointment.errors.messages.each do |msg| %>
+                    <li><%= msg[1][0] %></li>
+                <% end %>
+                <a href="#" class="close tips" original-title="close"><%= t("close") %></a>
+              </div>
+          <% end %>
+
+          <div class="st-form-line">
+            <span class="st-labeltext"><%= t("ranking") %></span>
+            <%= f.select :ranking, [[t("1_worst"), 1], [2, 2], [3, 3], [4, 4], [t("5_best"), 5]], :class => "st-forminput" %>
+          </div>
+
+          <div class="st-form-line">
+            <span class="st-labeltext"><%= t("story_fragment") %></span>
+            <%= f.text_area :story_fragment, :class => "st-forminput", :value => ""%>
+          </div>
+
+          <div class="st-form-line">
+            <span class="st-labeltext"><%= t("previous_clinical_story") %>: </span>
+                <% @appointment.patient.previous_story(@appointment).each do |app|%>
+                    <%= app.to_s %>
+                    <br>
+                <% end %>
+          </div>
+
+
+          <div class="button-box">
+
+            <%= link_to t("cancel"), patients_path, :class => "st-clear" %>
+            <%= f.submit t("save"), :class => "st-button"%>
+          </div>
+      <% end %>
+
+    </div>
+  </div>
+  <!-- END SIMPLE FORM -->
+
+</div>
+
