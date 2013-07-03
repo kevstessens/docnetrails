@@ -160,7 +160,7 @@ en:
   cancel: "Cancel"
   confirm: "Confirm"
   confirm:
-    question: "Do you want to confirm an appointment at "
+    question: "Do you want to confirm the following appointment?"
   find_features_by: "Find features by:"
   nothing_to_show: "There is nothing to show."
   statistics: "Statistics"

@@ -1,18 +1,36 @@
-<%= form_for @appointment, :url => appointments_new_appointment_calendar_path(:doctor => @appointment.doctor), :html => {:method => :get} do |f| %>
-
     <div class="modal-header">
       <h3 id="myModalLabel"><%= t("new_appointment_index") %></h3>
     </div>
 
-    <div class="st-form-line">
-      <%= t("confirm.question") %>
-      <%= @date %>
-    </div>
+    <table width="400">
+      <h2> <%= t("confirm.question") %> </h2>
+      <tr height="30">
+      <td width="200"> <%= t("date") %>:</td> <td width="200"> <%= @appointment.datetime %> </td>
+      </tr>
+      <tr height="30">
+      <td width="200"> <%= t("doctor.doctor") %>:</td> <td width="200"> <%= @appointment.doctor.user.full_name %> </td>
+      </tr>
+      <tr height="30">
+      <td width="200"> <%= t("medical_specification.medical_specification") %>:</td>
+      <td width="200"> <select name="specifications">
+      <% (@appointment.doctor.medical_specifications).each do |f| %>
+      <option value="<%= f.id %>" ><%= f.name %>
+      <% end %>
+      </select> </td> </tr>
+    </table>
     </br>
 
     <div class="button-box" style="float:right;">
-      <a href="#" class="st-clear" data-dismiss="modal" aria-hidden="true"><%= t("cancel") %></a>
-      <%= f.submit t("confirm"), :class => "st-button"%>
+      <a href="" class="st-clear" data-dismiss="modal" aria-hidden="true"><%= t("cancel") %></a>
+      <button onclick="confirm()" class="st-clear" data-dismiss="modal" aria-hidden="true">Confirm</button>
+      <script type="text/javascript">
+          function confirm() {
+              //var specifications = document.getElementById("specifications")
+              //var selected = specifications.options[specifications.selectedIndex].value;
+              //var specification = document.getElementById('specification')
+              //specification.value = selected
+              var button = document.getElementById("button");
+              button.click()
+          }
+      </script>
     </div>
-
-<% end %>

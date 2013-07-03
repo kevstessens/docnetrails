@@ -33,12 +33,13 @@
                 day:      '<%= t("day") %>'
             },
             dayClick: function(date, allDay, jsEvent, view) {
-
-                if (allDay) {
-                    $("#date").val(date);
+                if (view.name == "basicDay") {
+                    var elem = document.getElementById("date");
+                    elem.value = date;
                     document.getElementById('appoinment_confirmation').style.display = "block";
-                }else{
-                    alert('Clicked on the slot: ' + date);
+                } else {
+                    $('#calendar').fullCalendar('gotoDate', date);
+                    $('#calendar').fullCalendar('changeView', 'basicDay');
                 }
             },
             eventClick: function(calEvent, jsEvent, view) {
@@ -55,9 +56,17 @@
     });
 </script>
 
+<%= form_for @appointment do |f| %>
+    <%= f.hidden_field :doctor_id, :class => "st-forminput", :value => @appointment.doctor_id %>
+    <%= f.hidden_field :patient_id, :class => "st-forminput", :value => @appointment.patient_id %>
+    <%= f.hidden_field :datetime, :class => "st-forminput", :id => "date" %>
+
+    <%= f.button :id => "button" %>
+<% end %>
+
 <div id="appoinment_confirmation" class="modal hide" date="<%=  %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-body">
-    <%= render :partial => "appointments/confirmation", :date => "date" %>
+    <%= render :partial => "appointments/confirmation" %>
   </div>
 </div>
 
