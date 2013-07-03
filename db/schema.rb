@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130629223850) do
+ActiveRecord::Schema.define(:version => 20130703203110) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "country_id"
@@ -34,8 +34,9 @@ ActiveRecord::Schema.define(:version => 20130629223850) do
     t.integer  "ranking"
     t.text     "story_fragment"
     t.datetime "datetime"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.string   "medical_specification_id"
   end
 
   create_table "cities", :force => true do |t|
