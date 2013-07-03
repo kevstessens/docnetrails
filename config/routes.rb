@@ -1,5 +1,9 @@
 Docnet::Application.routes.draw do
 
+
+  scope "(:locale)", :locale => /en|es/ do
+
+
   match 'appointments/new_appointment_doctor_search' => 'appointments#new_appointment_doctor_search'
   match 'appointments/new_appointment_calendar' => 'appointments#new_appointment_calendar'
   match 'appointments/doctor_appointments' => 'appointments#doctor_appointments'
@@ -43,6 +47,11 @@ Docnet::Application.routes.draw do
 
 
   resources :user_roles
+
+  end
+
+  match '/:locale' => "dashboard#index"
+
 
 
   # The priority is based upon order of creation:
