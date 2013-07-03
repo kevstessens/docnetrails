@@ -10,4 +10,9 @@ class CancelAppointmentMailer < ActionMailer::Base
     mail(:subject => t("mailers.cancelled_appointment") + appointment.datetime.strftime("%d/%m/%y"), :to => user.email)
   end
 
+  def not_showed_appointment(appointment)
+    @appointment = appointment
+    mail(:subject => t("mailers.not_assisted_to_appointment") + appointment.datetime.strftime("%d/%m/%y"), :to => appointment.patient.user.email)
+  end
+
 end

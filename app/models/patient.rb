@@ -8,7 +8,7 @@ class Patient < ActiveRecord::Base
 
   def previous_story(appointment_recieved)
     story = Array.new
-    Appointment.where("patient_id = ? and datetime < ? and medical_specification_id = ?", self.id, appointment_recieved.datetime, appointment_recieved.medical_specification_id ).each do |appointment|
+    Appointment.where("patient_id = ? and datetime < ? and medical_specification_id = ? and assisted = ?", self.id, appointment_recieved.datetime, appointment_recieved.medical_specification_id, true ).each do |appointment|
       story.append(appointment.datetime.strftime("%d/%m/%y") + ": " + appointment.story_fragment)
     end
     return story

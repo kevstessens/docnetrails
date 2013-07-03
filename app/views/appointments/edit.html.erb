@@ -55,16 +55,27 @@
 
           <div class="st-form-line">
             <span class="st-labeltext"><%= t("story_fragment") %></span>
-            <%= f.text_area :story_fragment, :class => "st-forminput", :value => ""%>
+            <%= f.text_area :story_fragment, :class => "st-forminput"%>
           </div>
 
           <div class="st-form-line">
+            <span class="st-labeltext"><%= t("assisted")%></span>
+            <%= f.check_box :assisted, :class => "uniform", :default => true %>
+          </div>
+
+          <% unless Appointment.where("doctor_id =? and patient_id = ? and datetime < ?", @appointment.doctor_id, @appointment.patient_id, DateTime.current.to_date).count == 0 %>
+          <div class="st-form-line">
             <span class="st-labeltext"><%= t("previous_clinical_story") %>: </span>
+                <% if @appointment.patient.previous_story(@appointment).empty? %>
+                    -
+                <% else %>
                 <% @appointment.patient.previous_story(@appointment).each do |app|%>
                     <%= app.to_s %>
                     <br>
                 <% end %>
+            <% end %>
           </div>
+          <% end %>
 
 
           <div class="button-box">

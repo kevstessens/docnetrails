@@ -136,6 +136,10 @@ class AppointmentsController < ApplicationController
   # PUT /appointments/1.json
   def update
     @appointment = Appointment.find(params[:id])
+    if params[:appointment][:assisted] == "0"
+      CancelAppointmentMailer.not_showed_appointment(@appointment).deliver
+      params[:appointment][:ranking] = 1
+    end
 
     respond_to do |format|
       if @appointment.update_attributes(params[:appointment])
