@@ -68,10 +68,11 @@ class AppointmentsController < ApplicationController
   end
 
   def patient_appointments
-    @appointments = current_user.patient.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, doctor_id as doctor_id").all
+    @appointments = current_user.patient.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, doctor_id as doctor_id, story_fragment as url, id as id").all
     @appointments.each do |app|
       app.title = Doctor.find(app.doctor_id).user.full_name
       app.allDay = false
+      app.url = appointment_path(app.id)
     end
     @appointments = @appointments.to_json.html_safe
   end
@@ -148,6 +149,11 @@ class AppointmentsController < ApplicationController
   # DELETE /appointments/1.json
   def destroy
     @appointment = Appointment.find(params[:id])
+    if current_user.user_role == UserRole.paciente
+      CancelAppointmentMailer.cancel_appointment(@appointment, @appointment.doctor.user)
+    else
+      CancelAppointmentMailer.cancel_appointment(@appointment, @appointment.patient.user)
+    end
     @appointment.destroy
 
     respond_to do |format|

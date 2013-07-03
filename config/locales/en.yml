@@ -2,6 +2,8 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  appointment:
+    details: "Appointment details"
   patient:
     add: "Add Patient"
     new: "New Patient"
@@ -17,6 +19,7 @@ en:
     edit: "Edit Country"
     details: "Country Details"
   doctor:
+    name: "Doctor Name"
     find_by: "Find doctor by"
     doctor: "Doctor"
     hour_to: "Hour to"
@@ -66,12 +69,14 @@ en:
     edit: "Edit Medical Specification"
     details: "Medical Specification Details"
   prepaid_medical:
-      prepaid_medical: "Prepaid Medical"
-      new: "New Prepaid Medical"
-      create: "Create Prepaid Medical"
-      add: "Add Prepaid Medical"
-      edit: "Edit Prepaid Medical"
-      details: "Prepaid Medical Details"
+    prepaid_medical: "Prepaid Medical"
+    new: "New Prepaid Medical"
+    create: "Create Prepaid Medical"
+    add: "Add Prepaid Medical"
+    edit: "Edit Prepaid Medical"
+    details: "Prepaid Medical Details"
+  cancel_appointment: "Cancel Appointment"
+  cant_cancel_appointment: "You cant cancel this appointment"
   profile: "Profile"
   busy: "Busy Shift"
   not_informed: "Not Informed"
@@ -227,6 +232,10 @@ en:
     timeline_calendar: "Timeline Calendar"
     timeline: "Timeline"
   mailers:
+    cancelled_appointment: "appointment cancelled - "
+    cancelled_appointment_title: "appointment cancelled"
+    cancellation: "The appointment you had, has been cancelled by "
+    details_cancellation: "this means that now you have an empty appointment at: "
     new_comment_subject: "Your ticket has a new comment - Read it"
     no_hours_subject: "You have not uploaded your worked hours - Do it"
     request_subject: "A new request has been created for "

@@ -1,20 +1,70 @@
-<p id="notice"><%= notice %></p>
+<!-- start page title -->
+<div class="page-title">
+  <div class="in">
+    <div class="titlebar">	<h2><%= t("appointments") %>: <%= @appointment.doctor.user.full_name %></h2>	<p>Doc.net</p></div>
 
-<p>
-  <b>Patient:</b>
-  <%= @appointment.patient_id %>
-</p>
-
-<p>
-  <b>Doctor:</b>
-  <%= @appointment.doctor_id %>
-</p>
-
-<p>
-  <b>Datetime:</b>
-  <%= @appointment.datetime %>
-</p>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- end page title -->
 
 
-<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', appointments_path %>
+
+
+
+
+
+<!-- START CONTENT -->
+<div class="content">
+
+  <!-- START NAVIGATION -->
+  <div class="grid740" style="z-index: 720;">
+    <ul class="pagewrap">
+      <li><%= link_to t("dashboard.dashboard"), root_path %></li>
+      <li><%= link_to t("appointments"), appointments_patient_appointments_path %></li>
+      <li><b><%= @appointment.patient_id %></b></li>
+    </ul>
+  </div>
+  <!-- END NAVIGATION -->
+
+
+
+  <!-- START SIMPLE FORM -->
+  <div class="simplebox grid740">
+
+    <!-- start show codes -->
+    <div class="simplebox grid740">
+      <div class="titleh"><h3><%= t("appointment.details") %></h3>
+
+        <div class="shortcuts-icons">
+
+        </div>
+      </div>
+      <div class="body">
+
+        <ul class="statistics">
+          <li><%= t("doctor.name") %>	<p>	<span class="blue"><b><%= @appointment.doctor.user.full_name unless @appointment.doctor.user.nil?%></b></span>	</p>	</li>
+          <li><%= t("birthdate") %>	<p>	<span class="blue"><b><%= @appointment.datetime.strftime("%d/%m/%y %H:%M") unless @appointment.datetime.nil?%></b></span>	</p>	</li>
+          <li><%= t("prepaid_medicals") %>	<p>	<span class="blue"><b><%= @appointment.patient.prepaid_medical.name unless @appointment.patient.prepaid_medical_id.nil?%></b></span>	</p>	</li>
+          <% if @appointment.datetime.to_date > DateTime.current.to_date%>
+          <li><%= t("cancel_appointment") %>	<p>	<span class="blue"><b>      <%= link_to t("cancel_appointment"), appointment_path(@appointment), method: :delete, data: { confirm: 'Are you sure?' }, :class => "st-clear" %> </b></span>	</p>	</li>
+          <% else %>
+              <li><%= t("cancel_appointment") %>	<p>	<span class="red"><b>    <%= t("cant_cancel_appointment")%>  </b></span>	</p>	</li>
+            <%end%>
+              </b></span>	</p>	</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- end show codes -->
+
+  </div>
+  <!-- END SIMPLE FORM -->
+
+
+
+
+</div>
+

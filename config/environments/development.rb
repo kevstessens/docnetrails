@@ -41,7 +41,7 @@ Docnet::Application.configure do
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => 'gmail.com',
-      :user_name            => 'kevstessens@gmail.com',
+      :user_name            => 'docnet.argentina@gmail.com',
       :password             => 'iPassword2013',
       :authentication       => 'plain',
       :enable_starttls_auto => true  }
