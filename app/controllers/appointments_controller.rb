@@ -5,7 +5,7 @@ class AppointmentsController < ApplicationController
   def new_appointment_doctor_search
 
     @appointment = Appointment.new
-    @doctors = Doctor.all
+    @doctors = Doctor
     if !params[:appointment].nil?
       doctor = Array.new
       if (params[:appointment][:patient_id].blank? and params[:appointment][:doctor_id].blank? and params[:appointment][:ranking].blank?)
@@ -25,18 +25,23 @@ class AppointmentsController < ApplicationController
       end
       unless params[:appointment][:ranking].blank?
         prepaid_med = params[:appointment][:ranking]
-        hospital = params[:appointment][:doctor_id]
         Doctor.joins(:prepaid_medicals).where("prepaid_medicals.id = ?", prepaid_med).all.each do |doctor2|
           doctor.append(doctor2)
         end
       end
     else
-      doctor = Doctor.all
+      doctor = Doctor
+
     end
 
+    @doctors = doctor
 
+    unless @doctors.kind_of?(Array)
+      @doctors = @doctors.page(params[:page]).per(5)
+    else
+      @doctors = Kaminari.paginate_array(@doctors).page(params[:page]).per(5)
+    end
 
-      @doctors = doctor
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: new_appointment_doctor_search }
