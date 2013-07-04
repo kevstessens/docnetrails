@@ -22,4 +22,26 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :doctor, :allow_destroy => true
   accepts_nested_attributes_for :patient, :allow_destroy => true
+
+  def calculate_ranking
+    rank = 0
+    counting = 0
+    if self.user_role == UserRole.paciente
+      Appointment.where("patient_id = ?", self.patient.id).all.each do |app|
+        rank = app.ranking.to_i + rank
+        counting = counting + 1
+      end
+      if counting == 0
+        return "N/A"
+      else
+        if Integer(rank/counting).to_s == "0"
+          "N/A"
+        else
+          return Integer(rank/counting).to_s
+        end
+      end
+    else
+       "N/A"
+    end
+  end
 end

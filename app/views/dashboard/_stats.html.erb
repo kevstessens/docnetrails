@@ -1,31 +1,54 @@
+    <% unless current_user.user_role == UserRole.admin %>
+
+
     <!-- Line 6 -->
     <div class="simplebox grid160-left">
-      <div class="titleh"><h3><%= t("dashboard.project_completed") %></h3></div>
+      <div class="titleh"><h3><%= t("dashboard.assisted_appointments") %></h3></div>
       <div class="body padding10">
-        <h1 class="h1-tag-green" align="center"><b>60%</b></h1>
-      </div>
+        <% if current_user.user_role == UserRole.paciente %>
+        <h1 class="h1-tag-green" align="center"><b><%= Integer(((Appointment.where("patient_id = ? and assisted = ?", current_user.patient.id, true).count)/(Appointment.where("patient_id = ?", current_user.patient.id).count))*100) %>%</b></h1>
+            <% else %>
+            <h1 class="h1-tag-green" align="center"><b><%= Integer(((Appointment.where("doctor_id = ? and assisted = ?", current_user.doctor.id, true).count)/(Appointment.where("doctor_id = ?", current_user.doctor.id).count))*100) %>%</b></h1>
+            <% end %>
+            </div>
     </div>
 
     <div class="simplebox grid160-left">
-      <div class="titleh"><h3><%= t("dashboard.days_to_deliver") %></h3></div>
+      <div class="titleh"><h3><%= t("dashboard.pending_appointments") %></h3></div>
       <div class="body padding10">
-        <h1 class="h1-tag" align="center"><b>43</b></h1>
+        <% if current_user.user_role == UserRole.paciente %>
+
+      <h1 class="h1-tag" align="center"><b><%= Appointment.where("patient_id = ? and datetime >= ?", current_user.patient.id, DateTime.current).count.to_s%></b></h1>
+        <% else %>
+
+            <h1 class="h1-tag" align="center"><b><%= Appointment.where("doctor_id = ? and datetime >= ?", current_user.doctor.id, DateTime.current).count.to_s%></b></h1>
+        <% end %>
+
       </div>
     </div>
 
         <div class="simplebox grid160-left">
-          <div class="titleh"><h3><%= t("dashboard.hours_worked") %></h3></div>
+          <div class="titleh"><h3><%= t("dashboard.ranking") %></h3></div>
           <div class="body padding10">
-            <h1 class="h1-tag-green" align="center">3</h1>
+            <h1 class="h1-tag-green" align="center"><%= current_user.calculate_ranking%></h1>
           </div>
         </div>
 
 
 
     <div class="simplebox grid200-right">
-      <div class="titleh"><h3><%= t("dashboard.bugs_reported") %></h3></div>
+      <div class="titleh"><h3><%= t("dashboard.missed_appointments") %></h3></div>
       <div class="body padding10">
-        <h1 class="h1-tag-red" align="center">6</h1>
+        <% if current_user.user_role == UserRole.paciente %>
+
+      <h1 class="h1-tag-red" align="center"><%= Appointment.where("patient_id = ? and assisted = ? and datetime <= ?", current_user.patient.id, false, DateTime.current).count%></h1>
+        <% else %>
+
+      <h1 class="h1-tag-red" align="center"><%= Appointment.where("doctor_id = ? and assisted = ?and datetime <= ?", current_user.doctor.id, false, DateTime.current).count%></h1>
+        <% end %>
+
       </div></div>
 
     <div class="clear"></div>
+
+    <% end %>

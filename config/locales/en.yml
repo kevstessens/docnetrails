@@ -303,6 +303,10 @@ en:
     priority: "Priority"
     project_completed: "Project Completed"
     days_to_deliver: "Days to Deliver"
+    assisted_appointments: "Assisted"
+    pending_appointments: "Pending"
+    missed_appointments: "Missed"
+    ranking: "My Ranking"
     hours_worked: "Hours Worked"
     bugs_reported: "Bugs Reported"
   features:
