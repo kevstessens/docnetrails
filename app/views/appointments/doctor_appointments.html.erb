@@ -64,6 +64,8 @@
                     datetime.value = date;
                     var elem = document.getElementById("date");
                     elem.value = date;
+                    var elem2 = document.getElementById("date");
+                    elem.value = date;
                     document.getElementById('appoinment_new_patient').style.display = "block";
                 } else {
                     $('#calendar').fullCalendar('gotoDate', date);
@@ -89,7 +91,7 @@
       <%= f.hidden_field :doctor_id, :value => @appointment.doctor_id %>
       <%= f.hidden_field :patient_id, :id => "patient_id" %>
       <%= f.hidden_field :datetime, :id => "date" %>
-      <%= f.hidden_field :medical_specification_id, :id => "specification" %>
+      <%= f.hidden_field :medical_specification_id, :value => current_user.doctor.medical_specifications.first.id%>
       <%= f.button :id => "button" %>
   <% end %>
 </div>

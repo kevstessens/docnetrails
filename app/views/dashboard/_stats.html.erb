@@ -6,9 +6,9 @@
       <div class="titleh"><h3><%= t("dashboard.assisted_appointments") %></h3></div>
       <div class="body padding10">
         <% if current_user.user_role == UserRole.paciente %>
-        <h1 class="h1-tag-green" align="center"><b><%= Integer(((Appointment.where("patient_id = ? and assisted = ?", current_user.patient.id, true).count)/(Appointment.where("patient_id = ?", current_user.patient.id).count))*100) %>%</b></h1>
+        <h1 class="h1-tag-green" align="center"><b><%= Integer(((Appointment.where("patient_id = ? and assisted = ?", current_user.patient.id, true).count)/(Appointment.where("patient_id = ?", current_user.patient.id).count))*100) unless Appointment.where("patient_id = ?", current_user.patient.id).count == 0 %>%</b></h1>
             <% else %>
-            <h1 class="h1-tag-green" align="center"><b><%= Integer(((Appointment.where("doctor_id = ? and assisted = ?", current_user.doctor.id, true).count)/(Appointment.where("doctor_id = ?", current_user.doctor.id).count))*100) %>%</b></h1>
+            <h1 class="h1-tag-green" align="center"><b><%= Integer(((Appointment.where("doctor_id = ? and assisted = ?", current_user.doctor.id, true).count)/(Appointment.where("doctor_id = ?", current_user.doctor.id).count))*100) unless Appointment.where("doctor_id = ?", current_user.doctor.id).count == 0%>%</b></h1>
             <% end %>
             </div>
     </div>

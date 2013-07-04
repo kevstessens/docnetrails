@@ -53,6 +53,8 @@ class AppointmentsController < ApplicationController
     @appointment.datetime = params[:datetime]
     @appointment.patient_id = params[:patient_id]
     @appointment.doctor = current_user.doctor
+    @appointment.datetime=@appointment.datetime.advance(:hours => -3)
+    @appointment.medical_specification_id = current_user.doctor.medical_specifications.first.id
     respond_to do |format|
       if @appointment.save
         format.html { redirect_to appointments_doctor_appointments_path, notice: 'Appointment and new patient were successfully created.' }
@@ -84,6 +86,9 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
     @appointment.doctor = current_user.doctor
     @appointment.patient_id = 1
+    @appointment.medical_specification_id = current_user.doctor.medical_specifications.first.id
+    @appointment.datetime = @appointment.datetime.advance(:hours => -3) unless @appointment.datetime.nil?
+
     @appointments = current_user.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, patient_id as patient_id, story_fragment as url, id as id").all
     @appointments.each do |app|
       if app.patient_id == 1
@@ -192,7 +197,7 @@ class AppointmentsController < ApplicationController
     @appointment.destroy
 
     respond_to do |format|
-      format.html { redirect_to appointments_url }
+      format.html { redirect_to :root }
       format.json { head :no_content }
     end
   end

@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :birthdate, :full_name, :user_role_id, :patient_attributes, :patient, :doctor_attributes, :doctor,:prepaid_medical_id, :datetime
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :birthdate, :full_name, :user_role_id, :patient_attributes, :patient, :doctor_attributes, :doctor,:prepaid_medical_id, :datetime, :patient_id
   attr_accessor :prepaid_medical_id, :datetime
   attr_readonly :prepaid_medical_id
 

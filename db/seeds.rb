@@ -28,4 +28,5 @@ Hospital.create!(:name => "S. Juan de Dios")
 Hospital.create!(:name => "Austral")
 Hospital.create!(:name => "Italiano")
 
-Patient.create()
+User.create!(:email => "default@docnet.com", :password => "docnet123", :full_name => "N/A", :user_role_id => 3)
+Patient.create(:user_id => 2)
