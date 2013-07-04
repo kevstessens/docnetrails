@@ -41,6 +41,24 @@ class PatientsController < ApplicationController
     @user = User.find(@patient.user_id)
   end
 
+  def create_for_doctor
+    @patient_created = User.new(params[:user])
+    @patient_created.user_role_id = UserRole.paciente.id
+    @patient_created.birthdate = Date.current
+    @patient_created.prepaid_medical_id = 1
+    @patient = Patient.new
+    @patient_created.patient = @patient
+
+    respond_to do |format|
+      if @patient_created.save
+        format.html { redirect_to appointments_create_for_doctor_path(:datetime => params[:user][:datetime], :patient_id => @patient_created.patient.id), notice: 'Appointment and new patient were successfully created.' }
+      else
+        format.html { redirect_to @patient_created, notice: 'Error.' }
+        format.json { render json: @patient_created.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # POST /patients
   # POST /patients.json
   def create

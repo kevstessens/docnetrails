@@ -6,14 +6,35 @@
         var d = date.getDate();
         var m = date.getMonth();
         var y = date.getFullYear();
-
         $('#calendar').fullCalendar({
             header: {
                 left: 'prev,next today',
-                center: 'title',
-                right: 'month,basicWeek,basicDay'
+                right: 'month,agendaWeek,agendaDay'
             },
+
+            timeFormat: {
+                // for agendaWeek and agendaDay do not display time in title
+                // time already displayed in the view
+                agenda: '',
+
+                // for all other views (19:00 - 20:30)
+                '': 'H:mm{ - H:mm}'
+            },
+
+            columnFormat: {
+                month: 'dddd',    // Monday
+                week: 'dddd, MMM dS', // Monday, July 13th
+                day: 'dddd, MMM dS'  // Monday, July 13th
+            },
+
+            axisFormat: 'H:mm',
+            allDaySlot: false,
+            minTime: '6',
+            maxTime: '20',
+            slotMinutes: 30,
+            defaultEventMinutes: 22,
             editable: false,
+            aspectRatio: 2,
             events: <%= @appointments %>,
             monthNames:[' <%= t("january") %>', '<%= t("february") %>', '<%= t("march") %>', '<%= t("april") %>', '<%= t("may") %>', '<%= t("june") %>', '<%= t("july") %>',
                 '<%= t("august") %>', '<%= t("september") %>', '<%= t("october") %>', '<%= t("november") %>', '<%= t("december") %>'],
@@ -32,12 +53,21 @@
                 week:     '<%= t("week") %>',
                 day:      '<%= t("day") %>'
             },
-            dayClick: function(date, allDay, jsEvent, view) {
 
-                if (allDay) {
-                    alert('Clicked on the entire day: ' + date);
-                }else{
-                    alert('Clicked on the slot: ' + date);
+            dayClick: function(date, allDay, jsEvent, view) {
+                if (view.name == "agendaDay") {
+
+                    document.getElementById("form").style.display = "none";
+                    document.getElementById("data").style.display = "none";
+
+                    var datetime = document.getElementById("datetime");
+                    datetime.value = date;
+                    var elem = document.getElementById("date");
+                    elem.value = date;
+                    document.getElementById('appoinment_new_patient').style.display = "block";
+                } else {
+                    $('#calendar').fullCalendar('gotoDate', date);
+                    $('#calendar').fullCalendar('changeView', 'agendaDay');
                 }
             },
             eventClick: function(calEvent, jsEvent, view) {
@@ -54,6 +84,21 @@
     });
 </script>
 
+<div style="display: none;">
+  <%= form_for @appointment do |f| %>
+      <%= f.hidden_field :doctor_id, :value => @appointment.doctor_id %>
+      <%= f.hidden_field :patient_id, :id => "patient_id" %>
+      <%= f.hidden_field :datetime, :id => "date" %>
+      <%= f.hidden_field :medical_specification_id, :id => "specification" %>
+      <%= f.button :id => "button" %>
+  <% end %>
+</div>
+
+<div id="appoinment_new_patient" class="modal-confirmation hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-body" width="2000">
+    <%= render :partial => "appointments/new_patient" %>
+  </div>
+</div>
 
 <!-- start page title -->
 <div class="page-title">

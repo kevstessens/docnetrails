@@ -1,0 +1,100 @@
+<div class="modal-header">
+  <h3 id="myModalLabel">Reserve</h3>
+</div>
+
+
+<table width="400" id="question">
+  <tr height="20" />
+  <form>
+  <tr height="30">
+    <td width="200"> <input type="radio" name="answer" value="Ocupar" checked>Ocupar turno</td>
+  </tr>
+  <tr height="30">
+    <td width="200"> <input type="radio" name="answer" value="Sacar">Paciente no registrado</td>
+  </tr>
+  </form>
+</table>
+</br>
+
+<div class="body" id="form">
+
+
+  <%= semantic_nested_form_for @user, :url => url_for(:controller => 'patients', :action => 'create_for_doctor') do |f| %>
+
+      <% if @user.errors.any? %>
+          <div class="albox errorbox" style="z-index: 670;">
+            <b><%= t("errors") %> :</b>
+            <% @user.errors.messages.each do |msg| %>
+                <li><%= msg[1][0] %></li>
+            <% end %>
+            <a href="#" class="close tips" original-title="close"><%= t("close") %></a>
+          </div>
+      <% end %>
+
+      <div class="st-form-line">
+        <span class="st-labeltext"><%= t("name") %></span>
+        <%= f.text_field :full_name, :class => "st-forminput"%>
+      </div>
+
+      <div class="st-form-line">
+        <span class="st-labeltext"><%= t("users.email") %></span>
+        <%= f.text_field :email, :class => "st-forminput"%>
+      </div>
+
+      <div class="st-form-line">
+        <span class="st-labeltext"><%= t("password") %></span>
+        <%= f.password_field :password, :class => "st-forminput"%>
+      </div>
+
+
+      <div style="display: none;">
+        <%= f.text_field :datetime, :id => "datetime" %>
+      </div>
+
+
+      <div class="button-box" >
+        <%= f.submit %>
+      </div>
+  <% end %>
+
+
+</div>
+
+<table width="400" id="data">
+  <tr height="20" />
+  <tr height="30">
+    <td width="200"> <%= t("date") %>:</td> <td width="200"> <input id="date_display" readonly> </td>
+  </tr>
+  <tr height="30">
+    <td width="200"> <%= t("hour") %>:</td> <td width="200"> <input id="hour_display" readonly> </td>
+  </tr>
+  <tr height="30">
+    <td width="200"> <%= t("doctor.doctor") %>:</td> <td width="200"> <%= @appointment.doctor.user.full_name %> </td>
+  </tr>
+  <tr height="30">
+    <td width="200"> <%= t("matter") %>:</td>
+    <td width="200"> <select id="specifications">
+      <% (@appointment.doctor.medical_specifications).each do |f| %>
+          <option value="<%= f.id %>" ><%= f.name %>
+      <% end %>
+    </select> </td> </tr>
+</table>
+</br>
+
+<div class="button-box" style="float:right;">
+  <a href="" class="st-clear" data-dismiss="modal" aria-hidden="true"><%= t("cancel") %></a>
+  <button onclick="createPacient()" class="st-clear" data-dismiss="modal" aria-hidden="true">Confirm1</button>
+  <script type="text/javascript">
+      function createPacient() {
+          var button = document.getElementById("button");
+          var answers = document.getElementsByName("answer");
+          if (answers[1].checked) {
+              document.getElementById("question").style.display = "none";
+              document.getElementById("form").style.display = "block";
+          }
+          if (answers[0].checked) {
+              button.click();
+          }
+      }
+  </script>
+</div>

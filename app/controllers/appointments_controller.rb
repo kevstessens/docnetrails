@@ -48,6 +48,21 @@ class AppointmentsController < ApplicationController
     end
   end
 
+  def create_for_doctor
+    @appointment = Appointment.new(params[:appointment])
+    @appointment.datetime = params[:datetime]
+    @appointment.patient_id = params[:patient_id]
+    @appointment.doctor = current_user.doctor
+    respond_to do |format|
+      if @appointment.save
+        format.html { redirect_to appointments_doctor_appointments_path, notice: 'Appointment and new patient were successfully created.' }
+        format.json { render json: @appointment, status: :created, location: @appointment }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @appointment.errors, status: :unprocessable_entity }
+      end
+    end  end
+
   def new_appointment_calendar
     @appointment = Appointment.new
     @appointment.doctor = Doctor.find(params[:doctor])
@@ -64,14 +79,18 @@ class AppointmentsController < ApplicationController
     @appointments = @appointments.to_json.html_safe
   end
 
-  def confirmation
-    @appointment.datetime = Date.new
-  end
-
   def doctor_appointments
+    @user = User.new
+    @appointment = Appointment.new
+    @appointment.doctor = current_user.doctor
+    @appointment.patient_id = 1
     @appointments = current_user.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, patient_id as patient_id, story_fragment as url, id as id").all
     @appointments.each do |app|
-      app.title = Patient.find(app.patient_id).user.full_name
+      if app.patient_id == 1
+        app.title = t("busy")
+      else
+        app.title = Patient.find(app.patient_id).user.full_name
+      end
       app.allDay = false
       app.url = appointment_path(app.id)
 

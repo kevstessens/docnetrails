@@ -164,6 +164,7 @@ en:
   confirm: "Confirm"
   confirm:
     appointment: "Do you want to confirm this new appointment?"
+    new_patient: "Do you want to save an appointment for a new patient?"
   matter: "Matter"
   find_features_by: "Find features by:"
   nothing_to_show: "There is nothing to show."

@@ -57,14 +57,14 @@
             dayClick: function(date, allDay, jsEvent, view) {
                 if (view.name == "agendaDay") {
                     var date_display = document.getElementById("date_display");
-                    var day = date.getDate() + " - " + date.getMonth();
+                    var day = date.toLocaleDateString("es");
                     date_display.value = day;
                     var hour_display = document.getElementById("hour_display");
-                    var hour = date.getHours() + " : " + date.getMinutes();
+                    var hour = date.toLocaleTimeString("es").substr(0,5);
                     hour_display.value = hour;
                     var elem = document.getElementById("date");
                     elem.value = date;
-                    document.getElementById('appoinment_confirmation').style.display = "block";
+                    document.getElementById('appoinment_new_patient').style.display = "block";
                 } else {
                     $('#calendar').fullCalendar('gotoDate', date);
                     $('#calendar').fullCalendar('changeView', 'agendaDay');

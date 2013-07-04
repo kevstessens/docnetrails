@@ -27,3 +27,5 @@ Hospital.create!(:name => "Aleman")
 Hospital.create!(:name => "S. Juan de Dios")
 Hospital.create!(:name => "Austral")
 Hospital.create!(:name => "Italiano")
+
+Patient.create()
