@@ -44,8 +44,9 @@
 
         <ul class="statistics">
           <li><%= t("doctor.name") %>	<p>	<span class="blue"><b><%= @appointment.doctor.user.full_name unless @appointment.doctor.user.nil?%></b></span>	</p>	</li>
-          <li><%= t("birthdate") %>	<p>	<span class="blue"><b><%= @appointment.datetime.strftime("%d/%m/%y %H:%M") unless @appointment.datetime.nil?%></b></span>	</p>	</li>
-          <li><%= t("prepaid_medicals") %>	<p>	<span class="blue"><b><%= @appointment.patient.prepaid_medical.name unless @appointment.patient.prepaid_medical_id.nil?%></b></span>	</p>	</li>
+          <li><%= t("date") %>	<p>	<span class="blue"><b><%= @appointment.datetime.strftime("%d/%m/%y %H:%M") unless @appointment.datetime.nil?%></b></span>	</p>	</li>
+          <% medical_specification = MedicalSpecification.find(@appointment.medical_specification_id) %>
+          <li><%= t("matter") %>	<p>	<span class="blue"><b><%= medical_specification.name unless medical_specification.nil?%></b></span>	</p>	</li>
           <% if current_user.user_role == UserRole.paciente %>
             <% if @appointment.datetime.to_date > DateTime.current.to_date%>
             <li><%= t("cancel_appointment") %>	<p>	<span class="blue"><b>      <%= link_to t("cancel_appointment"), appointment_path(@appointment), method: :delete, data: { confirm: 'Are you sure?' }, :class => "st-clear" %> </b></span>	</p>	</li>
