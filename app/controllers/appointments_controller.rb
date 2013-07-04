@@ -47,9 +47,13 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
     @appointment.doctor = Doctor.find(params[:doctor])
     @appointment.patient = current_user.patient
-    @appointments = @appointment.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay").all
+    @appointments = @appointment.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, patient_id as patient_id").all
     @appointments.each do |app|
-      app.title = t("busy")
+      if app.patient_id.to_s == current_user.patient.id
+        app.title = t("busy")
+      else
+        app.title= t("your_shift")
+      end
       app.allDay = false
     end
     @appointments = @appointments.to_json.html_safe
@@ -93,7 +97,6 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1.json
   def show
     @appointment = Appointment.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @appointment }
@@ -120,6 +123,7 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = Appointment.new(params[:appointment])
+    @appointment.datetime=@appointment.datetime.advance(:hours => -3)
 
     respond_to do |format|
       if @appointment.save

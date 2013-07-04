@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails docnet: test" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="aedf35c4-9519-4dbd-8d0b-c2ee2879221f">
-    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-    <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
-    <libraries>
-      <library>
-        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/xerial-sqlite-license.txt</url>
-      </library>
-      <library>
-        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
-      </library>
-    </libraries>
-    <schema name="" catalog=""/>
-  </data-source>
-  <data-source source="LOCAL" name="Rails docnet: development" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="5ab8525a-ccd8-404a-848f-0cbacb7cc688">
+  <data-source source="LOCAL" name="Rails docnet: development" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="398d733b-5126-48bc-a1b6-854b9b1525fc">
     <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
     <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
     <libraries>
       <library>
-        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/xerial-sqlite-license.txt</url>
+        <url>jar://$PROJECT_DIR$/sqlite-jdbc-3.7.2.jar!/</url>
       </library>
       <library>
-        <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
+        <url>file://$PROJECT_DIR$/xerial-sqlite-license.txt</url>
       </library>
     </libraries>
     <schema name="" catalog=""/>
@@ -129,13 +116,13 @@
     <table name="patients" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
       <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
-      <column name="prepaid_medicals_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="prepaid_medical_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
       <column name="address_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
       <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
       <index name="index_patients_on_address_id" unique="true" columns="address_id"/>
-      <index name="index_patients_on_prepaid_medicals_id" unique="true" columns="prepaid_medicals_id"/>
+      <index name="index_patients_on_prepaid_medical_id" unique="true" columns="prepaid_medical_id"/>
       <index name="index_patients_on_user_id" unique="true" columns="user_id"/>
     </table>
     <table name="prepaid_medicals" schema="" catalog="" type="TABLE">
@@ -191,18 +178,5 @@
       <index name="index_users_on_email" unique="true" columns="email"/>
       <index name="index_users_on_user_role_id" unique="true" columns="user_role_id"/>
     </table>
-  </data-source>
-  <data-source source="LOCAL" name="Rails docnet: production" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="b5635703-4a40-41ed-8184-5bbb1a94b9a7">
-    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-    <jdbc-url>jdbc:sqlite:C:\Users\Usuario\Proyectos\docnetrails\db\production.sqlite3</jdbc-url>
-    <libraries>
-      <library>
-        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/xerial-sqlite-license.txt</url>
-      </library>
-      <library>
-        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
-      </library>
-    </libraries>
-    <schema name="" catalog=""/>
   </data-source>
 </component>

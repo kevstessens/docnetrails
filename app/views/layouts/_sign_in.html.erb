@@ -5,11 +5,20 @@
 <title>Doc.net</title>
   
   <%= stylesheet_link_tag    "application", :media => "all" %>
-    
+
 </head>
 
+<div align="center">
+<b><%= t("language_change")%></b><br>
+
+<%= link_to image_tag('../assets/spanish-flag.png'), :locale=>'es'%> |
+<%= link_to image_tag('../assets/english-flag.png'), :locale=>'en'%>
+
+</div>
 <body>
-  <%= yield %>
+<%= yield %>
 </body>
- 
+
+
+
 </html>

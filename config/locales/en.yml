@@ -5,6 +5,7 @@ en:
   appointment:
     details: "Appointment details"
   patient:
+    name: "Patient Name"
     add: "Add Patient"
     new: "New Patient"
     edit: "Edit Patient"
@@ -77,6 +78,7 @@ en:
     details: "Prepaid Medical Details"
   assisted: "Atended?"
   cancel_appointment: "Cancel Appointment"
+  marked_as_busy: "You've marked this appointment as a busy space"
   close_appointment: "Close Appointment "
   ranking: "Ranking"
   1_worst: "1 - Worst"
@@ -85,6 +87,7 @@ en:
   previous_clinical_story: "Previous Clinical story"
   cant_cancel_appointment: "You cant cancel this appointment"
   profile: "Profile"
+  your_shift: "Your shift"
   busy: "Busy Shift"
   not_informed: "Not Informed"
   appointments: "Appointments"
