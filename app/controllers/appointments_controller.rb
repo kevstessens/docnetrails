@@ -54,10 +54,10 @@ class AppointmentsController < ApplicationController
     @appointment.patient = current_user.patient
     @appointments = @appointment.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, patient_id as patient_id").all
     @appointments.each do |app|
-      if app.patient_id.to_s == current_user.patient.id
-        app.title = t("busy")
-      else
+      if app.patient_id.to_s == current_user.patient.id.to_s
         app.title= t("your_shift")
+      else
+        app.title = t("busy")
       end
       app.allDay = false
     end

@@ -18,6 +18,7 @@ gem 'formtastic'
 gem 'simple_form'
 
 
+gem 'whenever', git: 'git://github.com/Insomniware/whenever.git', :require => false
 
 # Gems used only for assets and not required
 # in production environments by default.

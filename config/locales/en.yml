@@ -244,6 +244,10 @@ en:
     timeline_calendar: "Timeline Calendar"
     timeline: "Timeline"
   mailers:
+    dont_forget_it: "Please, don't be late!"
+    for_the_doctor: "Yor appointment is for the doctor: "
+    reminder: "Remember your appointment for tomorrow"
+    remember_your_appointment: "Remember your appointment for tomorrow at: "
     not_assisted_to_appointment: "You have not showed to yout appointment on - "
     not_showed: "You missed your appointment"
     missed_appointment: "You requested an appointment but you did not assist to it"
