@@ -221,10 +221,10 @@ es:
   dashboard:
     dashboard: "Escritorio"
     ranking: "Mi Ranking"
-    assisted_appointments: "Turnos asistidos"
-    pending_appointments: "Turnos pendientes"
-    missed_appointments: "Turnos inasistidos"
-    ranking: "Mi Ranking"
+  ranking: "Mi Ranking"
+  assisted_appointments: "Turnos asistidos"
+  pending_appointments: "Turnos pendientes"
+  missed_appointments: "Turnos inasistidos"
   invested_hours:
     date: "Fecha"
     user: "Usuario"
