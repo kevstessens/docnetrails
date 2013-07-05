@@ -1,6 +1,8 @@
 #encoding: utf-8
 
 es:
+  reserve: "Reservar"
+  confirmate: "Confirmar"
   appointment:
     details: "Detalle de turno"
     disable: "Ocupar turno"
@@ -24,8 +26,8 @@ es:
     name: "Nombre de doctor"
     find_by: "Buscar doctor por"
     doctor: "Doctor"
-    hour_to: "Horario desde"
-    hour_from: "Horario hasta"
+    hour_to: "Horario hasta"
+    hour_from: "Horario desde"
     shift_duration: "Duración de turnos"
     edit: "Editar doctor"
     add: "Agregar doctor"
@@ -178,7 +180,7 @@ es:
   clear: "Limpiar"
   edit: "Editar"
   add: "Agregar"
-  language_change: "Idioma"
+  language_change: "Seleccionar Idioma"
   show: "Ver"
   errors: "Errores"
   close: "Cerrar"
