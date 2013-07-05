@@ -74,10 +74,10 @@
               <% if current_user.user_role_id == UserRole.paciente.id %>
 
                   <a href="<%= appointments_new_appointment_doctor_search_path%>" role="button" class="qbutton-left tips" title="<%= t("new_appointment_index")%>"><img src="/assets/icons/button/clock2.png" width="14" height="14" alt="new post" /></a>
-                  <a href="<%= appointments_patient_appointments_path%>" role="button" class="qbutton-right tips" title="<%= t("my_appointments")%>"><img src="/assets/icons/header/newpost.png" width="18" height="14" alt="new post" /></a>
+                  <a href="<%= edit_patient_path(Patient.where("user_id = ?", current_user.id).first)%>" role="button" class="qbutton-right tips" title="<%= t("edit_profile")%>"><img src="/assets/icons/header/newpost.png" width="18" height="14" alt="new post" /></a>
         <% elsif current_user.user_role_id == UserRole.doctor.id %>
-                <a href="<%= new_appointment_path%>" role="button" class="qbutton-left tips" title="<%= t("skip_shifts")%>"><img src="/assets/icons/button/clock2.png" width="14" height="14" alt="new post" /></a>
-                  <a href="<%= appointments_doctor_appointments_path%>" role="button" class="qbutton-right tips" title="<%= t("my_appointments")%>"><img src="/assets/icons/header/newpost.png" width="18" height="14" alt="new post" /></a>
+                <a href="<%= appointments_doctor_appointments_path %>" role="button" class="qbutton-left tips" title="<%= t("my_appointments")%>"><img src="/assets/icons/button/clock2.png" width="14" height="14" alt="new post" /></a>
+                  <a href="<%= edit_doctor_path(Doctor.where("user_id = ?", current_user.id).first)%>" role="button" class="qbutton-right tips" title="<%= t("edit_profile")%>"><img src="/assets/icons/header/newpost.png" width="18" height="14" alt="new post" /></a>
 
               <% end %>
           <% end %>

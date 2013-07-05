@@ -4,6 +4,8 @@
 en:
   appointment:
     details: "Appointment details"
+    disable: "Disable appointment"
+    new_patient: "Appointment for a new patient"
   patient:
     name: "Patient Name"
     add: "Add Patient"
@@ -420,9 +422,18 @@ en:
     request:
       created: "Request was successfully created."
       updated: "Request was successfully updated."
-
-
-
-
-
-
+  controllers:
+    patient: "Appointment and new patient were successfully created."
+    appointment: "Appointment was successfully updated."
+    city: "City was successfully saved."
+    country: "Country was successfully saved."
+    state: "State was successfully saved."
+    hospital: "Hospital was successfully saved."
+    spec: "Medical Specification was successfully saved."
+    prep: "Prepaid Medical was successfully saved."
+    user_c: "User was successfully created."
+    user_u: "User was successfully updated."
+    doctor_c: "Doctor was successfully created."
+    doctor_u: "Doctor was successfully updated."
+    patient_c: "Patient was successfully created."
+    patient_u: "Patient was successfully updated."

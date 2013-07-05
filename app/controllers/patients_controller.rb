@@ -69,7 +69,7 @@ class PatientsController < ApplicationController
       if @user.save
         @patient = @user.patient
         NewPatientMailer.new_patient_created(@patient).deliver
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
+        format.html { redirect_to @patient, notice: t("controllers.patient_c") }
         format.json { render json: @patient, status: :created, location: @patient }
       else
         format.html { render action: "new" }
@@ -87,7 +87,7 @@ class PatientsController < ApplicationController
 
     respond_to do |format|
       if @user.update_without_password(params[:user])
-        format.html { redirect_to @patient, notice: 'Patient was successfully updated.' }
+        format.html { redirect_to @patient, notice: t("controllers.patient_u") }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -29,9 +29,9 @@
 
             axisFormat: 'H:mm',
             allDaySlot: false,
-            minTime: '6',
-            maxTime: '20',
-            slotMinutes: 30,
+            minTime: <%= current_user.doctor.hour_from.hour %>,
+            maxTime: <%= current_user.doctor.hour_to.hour %>,
+            slotMinutes: <%= current_user.doctor.shift_duration.min %>,
             defaultEventMinutes: 22,
             editable: false,
             aspectRatio: 2,
@@ -59,6 +59,7 @@
 
                     document.getElementById("form").style.display = "none";
                     document.getElementById("data").style.display = "none";
+                    document.getElementById("confirm").style.display = "none";
 
                     var datetime = document.getElementById("datetime");
                     datetime.value = date;

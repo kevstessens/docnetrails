@@ -50,7 +50,7 @@ class DoctorsController < ApplicationController
       if @user.save
         @doctor = @user.doctor
         NewDoctorMailer.new_doctor_created(@user).deliver
-        format.html { redirect_to @doctor, notice: 'Doctor was successfully created.' }
+        format.html { redirect_to @doctor, notice: t("controllers.doctor_c") }
         format.json { render json: @doctor, status: :created, location: @doctor }
       else
         format.html { render action: "new" }
@@ -68,7 +68,7 @@ class DoctorsController < ApplicationController
 
     respond_to do |format|
       if @user.update_without_password(params[:user])
-        format.html { redirect_to @doctor, notice: 'Doctor was successfully updated.' }
+        format.html { redirect_to @doctor, notice: t("controllers.doctor_c") }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

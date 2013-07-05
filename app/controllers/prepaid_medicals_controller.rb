@@ -44,7 +44,7 @@ class PrepaidMedicalsController < ApplicationController
 
     respond_to do |format|
       if @prepaid_medical.save
-        format.html { redirect_to @prepaid_medical, notice: 'Prepaid medical was successfully created.' }
+        format.html { redirect_to @prepaid_medical, notice: t("controllers.prep") }
         format.json { render json: @prepaid_medical, status: :created, location: @prepaid_medical }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class PrepaidMedicalsController < ApplicationController
 
     respond_to do |format|
       if @prepaid_medical.update_attributes(params[:prepaid_medical])
-        format.html { redirect_to @prepaid_medical, notice: 'Prepaid medical was successfully updated.' }
+        format.html { redirect_to @prepaid_medical, notice: t("controllers.prep") }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

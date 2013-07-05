@@ -57,7 +57,7 @@ class AppointmentsController < ApplicationController
     @appointment.medical_specification_id = current_user.doctor.medical_specifications.first.id
     respond_to do |format|
       if @appointment.save
-        format.html { redirect_to appointments_doctor_appointments_path, notice: 'Appointment and new patient were successfully created.' }
+        format.html { redirect_to appointments_doctor_appointments_path, notice: t("controllers.patient") }
         format.json { render json: @appointment, status: :created, location: @appointment }
       else
         format.html { render action: "new" }
@@ -88,7 +88,6 @@ class AppointmentsController < ApplicationController
     @appointment.patient_id = 1
     @appointment.medical_specification_id = current_user.doctor.medical_specifications.first.id
     @appointment.datetime = @appointment.datetime.advance(:hours => -3) unless @appointment.datetime.nil?
-
     @appointments = current_user.doctor.appointments.select("story_fragment as title, datetime as start, datetime as end, story_fragment as allDay, patient_id as patient_id, story_fragment as url, id as id").all
     @appointments.each do |app|
       if app.patient_id == 1
@@ -176,7 +175,7 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.update_attributes(params[:appointment])
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully updated.' }
+        format.html { redirect_to @appointment, notice: t("controllers.appointment") }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

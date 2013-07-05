@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   attr_accessor :prepaid_medical_id, :datetime
   attr_readonly :prepaid_medical_id
 
+  validates_presence_of :full_name, :email, :encrypted_password
 
   accepts_nested_attributes_for :doctor, :allow_destroy => true
   accepts_nested_attributes_for :patient, :allow_destroy => true

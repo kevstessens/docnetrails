@@ -1,8 +1,7 @@
-# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
-
 en:
   errors:
     messages:
+      incomplete: "You must complete every field"
       expired: "has expired, please request a new one"
       not_found: "not found"
       already_confirmed: "was already confirmed, please try signing in"

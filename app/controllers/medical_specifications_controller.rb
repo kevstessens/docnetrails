@@ -44,7 +44,7 @@ class MedicalSpecificationsController < ApplicationController
 
     respond_to do |format|
       if @medical_specification.save
-        format.html { redirect_to @medical_specification, notice: 'Medical specification was successfully created.' }
+        format.html { redirect_to @medical_specification, notice: t("controllers.spec") }
         format.json { render json: @medical_specification, status: :created, location: @medical_specification }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class MedicalSpecificationsController < ApplicationController
 
     respond_to do |format|
       if @medical_specification.update_attributes(params[:medical_specification])
-        format.html { redirect_to @medical_specification, notice: 'Medical specification was successfully updated.' }
+        format.html { redirect_to @medical_specification, notice: t("controllers.spec") }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

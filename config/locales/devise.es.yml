@@ -1,6 +1,7 @@
 es:
   errors:
     messages:
+      incomplete: "Debes completar todos los campos"
       expired: "ha expirado, por favor pide una nueva"
       not_found: "no encontrado"
       already_confirmed: "ya fue confirmada. Intenta ingresar."
@@ -27,6 +28,7 @@ es:
       updated: 'Tu contraseña fue cambiada correctamente. Has iniciado sesión.'
       updated_not_active: 'Tu contraseña fue cambiada correctamente.'
       send_paranoid_instructions: "Si tu email existe en el sistema, recibirás instrucciones para recuperar tu contraseña en él"
+      no_token: "No se puede acceder a esta página. Si desea cambiar su contraseña, asegúrese de que abrió correctamente el enlace."
     confirmations:
       send_instructions: 'Recibirás instrucciones para confirmar tu cuenta en tu email en unos minutos.'
       send_paranoid_instructions: 'Si tu email existe en el sistema, recibirás instrucciones para confirmar tu cuenta en tu email en unos minutos.'

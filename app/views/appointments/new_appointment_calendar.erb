@@ -29,9 +29,9 @@
 
             axisFormat: 'H:mm',
             allDaySlot: false,
-            minTime: '6',
-            maxTime: '20',
-            slotMinutes: 30,
+            minTime: <%= @appointment.doctor.hour_from.hour %>,
+            maxTime: <%= @appointment.doctor.hour_to.hour %>,
+            slotMinutes: <%= @appointment.doctor.shift_duration.min %>,
             defaultEventMinutes: 22,
             editable: false,
             aspectRatio: 2,

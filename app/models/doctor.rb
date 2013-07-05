@@ -10,6 +10,7 @@ class Doctor < ActiveRecord::Base
   attr_reader :prepaid_medical_tokens #getter
   attr_reader :medical_specification_tokens #getter
 
+  validates_presence_of :prepaid_medicals
 
   def hospital_tokens=(ids)
     self.hospital_ids = ids.split(",")
