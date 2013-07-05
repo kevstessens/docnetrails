@@ -2,7 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  reserve: "Reserve"
+  reserve: "Disable Slot"
   confirmate: "Confirm"
   appointment:
     details: "Appointment details"
@@ -193,7 +193,7 @@ en:
   clear: "Clear"
   edit: "Edit"
   add: "Add"
-  language_change: "Language Selector"
+  language_change: "Language"
   destroy: "Destroy"
   show: "Show"
   errors: "Errors"
