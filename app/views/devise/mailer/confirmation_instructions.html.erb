@@ -67,7 +67,7 @@
 
       <!-- Start Error Blue -->
       <div style="text-align:center;margin:10px 0;z-index: 680;">
-        <a href="http://localhost:3000" target="blank"><%= image_tag "http://localhost:3000/assets/icons/error/success-green-big.png", :style => "border:none; margin-left:10px; margin-top:10px;"%></a>
+        <a href="http://localhost:3000" target="blank"><%= image_tag "https://pbs.twimg.com/media/BOaI4vuCMAAlXJr.png:large", :style => "border:none; margin-left:10px; margin-top:10px;"%></a>
         <h2 class="blue"><%= t("mailers.welcome") %> <%= @resource.email %>!</h2>
         <p><%= t("mailers.confirm_body") %> </p>
         <div style=" padding:30px;z-index: 670;"><a href="<%=  confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)%>" style="background:url(../assets/default-button.png) repeat-x top;font:bold 12px Arial, Helvetica, sans-serif; color:#fff;borderborder:1px solid #777;border-bottom:1px solid #666;border-radius:2px;padding:6px 10px;margin-right:10px;text-shadow: 0px -1px #777;background-color: #696969;"><%= t("mailers.confirm") %></a></div>

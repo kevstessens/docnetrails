@@ -67,7 +67,7 @@
 
       <!-- Start Error Blue -->
       <div style="text-align:center;margin:10px 0;z-index: 680;">
-        <a href="http://localhost:3000" target="blank"><%= image_tag "http://localhost:3000/assets/icons/error/error-red-big.png", :style => "border:none; margin-left:10px; margin-top:10px;"%></a>
+        <a href="http://localhost:3000" target="blank"><%= image_tag "https://pbs.twimg.com/media/BOaIv6DCIAA6vhC.png:large", :style => "border:none; margin-left:10px; margin-top:10px;"%></a>
         <h2 class="blue"><%= t("mailers.cancellation")%> <%= @user.full_name %></h2>
         <p><%= t("mailers.details_cancellation") + @appointment.datetime.strftime("%d/%m/%y %H:%M")%>  </p>
       </div>

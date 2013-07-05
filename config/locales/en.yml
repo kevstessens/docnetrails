@@ -53,6 +53,7 @@ en:
     edit: "Edit City"
     details: "City Details"
   address:
+    add: "Add Address"
     address: "Address"
     new: "New Address"
     create: "Create Address"
@@ -439,3 +440,47 @@ en:
     doctor_u: "Doctor was successfully updated."
     patient_c: "Patient was successfully created."
     patient_u: "Patient was successfully updated."
+  activerecord:
+    errors:
+      models:
+        message:
+          attributes:
+            subject:
+              blank: "El asunto no puede estar en blanco."
+            body:
+              blank: "El mensaje no puede estar en blanco."
+        project:
+          attributes:
+            name:
+              blank: "El nombre del proyecto no puede estar en blanco."
+        user:
+          attributes:
+            email:
+              blank: "The email can't be empty."
+              invalid: "The email is not valid"
+            full_name:
+              blank: "The name can't be empty."
+            password:
+              blank: "The password can't be empty."
+            encrypted_password:
+              blank: ""
+        doctor:
+          attributes:
+            prepaid_medicals:
+              blank: "The doctor must have at least one prepaid medical."
+        invested_hour:
+          attributes:
+            hours:
+              blank: "Las horas trabajadas no pueden estar en blanco."
+        feature:
+          attributes:
+            description:
+              blank: "La descripción no puede estar en blanco."
+        bug:
+          attributes:
+            description:
+              blank: "La descripción no puede estar en blanco."
+        request:
+          attributes:
+            description:
+              blank: "La descripción no puede estar en blanco."

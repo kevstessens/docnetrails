@@ -52,6 +52,7 @@ es:
     edit: "Editar Ciudad"
     details: "Detalle de Ciudad"
   address:
+    add: "Agregar dirección"
     address: "Dirección"
     new: "Nueva Dirección"
     create: "Crear Dirección"
@@ -151,7 +152,7 @@ es:
   friday: "Viernes"
   saturday: "Sábado"
   password: "Contraseña"
-  birthdate: "Cumpleaños"
+  birthdate: "Fecha de nacimiento"
   sign_in: "Iniciar Sesión"
   send_me_reset: "Enviarme instrucciones de reseteo"
   forgot: "Olvidó su Contraseña?"
@@ -618,4 +619,5 @@ es:
     doctor_c: "El doctor se creó con éxito."
     doctor_u: "El doctor se actualizó con éxito."
     patient_c: "El paciente se creó con éxito."
-    patient_u: "El paciente se actualizó con éxito."    
+    patient_u: "El paciente se actualizó con éxito."
+    signed_in_successully: "Has iniciado sesion correctamente"

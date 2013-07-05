@@ -31,7 +31,6 @@
           <tr>
             <th><%= t("id") %></th>
             <th><%= t("name") %></th>
-            <th><%= t("address") %></th>
             <th><%= t("actions") %></th>
           </tr>
           </thead>
@@ -40,12 +39,7 @@
               <tr class="gradeA">
                 <td><%= hospital.id %></td>
                 <td><%= link_to hospital.name, hospital %></td>
-                <% if(!@hospital.nil? && !@hospital.address.nil?) %>
-                    <% address = @hospital.address.street + " " + @hospital.address.number + ", " + @hospital.address.city.name %>
-                <% else %>
-                    <% address = "" %>
-                <% end %>
-                <td><%= address %></td>
+
                 <td><%= link_to t("edit"), edit_hospital_path(hospital) %>
                   <%= link_to t("destroy"), hospital, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>

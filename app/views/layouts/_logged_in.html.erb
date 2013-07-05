@@ -155,6 +155,7 @@
                   <li <%= "class=active" if @active_sub_tab=="country" %>><a href="<%= countries_path  %>"><%= t("countries")%></a></li>
                   <li <%= "class=active" if @active_sub_tab=="state" %>><a href="<%= states_path  %>"><%= t("states")%></a></li>
                   <li <%= "class=active" if @active_sub_tab=="city" %>><a href="<%= cities_path  %>"><%= t("cities")%></a></li>
+                  <li <%= "class=active" if @active_sub_tab=="address" %>><a href="<%= addresses_path  %>"><%= t("addresses")%></a></li>
                   <li <%= "class=active" if @active_sub_tab=="medical_specification" %>><a href="<%= medical_specifications_path  %>"><%= t("medical_specifications")%></a></li>
                 </ul>
               </li>
