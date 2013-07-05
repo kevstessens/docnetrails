@@ -1,6 +1,8 @@
 #encoding: utf-8
 
 es:
+  reserve: "Reservar"
+  confirmate: "Confirmar"
   appointment:
     details: "Detalle de turno"
     disable: "Ocupar turno"
@@ -24,8 +26,8 @@ es:
     name: "Nombre de doctor"
     find_by: "Buscar doctor por"
     doctor: "Doctor"
-    hour_to: "Horario desde"
-    hour_from: "Horario hasta"
+    hour_to: "Horario hasta"
+    hour_from: "Horario desde"
     shift_duration: "Duración de turnos"
     edit: "Editar doctor"
     add: "Agregar doctor"
@@ -149,9 +151,9 @@ es:
   friday: "Viernes"
   saturday: "Sábado"
   password: "Contraseña"
-  birthdate: "Birth date"
-  sign_in: "Sign in"
-  send_me_reset: "Send me reset password instructions"
+  birthdate: "Cumpleaños"
+  sign_in: "Iniciar Sesión"
+  send_me_reset: "Enviarme instrucciones de reseteo"
   forgot: "Olvidó su Contraseña?"
   go_to_notifications: "Ir a mis notificaciones"
   view_all: "Ver todo"
@@ -178,7 +180,7 @@ es:
   clear: "Limpiar"
   edit: "Editar"
   add: "Agregar"
-  language_change: "Idioma"
+  language_change: "Seleccionar Idioma"
   show: "Ver"
   errors: "Errores"
   close: "Cerrar"
@@ -248,10 +250,10 @@ es:
   dashboard:
     dashboard: "Escritorio"
     ranking: "Mi Ranking"
-    assisted_appointments: "Turnos asistidos"
-    pending_appointments: "Turnos pendientes"
-    missed_appointments: "Turnos inasistidos"
-    ranking: "Mi Ranking"
+  ranking: "Mi Ranking"
+  assisted_appointments: "Turnos asistidos"
+  pending_appointments: "Turnos pendientes"
+  missed_appointments: "Turnos inasistidos"
   invested_hours:
     date: "Fecha"
     user: "Usuario"

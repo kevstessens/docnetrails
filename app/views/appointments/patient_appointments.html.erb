@@ -32,14 +32,6 @@
                 week:     '<%= t("week") %>',
                 day:      '<%= t("day") %>'
             },
-            dayClick: function(date, allDay, jsEvent, view) {
-
-                if (allDay) {
-                    alert('Clicked on the entire day: ' + date);
-                }else{
-                    alert('Clicked on the slot: ' + date);
-                }
-            },
             eventClick: function(event) {
                 if (event.url) {
                     window.open(event.url,_self);

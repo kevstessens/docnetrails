@@ -1,5 +1,5 @@
 <div class="modal-header">
-  <h3 id="myModalLabel">Reserve</h3>
+  <h3 id="myModalLabel"><%=t("reserve")%></h3>
 </div>
 
 
@@ -90,8 +90,8 @@
 <div class="button-box" style="float:right;">
   <table><tr>
     <td><a href="" class="st-clear" data-dismiss="modal" aria-hidden="true"><%= t("cancel") %></a></td>
-    <td><button onclick="createPatient()" id="create" class="st-clear" data-dismiss="modal" aria-hidden="true"><%= t("confirm") %></button></td>
-    <td><button onclick="confirmPatient()" id="confirm" class="st-clear" data-dismiss="modal" aria-hidden="true"><%= t("confirm") %></button></td>
+    <td><button onclick="createPatient()" id="create" class="st-clear" data-dismiss="modal" aria-hidden="true"><%= t('confirmate') %></button></td>
+    <td><button onclick="confirmPatient()" id="confirm" class="st-clear" data-dismiss="modal" aria-hidden="true"><%= t('confirmate') %></button></td>
   </tr></table>
     <script type="text/javascript">
       function createPatient() {

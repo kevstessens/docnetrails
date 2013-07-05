@@ -47,7 +47,6 @@
             <th><%= t("id") %></th>
             <th><%= t("name") %></th>
             <th><%= t("email") %></th>
-            <th><%= t("prepaid_medicals") %></th>
             <th><%= t("actions") %></th>
 
           </tr>
@@ -62,7 +61,6 @@
                 <td><%= patient.id %></td>
                 <td><%= patient.user.full_name %></td>
                 <td><%= patient.user.email %></td>
-                <td><%= PrepaidMedical.where("id = ?", patient.prepaid_medical_id).first.name %></td>
                 <td><%= link_to t("show"), patient %>
                   <%= link_to t("edit"), edit_patient_path(patient) %>
                   <%= link_to t("destroy"), patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>

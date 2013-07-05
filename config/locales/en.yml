@@ -2,6 +2,8 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  reserve: "Reserve"
+  confirmate: "Confirm"
   appointment:
     details: "Appointment details"
     disable: "Disable appointment"
@@ -306,12 +308,12 @@ en:
     priority: "Priority"
     project_completed: "Project Completed"
     days_to_deliver: "Days to Deliver"
-    assisted_appointments: "Assisted"
-    pending_appointments: "Pending"
-    missed_appointments: "Missed"
-    ranking: "My Ranking"
     hours_worked: "Hours Worked"
     bugs_reported: "Bugs Reported"
+  assisted_appointments: "Assisted"
+  pending_appointments: "Pending"
+  missed_appointments: "Missed"
+  ranking: "My Ranking"
   features:
     expected_hours: "Expected Hours"
     features: "Features"

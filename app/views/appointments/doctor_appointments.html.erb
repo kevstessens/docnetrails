@@ -75,10 +75,8 @@
             },
             eventClick: function(calEvent, jsEvent, view) {
 
-                alert('Event: ' + calEvent.title);
 
                 // change the border color just for fun
-                $(this).css('border-color', 'red');
 
             }
 
@@ -106,7 +104,7 @@
 <!-- start page title -->
 <div class="page-title">
   <div class="in">
-    <div class="titlebar">  <h2><%= t("events.timeline_calendar")%></h2> <p>Doc.net</p></div>
+    <div class="titlebar">  <h2><%= t("appointments")%></h2> <p>Doc.net</p></div>
 
     <div class="clear"></div>
   </div>
@@ -121,7 +119,7 @@
   <div class="grid740" style="z-index: 720;">
     <ul class="pagewrap">
       <li><%= link_to t("dashboard.dashboard"), root_path %></li>
-      <li><%= t("events.calendar")%></li>
+      <li><%= t("appointments")%></li>
     </ul>
   </div>
   <!-- END NAVIGATION -->
