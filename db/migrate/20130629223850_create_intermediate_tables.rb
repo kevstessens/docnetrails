@@ -28,8 +28,8 @@ class CreateIntermediateTables < ActiveRecord::Migration
 
       t.timestamps :default => Time.now
     end
-    add_index :doctors_medical_specifications, :doctor_id
-    add_index :doctors_medical_specifications, :medical_specification_id
+    # add_index :doctors_medical_specifications, :doctor_id
+    # add_index :doctors_medical_specifications, :medical_specification_id
 
 
 
